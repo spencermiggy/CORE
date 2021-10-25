@@ -4,6 +4,8 @@ using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+[assembly: ExportFont("GREENSEA.otf", Alias = "let")]
+[assembly: ExportFont("GREENSEA-Awesome.otf", Alias = "lett")]
 namespace CORE
 {
     public partial class App : Application

@@ -27,7 +27,7 @@ namespace CORE.View
         private async Task GetRepairer()
         {
             var repairers = await repairer.Read();
-            ShowPeople.ItemsSource = repairers.Where(x => x.city == city).ToList();
+            ShowPeople.ItemsSource = repairers.Where(x => x.city.ToLower() == city.ToLower()).ToList();
         }
 
         private void TextBtn(object sender, EventArgs e)

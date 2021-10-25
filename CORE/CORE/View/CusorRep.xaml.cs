@@ -24,7 +24,7 @@ namespace CORE.View
 
         private async void rep_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new newRep());
+            await Navigation.PushModalAsync(new ContactAdmin());
         }
     }
 }

@@ -7,8 +7,10 @@
             <StackLayout>
                 <Grid ColumnDefinitions="*,*,*,*" Margin="20">
                     <Button ImageSource="user.png" BackgroundColor="Transparent" Clicked="ProfBtn" Grid.Column="0" Grid.Row="0"/>
-                    <SearchBar x:Name="Search1" Placeholder="Search" HorizontalOptions="End" VerticalOptions="Start" TextColor="Black" CancelButtonColor="HotPink" PlaceholderColor="Black" BackgroundColor="WhiteSmoke"
-                               Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="0" TextChanged="Search1_TextChanged"/>
+                    <Frame Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="0" CornerRadius="30" HeightRequest="10">
+                        <SearchBar x:Name="Search1" Placeholder="Search" HorizontalOptions="End" VerticalOptions="Start" TextColor="Black" CancelButtonColor="Black" PlaceholderColor="Black" BackgroundColor="Transparent"
+                                TextChanged="Search1_TextChanged"/>
+                    </Frame>
                 </Grid>
             </StackLayout>
             <ScrollView>
@@ -20,19 +22,22 @@
                                     <SwipeItems>
                                         <SwipeItem Text="Message/Call"
                                          IconImageSource="sms.png"
-                                         BackgroundColor="LightPink"
+                                         BackgroundColor="Aquamarine"
                                          Clicked="TextBtn"/>
                                     </SwipeItems>
                                 </SwipeView.LeftItems>
-                                <Frame BackgroundColor="Transparent" BorderColor="Transparent" Margin="15,-20,5,-35" Opacity="1">
-                                    <Grid Margin="10" Padding="15">
-                                        <Label FontSize="Caption" FontFamily="let" Text="{Binding fname}" Grid.Column="0" Grid.Row="0"/>
-                                        <Label FontSize="Caption" FontFamily="let" Text="{Binding activetime}" Grid.Column="1" Grid.Row="0"/>
-                                        <Label FontSize="Caption" FontFamily="let" Text="{Binding statusact}" Grid.Column="1" Grid.Row="1"/>
-                                        <Label FontSize="Caption" FontFamily="let" Text="{Binding job}" Grid.Column="0" Grid.Row="1"/>
-                                        <Label x:Name="tele" FontSize="Subtitle" FontFamily="let" Text="{Binding pnum}" Grid.Column="0" Grid.Row="2"/>
-                                        <Image Source="{Binding propics}" Aspect="AspectFit" Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" HeightRequest="50"
-                                           WidthRequest="50"/>
+                                <Frame BackgroundColor="Transparent" BorderColor="Transparent" Margin="15,-15,5,-35">
+                                    <Grid Margin="10" Padding="20">
+                                        <Label FontSize="Medium" TextColor="White" FontFamily="let" Text="{Binding fname}" Grid.Column="0" Grid.Row="0"/>
+                                        <Label FontSize="Subtitle" TextColor="White" FontFamily="let" Text="{Binding activetime}" Grid.Column="1" Grid.Row="0"/>
+                                        <Label FontSize="Caption" TextColor="White" FontFamily="let" Text="{Binding statusact}" Grid.Column="1" Grid.Row="1"/>
+                                        <Label FontSize="Caption" TextColor="White" FontFamily="let" Text="{Binding job}" Grid.Column="0" Grid.Row="1"/>
+                                        <Label x:Name="tele" TextColor="White" FontSize="Subtitle" FontFamily="let" Text="{Binding pnum}" Grid.Column="0" Grid.Row="2"/>
+                                        <Frame Grid.Column="2" Grid.Row="0" Grid.RowSpan="4" BorderColor="White" VerticalOptions="Start"
+                                               HorizontalOptions="End" WidthRequest="100" HeightRequest="100"
+                                               HasShadow="False" CornerRadius="110" Padding="0" IsClippedToBounds="True">
+                                            <Image Source="{Binding propics}" Aspect="Fill"/>
+                                        </Frame>
                                     </Grid>
                                 </Frame>
                             </SwipeView>

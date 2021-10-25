@@ -1,4 +1,5 @@
-﻿using Plugin.Share;
+﻿using Plugin.Messaging;
+using Plugin.Share;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,11 @@ namespace CORE.View
 
         private void but_Clicked(object sender, EventArgs e)
         {
-            App.Current.MainPage = new CusorRep();
+            var phone = CrossMessaging.Current.SmsMessenger;
+            if (phone.CanSendSms)
+            {
+                phone.SendSms("09959844622", "");
+            }
         }
 
         private void fbbtn_Clicked(object sender, EventArgs e)

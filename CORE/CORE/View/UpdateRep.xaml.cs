@@ -64,7 +64,8 @@ namespace CORE.View
             else
             {
                 await repairer.Update(repairer);
-                await DisplayAlert("Success", "Info Updated", "Ok");
+                await DisplayAlert("Success", "Info Updated.... We will logout you to confirm changes", "Ok");
+                App.Current.MainPage = new MainPage();
             }
         }
 

@@ -5,15 +5,22 @@
              x:Class="CORE.View.newRep"
              BackgroundImageSource="BG.jpg">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout Padding="0" Margin="50,100,50,100" HorizontalOptions="FillAndExpand">
             <StackLayout VerticalOptions="Start">
-                <Image x:Name="SelectedImage" Aspect="AspectFit"/>
+                <Frame BorderColor="White" VerticalOptions="Start"
+                                               HorizontalOptions="Center" WidthRequest="100" HeightRequest="100"
+                                               HasShadow="False" CornerRadius="110" Padding="0" IsClippedToBounds="True">
+                    <Image x:Name="SelectedImage" Aspect="AspectFit"/>
+                </Frame>
             </StackLayout>
             <StackLayout>
-                <Button x:Name="BtnUploadImage" Text="Select from Gallery" Clicked="SelectButton_Clicked" CornerRadius="100"/>
+                <Grid ColumnDefinitions="*,*,*">
+                    <Button x:Name="BtnUploadImage" FontSize="Small" Text="Select from Gallery" Clicked="SelectButton_Clicked" CornerRadius="100" Grid.Column="1"
+                                HeightRequest="45"/>
+                </Grid>
             </StackLayout>
             <Grid>
-                <StackLayout Padding="0" Margin="50,100,50,100" HorizontalOptions="FillAndExpand">
+                <StackLayout>
                     <Frame  BackgroundColor="White" HeightRequest="500" HasShadow="True" Padding="0" Margin="0">
 
                         <StackLayout>

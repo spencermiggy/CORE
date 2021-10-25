@@ -5,15 +5,14 @@
              BackgroundImageSource="BG.jpg">
     <ContentPage.Content>
         <StackLayout Margin="30">
-            <ImageButton x:Name="but" Source="bakbut.png" BackgroundColor="Transparent" WidthRequest="50" HorizontalOptions="Start" Clicked="but_Clicked"/>
-            <StackLayout Margin="50" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Spacing="40">
+            <StackLayout Margin="50" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Spacing="40" BackgroundColor="WhiteSmoke">
                 <Grid ColumnDefinitions="*,*">
                     <ImageButton x:Name="fbbtn" Source="fb.png" BackgroundColor="Transparent" WidthRequest="60" Grid.Column="0" Grid.Row="0" Clicked="fbbtn_Clicked"/>
                     <ImageButton x:Name="gbtn" Source="Gmail.png" BackgroundColor="Transparent" WidthRequest="60" Grid.Column="1" Grid.Row="0" Clicked="gbtn_Clicked"/>
                 </Grid>
-                <Label Text="Contact us our Social media accounts" FontSize="16" FontFamily="let" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
-                <Entry Text="09959844622" FontSize="Title" HorizontalOptions="Center" FontFamily="let"/>
-                <Label Text="Copy and Contact this number for registration. This is for repairers registration only" 
+                <Label Text="Contact us our Social media accounts" TextColor="Black" FontSize="16" FontFamily="let" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+                <Button ImageSource="sms.png" HorizontalOptions="Center" BackgroundColor="Transparent" Clicked="but_Clicked"/>
+                <Label Text="Message or Call me on the button" VerticalOptions="Start" TextColor="Black"
                        HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="16" FontFamily="let"/>
             </StackLayout>
         </StackLayout>
