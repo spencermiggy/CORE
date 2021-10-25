@@ -9,6 +9,7 @@ using Xamarin.Forms.Xaml;
 using CORE.Models;
 using static CORE.App;
 using Xamarin.Essentials;
+using Plugin.Share;
 
 namespace CORE.View
 {
@@ -43,6 +44,11 @@ namespace CORE.View
         private void BtnLog(object sender, EventArgs e)
         {
             App.Current.MainPage = new MainPage();
+        }
+
+        private void reportButton_Clicked(object sender, EventArgs e)
+        {
+            CrossShare.Current.OpenBrowser("https://web.facebook.com/misgkie/");
         }
     }
 }

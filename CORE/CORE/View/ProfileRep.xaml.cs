@@ -1,4 +1,5 @@
 ﻿using CORE.Models;
+using Plugin.Share;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,6 +47,11 @@ namespace CORE.View
         private async void Btnsched(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new SchedPage());
+        }
+
+        private void reportButton_Clicked(object sender, EventArgs e)
+        {
+            CrossShare.Current.OpenBrowser("https://web.facebook.com/misgkie/");
         }
     }
 }
