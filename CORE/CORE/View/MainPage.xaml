@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:CORE.CustomRenderer"
+             mc:Ignorable="d"
+             x:Class="CORE.View.MainPage"
+             BackgroundImageSource="BG.jpg" Visual="Material">
+
+    <StackLayout>
+        <Grid>
+            <StackLayout Padding="0" Margin="0" HorizontalOptions="FillAndExpand">
+                <Frame HeightRequest="150" BackgroundColor="Transparent" Padding="0" Margin="0">
+                    
+                </Frame>
+            </StackLayout>
+            <StackLayout Padding="0" Margin="70,60,70,100" HorizontalOptions="FillAndExpand">
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+                    <Image Source="homeicon.png" Aspect="AspectFit" Margin="50"/>
+                </StackLayout>
+                <Frame BackgroundColor="WhiteSmoke" HeightRequest="500" HasShadow="True" Padding="0" Margin="0">
+
+                    <StackLayout>
+
+
+                        <StackLayout Margin="10">
+                            <Label Text="SIGN IN" TextColor="Black" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+                        </StackLayout>
+
+                        <StackLayout Padding="0" Margin="15,10">
+
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="Transparent" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                        <Image Source="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png" Aspect="AspectFill" Margin="0"/>
+                                    </Frame>
+
+                                    <local:CustomEntry x:Name="Pnumb" Placeholder="Phone Number" Keyboard="Numeric" TextColor="HotPink" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="Transparent" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                        <Image Source="https://icon-library.com/images/show-password-icon/show-password-icon-4.jpg" Aspect="AspectFill" Margin="0"/>
+                                    </Frame>
+
+                                    <local:CustomEntry x:Name="Passw" Placeholder="Password" IsPassword="True" TextColor="HotPink" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                </StackLayout>
+                            </Frame>
+                            <StackLayout>
+                                <Grid RowDefinitions="*,*" Margin="20">
+                                    <Button Text="CUSTOMER" BackgroundColor="HotPink" CornerRadius="100" Grid.Column="0" Grid.Row="0" Clicked="CusLog_Clicked"/>
+                                    <Button Text="REPAIRER" BackgroundColor="HotPink" CornerRadius="100" Grid.Column="1" Grid.Row="0" Clicked="RepLog_Clicked"/>
+                                </Grid>
+                            </StackLayout>
+                            
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                <Label Text="Still Not Connected ?" TextColor="DarkGray" FontSize="Small"/>
+                            </StackLayout>
+                            <StackLayout>
+                                <Button Text="SIGN UP" BackgroundColor="White" TextColor="HotPink" CornerRadius="30" HorizontalOptions="Center" HeightRequest="25" FontSize="10" Clicked="addAcc_Clicked"/>
+                            </StackLayout>
+
+                        </StackLayout>
+
+
+                    </StackLayout>
+
+                </Frame>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CORE.View.CusorRep"
+             BackgroundImageSource="BG.jpg">
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout Padding="0" Margin="50,100,50,100" HorizontalOptions="FillAndExpand">
+                <Frame  BackgroundColor="WhiteSmoke" HeightRequest="500" HasShadow="True" Padding="0" Margin="0">
+
+                    <StackLayout>
+                        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                            <Label Text="Choose Below" HorizontalOptions="CenterAndExpand" FontSize="Title" TextColor="Black"/>
+                        </StackLayout>
+
+                        <StackLayout Margin="50,150,50,0">
+
+                            <Grid ColumnDefinitions="*,*">
+                                <StackLayout Grid.Column="0" Grid.Row="0">
+                                    <ImageButton x:Name="btnCusreg" Source="@drawable/cus.png" WidthRequest="50" HeightRequest="50" BackgroundColor="Transparent" CornerRadius="100" Clicked="cur_Clicked"/>
+                                    <Label Text="Customer" TextColor="Black" HorizontalOptions="Center"/>
+                                </StackLayout>
+                                <StackLayout Grid.Column="1" Grid.Row="0">
+                                    <ImageButton x:Name="btnRepreg" Source="@drawable/rep.jpg" WidthRequest="50" HeightRequest="50" BackgroundColor="Transparent" CornerRadius="100" Clicked="rep_Clicked"/>
+                                    <Label Text="Repairer" TextColor="Black" HorizontalOptions="Center"/>
+                                </StackLayout>
+                            </Grid>
+
+                        </StackLayout>
+
+
+                    </StackLayout>
+
+                </Frame>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
