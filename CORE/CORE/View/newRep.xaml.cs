@@ -35,7 +35,7 @@ namespace CORE.View
                 addr = Addre.Text,
                 city = Citys.Text,
                 pass = Passw.Text,
-                propics = $"{urlImage}/{imgID}.jpg",
+                propics = $"{urlImage}",
                 picstr = $"{imgID}.jpg"
              };
             if (firstname.Text == null || lastname.Text == null || Job.Text == null || Pnumb.Text == null || Addre.Text == null || Citys.Text == null || Passw.Text == null)
@@ -77,9 +77,9 @@ namespace CORE.View
         }
         private async void UploadImage(Stream stream)
         {
-            var account = CloudStorageAccount.Parse("DefaultEndpointsProtocol=https;AccountName=imagestoragecore;AccountKey=TNDP7cpEyUTkc/+sfM7utsBmuyk7Ek8s2bfdh3wJ8LZxLXA2cwo0YT1+oWO9jxocrUNpBJqAG1iSwKXDrdrpig==;EndpointSuffix=core.windows.net");
+            var account = CloudStorageAccount.Parse("DefaultEndpointsProtocol=https;AccountName=picturestorages;AccountKey=xJI7ywyt+8/Et5JJ5g190+brznK6/yvPigs/X8FMInd/LsAiQv4CXThETiT9VzsKG0RvMH58ocXCQ/0+tqKEdw==;EndpointSuffix=core.windows.net");
             var client = account.CreateCloudBlobClient();
-            var container = client.GetContainerReference("imagestoragecore");
+            var container = client.GetContainerReference("imagefile");
             await container.CreateIfNotExistsAsync();
 
             imgID = Guid.NewGuid().ToString();

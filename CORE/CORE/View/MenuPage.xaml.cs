@@ -30,15 +30,9 @@ namespace CORE.View
             ShowPeople.ItemsSource = repairers.Where(x => x.city == city).ToList();
         }
 
-        private void CallBtn(object sender, EventArgs e)
-        {
-            var item = sender as SwipeItemView;
-            if (item?.BindingContext is repairer model) PhoneDialer.Open(model.pnum);
-        }
-
         private void TextBtn(object sender, EventArgs e)
         {
-            var item = sender as SwipeItemView;
+            var item = sender as SwipeItem;
             var smsSend = CrossMessaging.Current.SmsMessenger;
             if (item?.BindingContext is repairer model)
             {
@@ -72,7 +66,7 @@ namespace CORE.View
 
         }
 
-        private async void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
+        private async void Search1_TextChanged(object sender, TextChangedEventArgs e)
         {
             await XSearch(Search1.Text);
         }

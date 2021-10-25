@@ -44,6 +44,7 @@ namespace CORE.View
                         App.pass = users.pass;
                         App.pnum = users.pnum;
                         App.propics = users.propics;
+                        App.picstr = users.picstr;
                         App.Current.MainPage = new MenuPage();
                     }
                     else
@@ -82,6 +83,7 @@ namespace CORE.View
                         App.city = users.city;
                         App.pass = users.pass;
                         App.propics = users.propics;
+                        App.picstr = users.picstr;
                         App.activetime = users.activetime;
                         App.statusact = users.statusact;
                         App.Current.MainPage = new MenuRep();
