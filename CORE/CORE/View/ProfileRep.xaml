@@ -25,12 +25,12 @@
                     <Button Grid.Row="0" Grid.Column="1" CornerRadius ="30" ImageSource="active.png" BackgroundColor="#ebedf0" Clicked="Btnsched"/>
                     <Label Grid.Row="1" Grid.Column="1"  Text="Edit Schedule" Style="{StaticResource StAndroidLabel}"/>
 
-                    <Button Grid.Row="0" Grid.Column="2" CornerRadius ="30" 
+                    <Button Grid.Row="0" Grid.Column="2" CornerRadius ="30"
                             ImageSource="https://www.nicepng.com/png/full/117-1178608_file-notification-exclamation-mark-icon-blue.png" BackgroundColor="#ebedf0" Clicked="reportButton_Clicked" />
                     <Label Grid.Row="1" Grid.Column="2"  Text="Report an Account" Style="{StaticResource StAndroidLabel}"/>
                     
-                    <Button Grid.Row="0" Grid.Column="2" CornerRadius ="30" ImageSource="out.png" BackgroundColor="#ebedf0" Clicked="BtnLog" />
-                    <Label Grid.Row="1" Grid.Column="2"  Text="Logout" Style="{StaticResource StAndroidLabel}"/>
+                    <Button Grid.Row="0" Grid.Column="3" CornerRadius ="30" ImageSource="out.png" BackgroundColor="#ebedf0" Clicked="BtnLog" />
+                    <Label Grid.Row="1" Grid.Column="3"  Text="Logout" Style="{StaticResource StAndroidLabel}"/>
                 </Grid>
             </Grid>
 

@@ -18,17 +18,17 @@
                             <Label Grid.Row="3" Text="{Binding pnum}"  Style="{StaticResource StProfileDesc}"/>
 
                             <!--Android Buttons-->
-                            <Grid Grid.Row="4" ColumnDefinitions="50,50" RowDefinitions="50,Auto" Padding="0,10" IsVisible="{OnPlatform iOS=False, Android=True}"  HorizontalOptions="CenterAndExpand" ColumnSpacing="30">
+                            <Grid Grid.Row="4" ColumnDefinitions="50,50,50" RowDefinitions="50,Auto" Padding="0,10" IsVisible="{OnPlatform iOS=False, Android=True}"  HorizontalOptions="CenterAndExpand" ColumnSpacing="30">
 
                                 <Button Grid.Row="0" Grid.Column="0" WidthRequest="50" CornerRadius ="30" BackgroundColor="#ebedf0" ImageSource="pen.png" TextColor="Black" FontSize="Medium" Clicked="BtnEdit" />
                                 <Label Grid.Row="1" Grid.Column="0"  Text="Edit Profile" Style="{StaticResource StAndroidLabel}"/>
 
-                                <Button Grid.Row="0" Grid.Column="2" CornerRadius ="30" 
+                                <Button Grid.Row="0" Grid.Column="1" CornerRadius ="30" 
                                  ImageSource="https://www.nicepng.com/png/full/117-1178608_file-notification-exclamation-mark-icon-blue.png" BackgroundColor="#ebedf0" Clicked="reportButton_Clicked" />
-                                <Label Grid.Row="1" Grid.Column="2"  Text="Report an Account" Style="{StaticResource StAndroidLabel}"/>
+                                <Label Grid.Row="1" Grid.Column="1"  Text="Report an Account" Style="{StaticResource StAndroidLabel}"/>
 
-                                <Button Grid.Row="0" Grid.Column="1" CornerRadius ="30" ImageSource="out.png" BackgroundColor="#ebedf0" Clicked="BtnLog" />
-                                <Label Grid.Row="1" Grid.Column="1"  Text="Logout" Style="{StaticResource StAndroidLabel}"/>
+                                <Button Grid.Row="0" Grid.Column="2" CornerRadius ="30" ImageSource="out.png" BackgroundColor="#ebedf0" Clicked="BtnLog" />
+                                <Label Grid.Row="1" Grid.Column="2"  Text="Logout" Style="{StaticResource StAndroidLabel}"/>
                             </Grid>
                         </Grid>
                   
