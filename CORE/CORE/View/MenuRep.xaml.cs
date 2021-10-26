@@ -69,7 +69,28 @@ namespace CORE.View
 
         private async void Search1_TextChanged(object sender, TextChangedEventArgs e)
         {
-            await XSearch(Search1.Text);
+            if(Search1.Text != "")
+            {
+                await XSearch(Search1.Text);
+            }
+            else
+            {
+                await GetRepairer();
+            }
+        }
+        private void reportButton_Clicked(object sender, EventArgs e)
+        {
+            var item = sender as SwipeItem;
+            var smsSend = CrossMessaging.Current.SmsMessenger;
+            if (item?.BindingContext is repairer model)
+            {
+                smsSend.SendSms("09959844622", $"Name: {model.fname} {model.lname}, " +
+                    $"Job: {model.job}," +
+                    $" Address: {model.addr} , " +
+                    $"Mobile Number: {model.pnum}....... " +
+                    $"Your report message:      " +
+                    $"    ");
+            }
         }
     }
 }

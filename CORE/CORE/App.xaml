@@ -24,6 +24,13 @@
                 <Setter Property="TextColor"           Value="White"/>
                 <Setter Property="FontFamily"              Value="let"/>
             </Style>
+
+            <Style x:Key="StProfileName2"              TargetType="Label">
+                <Setter Property="FontAttributes"      Value="Bold"/>
+                <Setter Property="FontSize"            Value="Medium"/>
+                <Setter Property="TextColor"           Value="SkyBlue"/>
+                <Setter Property="FontFamily"              Value="let"/>
+            </Style>
             
             <Style x:Key="StProfileName1"              TargetType="Label">
                 <Setter Property="HorizontalOptions"   Value="CenterAndExpand"/>
@@ -35,11 +42,12 @@
             </Style>
 
             <Style x:Key="StProfileDesc"                  TargetType="Label">
-                <Setter Property="Margin"                  Value="20,0"/>
+                <Setter Property="Margin"                  Value="20,20"/>
                 <Setter Property="HorizontalTextAlignment" Value="Center"/>
                 <Setter Property="HorizontalOptions"       Value="CenterAndExpand"/>
                 <Setter Property="TextColor"               Value="White"/>
                 <Setter Property="FontFamily"              Value="let"/>
+                <Setter Property="FontSize"                Value="Subtitle"/>
             </Style>
 
             <Style x:Key="StAndroidLabel"                  TargetType="Label">

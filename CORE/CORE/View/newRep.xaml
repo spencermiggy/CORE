@@ -5,7 +5,7 @@
              x:Class="CORE.View.newRep"
              BackgroundImageSource="BG.jpg">
     <ContentPage.Content>
-        <StackLayout Padding="0" Margin="50,100,50,100" HorizontalOptions="FillAndExpand">
+        <StackLayout Padding="0" Margin="50" HorizontalOptions="FillAndExpand">
             <StackLayout VerticalOptions="Start">
                 <Frame BorderColor="White" VerticalOptions="Start"
                                                HorizontalOptions="Center" WidthRequest="100" HeightRequest="100"
@@ -21,7 +21,7 @@
             </StackLayout>
             <Grid>
                 <StackLayout>
-                    <Frame  BackgroundColor="White" HeightRequest="500" HasShadow="True" Padding="0" Margin="0">
+                    <Frame  BackgroundColor="White" HeightRequest="500" HasShadow="True" Padding="0" Margin="0" CornerRadius="30">
 
                         <StackLayout>
 
@@ -34,43 +34,43 @@
 
                                 <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                     <StackLayout Orientation="Horizontal">
-                                        <local:CustomEntry x:Name="firstname" Placeholder="First Name" PlaceholderColor="LightGray" TextColor="HotPink" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                        <local:CustomEntry x:Name="firstname" Placeholder="First Name" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
                                     </StackLayout>
                                 </Frame>
 
                                 <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                     <StackLayout Orientation="Horizontal">
-                                        <local:CustomEntry x:Name="lastname" Placeholder="Last Name" PlaceholderColor="LightGray" TextColor="HotPink" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                        <local:CustomEntry x:Name="lastname" Placeholder="Last Name" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
                                     </StackLayout>
                                 </Frame>
                                 
                                 <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                     <StackLayout Orientation="Horizontal">
-                                        <local:CustomEntry x:Name="Job" Placeholder="Job as a repairer?" PlaceholderColor="LightGray" TextColor="HotPink" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                        <local:CustomEntry x:Name="Job" Placeholder="Job as a repairer?" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
                                     </StackLayout>
                                 </Frame>
 
                                 <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                     <StackLayout Orientation="Horizontal">
-                                        <local:CustomEntry x:Name="Pnumb" Placeholder="Phone Number" PlaceholderColor="LightGray" TextColor="HotPink" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                        <local:CustomEntry x:Name="Pnumb" Placeholder="Phone Number" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
                                     </StackLayout>
                                 </Frame>
 
                                 <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                     <StackLayout Orientation="Horizontal">
-                                        <local:CustomEntry x:Name="Addre" Placeholder="Address" PlaceholderColor="LightGray" TextColor="HotPink" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                        <local:CustomEntry x:Name="Addre" Placeholder="Address" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
                                     </StackLayout>
                                 </Frame>
 
                                 <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                     <StackLayout Orientation="Horizontal">
-                                        <local:CustomEntry x:Name="Citys" Placeholder="City" PlaceholderColor="LightGray" TextColor="HotPink" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                        <local:CustomEntry x:Name="Citys" Placeholder="City" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
                                     </StackLayout>
                                 </Frame>
 
                                 <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                     <StackLayout Orientation="Horizontal">
-                                        <local:CustomEntry x:Name="Passw" Placeholder="Password" IsPassword="True" PlaceholderColor="LightGray" TextColor="HotPink" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                        <local:CustomEntry x:Name="Passw" Placeholder="Password" IsPassword="True" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
                                     </StackLayout>
                                 </Frame>
 
