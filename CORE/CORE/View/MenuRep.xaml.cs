@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Essentials;
 using static CORE.App;
 
+using Xamarin.Forms.Maps;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Plugin.Messaging;
@@ -16,6 +17,7 @@ namespace CORE.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MenuRep : ContentPage
     {
+        private readonly Geocoder geocoder = new Geocoder();
         public MenuRep()
         {
             InitializeComponent();
@@ -91,6 +93,11 @@ namespace CORE.View
                     $"Your report message:      " +
                     $"    ");
             }
+        }
+
+        private void SwipeItem_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }

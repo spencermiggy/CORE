@@ -22,6 +22,10 @@
                             <SwipeView BackgroundColor="Transparent">
                                 <SwipeView.LeftItems>
                                     <SwipeItems>
+                                        <SwipeItem Text="Location"
+                                         IconImageSource=""
+                                         BackgroundColor="Aqua"
+                                         Clicked="SwipeItem_Clicked"/>
                                         <SwipeItem Text="Message/Call"
                                          IconImageSource="sms.png"
                                          BackgroundColor="Aquamarine"

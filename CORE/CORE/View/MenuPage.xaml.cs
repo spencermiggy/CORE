@@ -10,12 +10,15 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Plugin.Messaging;
 using Xamarin.Essentials;
+using Xamarin.Forms.Maps;
 
 namespace CORE.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MenuPage : ContentPage
     {
+
+        private readonly Geocoder geocoder = new Geocoder();
         public MenuPage()
         {
             InitializeComponent();
@@ -90,6 +93,11 @@ namespace CORE.View
                     $"Your report message:      " +
                     $"    ");
             }
+        }
+
+        private void SwipeItem_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }
