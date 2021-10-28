@@ -45,6 +45,8 @@ namespace CORE.View
                         App.pnum = users.pnum;
                         App.propics = users.propics;
                         App.picstr = users.picstr;
+                        App.latt = users.latt;
+                        App.longg = users.longg;
                         App.Current.MainPage = new MenuPage();
                     }
                     else

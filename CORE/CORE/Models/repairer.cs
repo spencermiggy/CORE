@@ -20,6 +20,9 @@ namespace CORE.Models
         public string picstr { get; set; }
         public string activetime { get; set; }
         public string statusact { get; set; }
+        public string latt { get; set; }
+        public string longg { get; set; }
+
         public static async Task Insert(repairer repairer)
         {
             await App.MobileService.GetTable<repairer>().InsertAsync(repairer);

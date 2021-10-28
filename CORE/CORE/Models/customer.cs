@@ -18,6 +18,8 @@ namespace CORE.Models
         public string pass { get; set; }
         public string propics { get; set; }
         public string picstr { get; set; }
+        public string latt { get; set; }
+        public string longg { get; set; }
 
         public static async Task Insert(customer customer)
         {

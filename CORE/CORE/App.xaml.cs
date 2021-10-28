@@ -13,7 +13,9 @@ namespace CORE
         public static readonly MobileServiceClient MobileService = new MobileServiceClient("https://core5.azurewebsites.net");
         public static string customer_id;
         public static string repairer_id;
-        public static string firstnamed, lastnamed, addressed, jobbed, cityed, mobilenum, password, propics, picstr, fname, lname, job, city, pnum, pass, addr, activetime, statusact;
+        public static string firstnamed, lastnamed, addressed, jobbed, cityed, mobilenum, password,
+            propics, picstr, fname, lname, job, city, pnum, pass, addr, activetime, statusact,
+            latt, longg;
         public App()
         {
             InitializeComponent();

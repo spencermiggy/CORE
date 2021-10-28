@@ -4,9 +4,20 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
     x:Class="CORE.View.MapPage">
-    <maps:Map x:Name="locationsMap"
+    <StackLayout>
+        <Grid>
+            <Grid Grid.Row="0">
+                <Button x:Name="GetLoc" Text="Get Location" Grid.Row="0" Grid.Column="0" VerticalOptions="Start" HorizontalOptions="Start" FontSize="Small" Clicked="GetLoc_Clicked"/>
+                <Entry x:Name="Lat" Placeholder="Latitude" Grid.Row="0" Grid.Column="1" HorizontalOptions="CenterAndExpand"/>
+                <Entry x:Name="Long" Placeholder="Longitude" Grid.Row="0" Grid.Column="2" HorizontalOptions="CenterAndExpand"/>
+                <Button x:Name="SetLoc" Text="Refresh Lat/Long" Grid.Row="0" Grid.Column="3" VerticalOptions="Start" HorizontalOptions="End" FontSize="Small" Clicked="SetLoc_Clicked"/>
+            </Grid>
+            <Label x:Name="lugar" Text="Location Info" Grid.Row="1" HorizontalOptions="CenterAndExpand" VerticalOptions="Start"/>
+        </Grid>
+        <maps:Map x:Name="locationsMap"
               IsShowingUser="True"
               HorizontalOptions="FillAndExpand"
               VerticalOptions="FillAndExpand"
-              MapType="Satellite"/>
+              MapType="Hybrid"/>
+    </StackLayout>
 </ContentPage>

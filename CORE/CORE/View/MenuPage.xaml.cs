@@ -11,13 +11,15 @@ using Xamarin.Forms.Xaml;
 using Plugin.Messaging;
 using Xamarin.Essentials;
 using Xamarin.Forms.Maps;
+using Plugin.Geolocator.Abstractions;
+using Plugin.Geolocator;
+using Position = Plugin.Geolocator.Abstractions.Position;
 
 namespace CORE.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MenuPage : ContentPage
     {
-
         private readonly Geocoder geocoder = new Geocoder();
         public MenuPage()
         {
@@ -96,6 +98,15 @@ namespace CORE.View
         }
 
         private async void SwipeItem_Clicked(object sender, EventArgs e)
+        {
+            var item = sender as SwipeItem;
+            if (item?.BindingContext is repairer model)
+            {
+                Position position = (Position)await geocoder.GetPositionsForAddressAsync($"{model.addr}");
+            }
+        }
+
+        private async void Button_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new MapPage());
         }
