@@ -5,8 +5,8 @@
     xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
     x:Class="CORE.View.MapPage">
     <maps:Map x:Name="locationsMap"
-              IsShowingUser="False"
+              IsShowingUser="True"
               HorizontalOptions="FillAndExpand"
               VerticalOptions="FillAndExpand"
-              MapType="Street"/>
+              MapType="Satellite"/>
 </ContentPage>

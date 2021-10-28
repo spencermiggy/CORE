@@ -95,9 +95,9 @@ namespace CORE.View
             }
         }
 
-        private void SwipeItem_Clicked(object sender, EventArgs e)
+        private async void SwipeItem_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushModalAsync(new MapPage());
         }
     }
 }
