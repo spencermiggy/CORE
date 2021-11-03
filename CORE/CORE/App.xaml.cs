@@ -10,7 +10,7 @@ namespace CORE
 {
     public partial class App : Application
     {
-        public static readonly MobileServiceClient MobileService = new MobileServiceClient("https://core5.azurewebsites.net");
+        public static readonly MobileServiceClient MobileService = new MobileServiceClient("https://core55.azurewebsites.net");
         public static string customer_id;
         public static string repairer_id;
         public static string firstnamed, lastnamed, addressed, jobbed, cityed, mobilenum, password,
