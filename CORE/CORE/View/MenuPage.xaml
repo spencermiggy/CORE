@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:fRating="clr-namespace:Rating;assembly=Rating"
              x:Class="CORE.View.MenuPage"
              BackgroundImageSource="BG.jpg">
     <ContentPage.Content>
@@ -13,7 +12,7 @@
                         <SearchBar x:Name="Search1" Placeholder="Search" BackgroundColor="Transparent" VerticalOptions="Start" TextColor="Black" CancelButtonColor="Black" PlaceholderColor="Black"
                                 TextChanged="Search1_TextChanged"/>
                     </Frame>
-                    <Button ImageSource="maplogo.png" BackgroundColor="Transparent" Clicked="Button_Clicked" Grid.Column="3" Grid.Row="0" BorderColor="Transparent"/>
+                    <Button ImageSource="mapa.png" BackgroundColor="Transparent" Clicked="Button_Clicked" Grid.Column="3" Grid.Row="0" BorderColor="Transparent"/>
                 </Grid>
             </StackLayout>
             <ScrollView>
@@ -40,10 +39,10 @@
                                 <Frame BackgroundColor="Transparent" BorderColor="Transparent" Margin="0,-15,0,-35" Padding="10">
                                     <Grid Margin="10" Padding="20">
                                         <Label Style="{StaticResource StProfileName2}" Text="{Binding fname}" Grid.Column="0" Grid.Row="0"/>
-                                        <Label FontSize="Caption" TextColor="White" FontFamily="let" Text="{Binding activetime}" Grid.Column="0" Grid.Row="2"/>
-                                        <Label FontSize="Caption" TextColor="White" FontFamily="let" Text="{Binding statusact}" Grid.Column="1" Grid.Row="2"/>
-                                        <Label FontSize="Caption" TextColor="White" FontFamily="let" Text="{Binding job}" Grid.Column="0" Grid.Row="1"/>
-                                        <Label FontSize="Caption" TextColor="White" FontFamily="let" Text="{Binding addr}" Grid.Column="1" Grid.Row="1"/>
+                                        <Label FontSize="Medium" FontAttributes="Bold" TextColor="White" Text="{Binding activetime}" Grid.Column="0" Grid.Row="2"/>
+                                        <Label FontSize="Medium" FontAttributes="Bold" TextColor="White" Text="{Binding statusact}" Grid.Column="1" Grid.Row="2"/>
+                                        <Label FontSize="Medium" FontAttributes="Bold" TextColor="White" Text="{Binding job}" Grid.Column="0" Grid.Row="1"/>
+                                        <Label FontSize="Medium" FontAttributes="Bold" TextColor="White" Text="{Binding addr}" Grid.Column="1" Grid.Row="1"/>
                                         <Label Style="{StaticResource StProfileName2}" Text="{Binding pnum}" Grid.Column="1" Grid.Row="0"/>
                                         <Frame Grid.Column="2" Grid.Row="0" Grid.RowSpan="4" BorderColor="White" VerticalOptions="Start"
                                                HorizontalOptions="End" WidthRequest="100" HeightRequest="100"
