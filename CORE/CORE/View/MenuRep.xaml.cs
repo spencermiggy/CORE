@@ -51,16 +51,8 @@ namespace CORE.View
         {
             try
             {
-                if (Search1.Text != "")
-                {
-                    var products = await MobileService.GetTable<repairer>().Take(100).ToListAsync();
-                    ShowPeople.ItemsSource = products.Where(p => p.job.ToLower().Contains(query.ToLower())).ToList();
-                }
-                else
-                {
-                    var repairers = await repairer.Read();
-                    ShowPeople.ItemsSource = repairers.Where(x => x.city == city).ToList();
-                }
+                var products = await MobileService.GetTable<repairer>().Take(100).ToListAsync();
+                ShowPeople.ItemsSource = products.Where(p => p.job.ToLower().Contains(query.ToLower())).ToList();
             }
             catch
             {
@@ -95,14 +87,21 @@ namespace CORE.View
             }
         }
 
-        private void SwipeItem_Clicked(object sender, EventArgs e)
+        private async void SwipeItem_Clicked(object sender, EventArgs e)
         {
-
+            var item = sender as SwipeItem;
+            if (item?.BindingContext is repairer model)
+            {
+                await Xamarin.Essentials.Map.OpenAsync(Convert.ToDouble(model.latt), Convert.ToDouble(model.longg), new MapLaunchOptions 
+                {
+                    NavigationMode = NavigationMode.Driving 
+                });
+            }
         }
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new MapPage());
+            await Navigation.PushModalAsync(new MapPage1());
         }
     }
 }

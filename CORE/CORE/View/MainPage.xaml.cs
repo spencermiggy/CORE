@@ -88,6 +88,8 @@ namespace CORE.View
                         App.picstr = users.picstr;
                         App.activetime = users.activetime;
                         App.statusact = users.statusact;
+                        App.latt = users.latt;
+                        App.longg = users.longg;
                         App.Current.MainPage = new MenuRep();
                     }
                     else

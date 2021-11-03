@@ -2,22 +2,21 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:CORE.CustomRenderer"
              x:Class="CORE.View.UpdatePage"
-             BackgroundImageSource="Bg.jpg">
+             BackgroundImageSource="Bg.jpg" Visual="Material">
     <ContentPage.Content>
         <Grid x:Name="profgrid1">
             <StackLayout Padding="0" Margin="50" HorizontalOptions="FillAndExpand">
                 <StackLayout VerticalOptions="Start">
                     <Frame BorderColor="White" VerticalOptions="Start"
                                                HorizontalOptions="Center" WidthRequest="100" HeightRequest="100"
-                                               HasShadow="False" CornerRadius="110" Padding="0" IsClippedToBounds="True">
+                                               HasShadow="False" CornerRadius="110" Padding="0" IsClippedToBounds="True" BackgroundColor="White">
                         <Image x:Name="SelectedImage" Aspect="AspectFit"/>
                     </Frame>
                 </StackLayout>
                 <StackLayout>
-                    <Grid ColumnDefinitions="*,*,*">
-                        <Button x:Name="BtnUploadImage" FontSize="Small" Text="Select from Gallery" Clicked="SelectButton_Clicked" CornerRadius="100" Grid.Column="1"
+                    <Button x:Name="BtnUploadImage" BackgroundColor="Transparent"
+                            FontSize="Small" FontAttributes="Bold" Text="Select from Gallery" Clicked="SelectButton_Clicked" CornerRadius="100"
                                 HeightRequest="45"/>
-                    </Grid>
                 </StackLayout>
                 <Frame  BackgroundColor="White" HeightRequest="500" HasShadow="True" Padding="0" Margin="0" CornerRadius="30">
 
@@ -30,39 +29,39 @@
 
                         <StackLayout Padding="0" Margin="20,20">
 
-                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                            <Frame BackgroundColor="DarkGray" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                 <StackLayout Orientation="Horizontal">
-                                    <local:CustomEntry x:Name="firstname" Placeholder="First Name" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                    <local:CustomEntry x:Name="firstname" Placeholder="First Name" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
                                 </StackLayout>
                             </Frame>
 
-                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                            <Frame BackgroundColor="DarkGray" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                 <StackLayout Orientation="Horizontal">
-                                    <local:CustomEntry x:Name="lastname" Placeholder="Last Name" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                    <local:CustomEntry x:Name="lastname" Placeholder="Last Name" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
                                 </StackLayout>
                             </Frame>
 
-                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                            <Frame BackgroundColor="DarkGray" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                 <StackLayout Orientation="Horizontal">
-                                    <local:CustomEntry x:Name="Pnumb" Placeholder="Phone Number" Keyboard="Numeric" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                    <local:CustomEntry x:Name="Pnumb" Placeholder="Phone Number" BackgroundColor="White" Keyboard="Numeric" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
                                 </StackLayout>
                             </Frame>
 
-                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                            <Frame BackgroundColor="DarkGray" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                 <StackLayout Orientation="Horizontal">
-                                    <local:CustomEntry x:Name="Addre" Placeholder="Address" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                    <local:CustomEntry x:Name="Addre" Placeholder="Address" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
                                 </StackLayout>
                             </Frame>
 
-                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                            <Frame BackgroundColor="DarkGray" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                 <StackLayout Orientation="Horizontal">
-                                    <local:CustomEntry x:Name="Citys" Placeholder="City" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                    <local:CustomEntry x:Name="Citys" Placeholder="City" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
                                 </StackLayout>
                             </Frame>
 
-                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                            <Frame BackgroundColor="DarkGray" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                 <StackLayout Orientation="Horizontal">
-                                    <local:CustomEntry x:Name="Passw" Placeholder="Password" IsPassword="True" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                    <local:CustomEntry x:Name="Passw" Placeholder="Password" IsPassword="True" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
                                 </StackLayout>
                             </Frame>
 

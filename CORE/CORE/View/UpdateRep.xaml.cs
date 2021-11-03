@@ -53,6 +53,8 @@ namespace CORE.View
                 city = Citys.Text,
                 pass = Passw.Text,
                 activetime = activetime,
+                latt = latt,
+                longg = longg,
                 statusact = statusact,
                 propics = $"{urlImage}",
                 picstr = $"{imgID}.jpg"

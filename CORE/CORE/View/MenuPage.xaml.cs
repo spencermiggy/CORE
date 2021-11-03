@@ -11,9 +11,6 @@ using Xamarin.Forms.Xaml;
 using Plugin.Messaging;
 using Xamarin.Essentials;
 using Xamarin.Forms.Maps;
-using Plugin.Geolocator.Abstractions;
-using Plugin.Geolocator;
-using Position = Plugin.Geolocator.Abstractions.Position;
 
 namespace CORE.View
 {
@@ -53,16 +50,8 @@ namespace CORE.View
         {
             try
             {
-                if (Search1.Text != "")
-                {
-                    var products = await MobileService.GetTable<repairer>().Take(100).ToListAsync();
-                    ShowPeople.ItemsSource = products.Where(p => p.job.ToLower().Contains(query.ToLower())).ToList();
-                }
-                else
-                {
-                    var repairers = await repairer.Read();
-                    ShowPeople.ItemsSource = repairers.Where(x => x.city == city).ToList();
-                }
+                var products = await MobileService.GetTable<repairer>().Take(100).ToListAsync();
+                ShowPeople.ItemsSource = products.Where(p => p.job.ToLower().Contains(query.ToLower())).ToList();
             }
             catch
             {
@@ -102,7 +91,10 @@ namespace CORE.View
             var item = sender as SwipeItem;
             if (item?.BindingContext is repairer model)
             {
-                Position position = (Position)await geocoder.GetPositionsForAddressAsync($"{model.addr}");
+                await Xamarin.Essentials.Map.OpenAsync(Convert.ToDouble(model.latt), Convert.ToDouble(model.longg), new MapLaunchOptions
+                {
+                    NavigationMode = NavigationMode.Driving
+                });
             }
         }
 
