@@ -8,7 +8,7 @@
             <StackLayout>
                 <Grid ColumnDefinitions="*,*,*,*" Margin="20">
                     <Button ImageSource="user.png" BackgroundColor="Transparent" Clicked="ProfBtn" Grid.Column="0" Grid.Row="0" BorderColor="Transparent"/>
-                    <Frame Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" CornerRadius="30" HeightRequest="10" BackgroundColor="White">
+                    <Frame Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" CornerRadius="30" HeightRequest="10" BackgroundColor="White" IsClippedToBounds="True">
                         <SearchBar x:Name="Search1" Placeholder="Search" BackgroundColor="Transparent" VerticalOptions="Start" TextColor="Black" CancelButtonColor="Black" PlaceholderColor="Black"
                                 TextChanged="Search1_TextChanged"/>
                     </Frame>
@@ -36,7 +36,7 @@
                                          Clicked="reportButton_Clicked"/>
                                     </SwipeItems>
                                 </SwipeView.LeftItems>
-                                <Frame BackgroundColor="Transparent" BorderColor="Transparent" Margin="0,-15,0,-35" Padding="10">
+                                <Frame BackgroundColor="Transparent" BorderColor="Transparent" Margin="0,-15,0,-35" Padding="10" IsClippedToBounds="True">
                                     <Grid Margin="10" Padding="20">
                                         <Label Style="{StaticResource StProfileName2}" Text="{Binding fname}" Grid.Column="0" Grid.Row="0"/>
                                         <Label FontSize="Medium" FontAttributes="Bold" TextColor="White" Text="{Binding activetime}" Grid.Column="0" Grid.Row="2"/>

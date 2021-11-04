@@ -31,6 +31,8 @@ namespace CORE.View
                 city = city,
                 pass = pass,
                 propics = propics,
+                latt = latt,
+                longg = longg,
                 statusact = stat.Text,
                 activetime = time.Text
             };
