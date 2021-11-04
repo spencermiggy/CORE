@@ -6,9 +6,9 @@ using Xamarin.Forms.Xaml;
 
 [assembly: ExportFont("GREENSEA.otf", Alias = "let")]
 [assembly: ExportFont("GREENSEA-Awesome.otf", Alias = "lett")]
-[assembly: ExportFont("Oswald-Bold.ttf", Alias = "lettt")]
-[assembly: ExportFont("Oswald-SemiBold.ttf", Alias = "letttt")]
-[assembly: ExportFont("Lobster-Regular.ttf", Alias = "let1")]
+[assembly: ExportFont("Font-Awesome-6-Brands-Regular-400.otf", Alias = "lettt")]
+[assembly: ExportFont("BUNCH-BONARIE.ttf", Alias = "letttt")]
+[assembly: ExportFont("RompiesRegular-WyKYG.otf", Alias = "lettttt")]
 namespace CORE
 {
     public partial class App : Application
