@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:sharpndado="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame"
              x:Class="CORE.View.MenuRep" BackgroundImageSource="BG.jpg">
     <ContentPage.Content>
         <StackLayout>
@@ -18,39 +18,41 @@
                 <CollectionView x:Name="ShowPeople">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <SwipeView BackgroundColor="Transparent">
-                                <SwipeView.LeftItems>
-                                    <SwipeItems>
-                                        <SwipeItem Text="Location"
+                            <sharpndado:MaterialFrame VerticalOptions="Center" Margin="20" Padding="20" Style="{StaticResource AcrylicFrame}">
+                                <SwipeView BackgroundColor="Transparent">
+                                    <SwipeView.LeftItems>
+                                        <SwipeItems>
+                                            <SwipeItem Text="Locate Now"
                                          IconImageSource="maplogo.png"
-                                         BackgroundColor="Aqua"
+                                         BackgroundColor="LightBlue"
                                          Clicked="SwipeItem_Clicked"/>
-                                        <SwipeItem Text="Message/Call"
+                                            <SwipeItem Text="Message/Call"
                                          IconImageSource="sms.png"
                                          BackgroundColor="Aquamarine"
                                          Clicked="TextBtn"/>
-                                        <SwipeItem Text="Report"
+                                            <SwipeItem Text="Report"
                                          IconImageSource="report.png"
                                          BackgroundColor="SkyBlue"
                                          Clicked="reportButton_Clicked"/>
-                                    </SwipeItems>
-                                </SwipeView.LeftItems>
-                                <Frame BackgroundColor="Transparent" BorderColor="Transparent" Margin="0,-15,0,-35" Padding="10" IsClippedToBounds="True">
-                                    <Grid Margin="10" Padding="20">
-                                        <Label Style="{StaticResource StProfileName2}" Text="{Binding fname}" Grid.Column="0" Grid.Row="0"/>
-                                        <Label FontSize="Medium" FontAttributes="Bold" TextColor="White" Text="{Binding activetime}" Grid.Column="0" Grid.Row="2"/>
-                                        <Label FontSize="Medium" FontAttributes="Bold" TextColor="White" Text="{Binding statusact}" Grid.Column="1" Grid.Row="2"/>
-                                        <Label FontSize="Medium" FontAttributes="Bold" TextColor="White" Text="{Binding job}" Grid.Column="0" Grid.Row="1"/>
-                                        <Label FontSize="Medium" FontAttributes="Bold" TextColor="White" Text="{Binding addr}" Grid.Column="1" Grid.Row="1"/>
-                                        <Label Style="{StaticResource StProfileName2}" Text="{Binding pnum}" Grid.Column="1" Grid.Row="0"/>
-                                        <Frame Grid.Column="2" Grid.Row="0" Grid.RowSpan="4" BorderColor="White" VerticalOptions="Start"
+                                        </SwipeItems>
+                                    </SwipeView.LeftItems>
+                                    <Frame BackgroundColor="Transparent" BorderColor="Transparent" Margin="0,-25,0,-40" Padding="10" IsClippedToBounds="True">
+                                        <Grid Margin="10" Padding="20">
+                                            <Label Style="{StaticResource StProfileName2}" FontFamily="let" FontSize="Small" Text="{Binding fname}" Grid.Column="2" Grid.Row="4" HorizontalOptions="Center"/>
+                                            <Label Style="{StaticResource StProfileName3}" Text="{Binding activetime}" Grid.Column="0" Grid.Row="3"/>
+                                            <Label Style="{StaticResource StProfileName3}" Text="{Binding statusact}" Grid.Column="1" Grid.Row="3"/>
+                                            <Label Style="{StaticResource StProfileName3}" Text="{Binding job}" Grid.Column="0" Grid.Row="2"/>
+                                            <Label Style="{StaticResource StProfileName3}" Text="{Binding addr}" Grid.Column="1" Grid.Row="2"/>
+                                            <Label Style="{StaticResource StProfileName2}" Text="{Binding pnum}" Grid.Column="0" Grid.Row="0"/>
+                                            <Frame Grid.Column="2" Grid.Row="0" Grid.RowSpan="4" BorderColor="White" VerticalOptions="Start"
                                                HorizontalOptions="End" WidthRequest="100" HeightRequest="100"
                                                HasShadow="False" CornerRadius="110" Padding="0" IsClippedToBounds="True">
-                                            <Image Source="{Binding propics}" Aspect="Fill"/>
-                                        </Frame>
-                                    </Grid>
-                                </Frame>
-                            </SwipeView>
+                                                <Image Source="{Binding propics}" Aspect="Fill"/>
+                                            </Frame>
+                                        </Grid>
+                                    </Frame>
+                                </SwipeView>
+                            </sharpndado:MaterialFrame>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
