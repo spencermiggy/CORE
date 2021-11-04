@@ -30,7 +30,7 @@
                 <Setter Property="FontAttributes"      Value="Bold"/>
                 <Setter Property="FontSize"            Value="20"/>
                 <Setter Property="Margin"              Value="20,80,20,0"/>
-                <Setter Property="TextColor"           Value="White"/>
+                <Setter Property="TextColor"           Value="Black"/>
                 <Setter Property="FontFamily"              Value="let"/>
             </Style>
 
@@ -51,7 +51,7 @@
                 <Setter Property="FontAttributes"      Value="Bold"/>
                 <Setter Property="FontSize"            Value="20"/>
                 <Setter Property="Margin"              Value="20,0,20,0"/>
-                <Setter Property="TextColor"           Value="White"/>
+                <Setter Property="TextColor"           Value="Black"/>
                 <Setter Property="FontFamily"              Value="let"/>
             </Style>
 
@@ -59,7 +59,7 @@
                 <Setter Property="Margin"                  Value="20,20"/>
                 <Setter Property="HorizontalTextAlignment" Value="Center"/>
                 <Setter Property="HorizontalOptions"       Value="CenterAndExpand"/>
-                <Setter Property="TextColor"               Value="White"/>
+                <Setter Property="TextColor"               Value="Black"/>
                 <Setter Property="FontFamily"              Value="let"/>
                 <Setter Property="FontSize"                Value="Subtitle"/>
             </Style>
@@ -67,7 +67,7 @@
             <Style x:Key="StAndroidLabel"                  TargetType="Label">
                 <Setter Property="HorizontalTextAlignment" Value="Center"/>
                 <Setter Property="FontSize"                Value ="Micro"/>
-                <Setter Property="TextColor"               Value="White"/>
+                <Setter Property="TextColor"               Value="Black"/>
                 <Setter Property="FontFamily"              Value="let"/>
             </Style>
             <Style x:Key="StAndroidLabel1"                  TargetType="Label">

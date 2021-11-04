@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:CORE.CustomRenderer" xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              x:Class="CORE.View.SchedPage"
-             BackgroundImageSource="BG.jpg">
+             BackgroundColor="AntiqueWhite" Visual="Material">
     <ContentPage.Content>
         <StackLayout>
             <Grid>
@@ -18,13 +18,13 @@
 
                             <StackLayout Padding="0" Margin="15,10">
 
-                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                <Frame BackgroundColor="DarkGray" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                     <StackLayout Orientation="Horizontal">
                                         <local:CustomEntry x:Name="stat" PlaceholderColor="Black" Placeholder="Set status" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
                                     </StackLayout>
                                 </Frame>
 
-                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                <Frame BackgroundColor="DarkGray" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                     <StackLayout Orientation="Horizontal">
                                         <local:CustomEntry x:Name="time" PlaceholderColor="Black" Placeholder="Set time Ex.1am to 9pm" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
                                     </StackLayout>
@@ -32,7 +32,7 @@
 
                                 <StackLayout>
                                     <Grid Margin="20">
-                                        <Button Text="Update" BackgroundColor="HotPink" CornerRadius="100" Grid.Column="1" Grid.Row="0" Clicked="Btnupd"/>
+                                        <Button Text="Update" BackgroundColor="LightPink" CornerRadius="100" Grid.Column="1" Grid.Row="0" Clicked="Btnupd"/>
                                     </Grid>
                                 </StackLayout>
                             </StackLayout>

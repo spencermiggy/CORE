@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:CORE.CustomRenderer"
              x:Class="CORE.View.newRep"
-             BackgroundImageSource="BG.jpg" Visual="Material">
+             BackgroundColor="AntiqueWhite" Visual="Material">
     <ContentPage.Content>
         <StackLayout Padding="0" Margin="50" HorizontalOptions="FillAndExpand">
             <StackLayout VerticalOptions="Start">
@@ -14,9 +14,9 @@
                 </Frame>
             </StackLayout>
             <StackLayout>
-                <Button x:Name="BtnUploadImage" FontSize="Small" FontAttributes="Bold"
-                        BackgroundColor="Transparent" Text="Select from Gallery" Clicked="SelectButton_Clicked" CornerRadius="100"
-                                HeightRequest="45"/>
+                <Button x:Name="BtnUploadImage" FontSize="Small" FontAttributes="Bold" BackgroundColor="AntiqueWhite"
+                            Text="Select from Gallery" Clicked="SelectButton_Clicked" CornerRadius="100"
+                                HeightRequest="45" BorderColor="AntiqueWhite" TextColor="Black" Margin="70,0,70,-10"/>
             </StackLayout>
             <Grid>
                 <StackLayout>

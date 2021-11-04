@@ -2,18 +2,25 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CORE.View.ContactAdmin"
-             BackgroundImageSource="BG.jpg">
+             BackgroundColor="AntiqueWhite">
     <ContentPage.Content>
-        <StackLayout Margin="30">
-            <StackLayout Margin="50" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Spacing="40" BackgroundColor="WhiteSmoke">
-                <Grid ColumnDefinitions="*,*">
-                    <ImageButton x:Name="fbbtn" Source="fb.png" BackgroundColor="Transparent" WidthRequest="60" Grid.Column="0" Grid.Row="0" Clicked="fbbtn_Clicked"/>
-                    <ImageButton x:Name="gbtn" Source="Gmail.png" BackgroundColor="Transparent" WidthRequest="60" Grid.Column="1" Grid.Row="0" Clicked="gbtn_Clicked"/>
-                </Grid>
-                <Label Text="Contact us our Social media accounts" TextColor="Black" FontSize="16" FontFamily="let" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
-                <Button ImageSource="sms.png" HorizontalOptions="Center" BackgroundColor="Transparent" Clicked="but_Clicked"/>
-                <Label Text="Message or Call me on the button" VerticalOptions="Start" TextColor="Black"
+        <StackLayout>
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+                <Image Source="homeicon.png" Aspect="AspectFit" Margin="60"/>
+            </StackLayout>
+            <StackLayout Margin="30">
+                <Frame CornerRadius="30" VerticalOptions="CenterAndExpand">
+                    <StackLayout Margin="50" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Spacing="40" BackgroundColor="White">
+                        <Grid ColumnDefinitions="*,*">
+                            <ImageButton x:Name="fbbtn" Source="fb.png" BackgroundColor="Transparent" WidthRequest="60" Grid.Column="0" Grid.Row="0" Clicked="fbbtn_Clicked"/>
+                            <ImageButton x:Name="gbtn" Source="Gmail.png" BackgroundColor="Transparent" WidthRequest="60" Grid.Column="1" Grid.Row="0" Clicked="gbtn_Clicked"/>
+                        </Grid>
+                        <Label Text="Contact us our Social media accounts" TextColor="Black" FontSize="16" FontFamily="let" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+                        <Button ImageSource="sms.png" HorizontalOptions="Center" BackgroundColor="Transparent" Clicked="but_Clicked"/>
+                        <Label Text="Message or Call me on the button" VerticalOptions="Start" TextColor="Black"
                        HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="16" FontFamily="let"/>
+                    </StackLayout>
+                </Frame>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

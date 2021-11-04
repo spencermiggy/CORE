@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:CORE.CustomRenderer"
              x:Class="CORE.View.UpdatePage"
-             BackgroundImageSource="Bg.jpg" Visual="Material">
+             BackgroundColor="AntiqueWhite" Visual="Material">
     <ContentPage.Content>
         <Grid x:Name="profgrid1">
             <StackLayout Padding="0" Margin="50" HorizontalOptions="FillAndExpand">
@@ -14,9 +14,9 @@
                     </Frame>
                 </StackLayout>
                 <StackLayout>
-                    <Button x:Name="BtnUploadImage" BackgroundColor="Transparent"
-                            FontSize="Small" FontAttributes="Bold" Text="Select from Gallery" Clicked="SelectButton_Clicked" CornerRadius="100"
-                                HeightRequest="45"/>
+                    <Button x:Name="BtnUploadImage" FontSize="Small" FontAttributes="Bold" BackgroundColor="AntiqueWhite"
+                            Text="Select from Gallery" Clicked="SelectButton_Clicked" CornerRadius="100"
+                                HeightRequest="45" BorderColor="AntiqueWhite" TextColor="Black" Margin="70,0,70,-10"/>
                 </StackLayout>
                 <Frame  BackgroundColor="White" HeightRequest="600" HasShadow="True" Padding="0" Margin="0" CornerRadius="30">
 

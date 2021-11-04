@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CORE.View.ProfileRep" BackgroundImageSource="BG.jpg">
+             x:Class="CORE.View.ProfileRep" BackgroundColor="AntiqueWhite">
     <ContentPage.Content>
         <ScrollView VerticalScrollBarVisibility="Never">
             <Grid x:Name="profgrid1" RowSpacing="0" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto">
@@ -31,6 +31,12 @@
                     
                     <Button Grid.Row="0" Grid.Column="3" CornerRadius ="30" ImageSource="out.png" BackgroundColor="#ebedf0" Clicked="BtnLog" />
                     <Label Grid.Row="1" Grid.Column="3"  Text="Logout" Style="{StaticResource StAndroidLabel}"/>
+                </Grid>
+                <Grid Grid.Row="6" IsVisible="{OnPlatform iOS=False, Android=True}"  HorizontalOptions="CenterAndExpand" ColumnSpacing="10">
+                    <Label Style="{StaticResource StProfileName3}" Text="HOuse Address:" Grid.Column="0" Grid.Row="0"/>
+                    <Label Style="{StaticResource StProfileName3}" Text="City:" Grid.Column="0" Grid.Row="1"/>
+                    <Label Style="{StaticResource StProfileName2}" Text="{Binding addr}" Grid.Column="1" Grid.Row="0"/>
+                    <Label Style="{StaticResource StProfileName2}" Text="{Binding city}" Grid.Column="1" Grid.Row="1"/>
                 </Grid>
             </Grid>
 

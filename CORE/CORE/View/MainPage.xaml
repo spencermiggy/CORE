@@ -5,20 +5,15 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:CORE.CustomRenderer"
              mc:Ignorable="d"
              x:Class="CORE.View.MainPage"
-             BackgroundImageSource="BG.jpg" Visual="Material">
+             BackgroundColor="AntiqueWhite" Visual="Material">
 
     <StackLayout>
         <Grid>
-            <StackLayout Padding="0" Margin="0" HorizontalOptions="FillAndExpand">
-                <Frame HeightRequest="150" BackgroundColor="Transparent" Padding="0" Margin="0">
-                    
-                </Frame>
-            </StackLayout>
             <StackLayout Padding="0" Margin="70,60,70,100" HorizontalOptions="FillAndExpand">
                 <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
-                    <Image Source="homeicon.png" Aspect="AspectFit" Margin="50"/>
+                    <Image Source="homeicon.png" Aspect="AspectFit" Margin="40"/>
                 </StackLayout>
-                <Frame BackgroundColor="WhiteSmoke" HeightRequest="500" HasShadow="True" Padding="0" Margin="0">
+                <Frame BackgroundColor="WhiteSmoke" HeightRequest="500" HasShadow="True" Padding="0" Margin="0" CornerRadius="30">
 
                     <StackLayout>
 
@@ -50,8 +45,8 @@
                             </Frame>
                             <StackLayout>
                                 <Grid RowDefinitions="*,*" Margin="20">
-                                    <Button Text="CUSTOMER" BackgroundColor="HotPink" FontFamily="let" CornerRadius="100" Grid.Column="0" Grid.Row="0" Clicked="CusLog_Clicked" FontSize="Caption"/>
-                                    <Button Text="REPAIRER" BackgroundColor="HotPink" FontFamily="let" CornerRadius="100" Grid.Column="1" Grid.Row="0" Clicked="RepLog_Clicked" FontSize="Caption"/>
+                                    <Button Text="CUSTOMER" BackgroundColor="LightPink" FontFamily="let" CornerRadius="100" Grid.Column="0" Grid.Row="0" Clicked="CusLog_Clicked" FontSize="Caption"/>
+                                    <Button Text="REPAIRER" BackgroundColor="LightPink" FontFamily="let" CornerRadius="100" Grid.Column="1" Grid.Row="0" Clicked="RepLog_Clicked" FontSize="Caption"/>
                                 </Grid>
                             </StackLayout>
                             

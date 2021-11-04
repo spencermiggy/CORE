@@ -3,35 +3,40 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:PanCake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              x:Class="CORE.View.ProfilePage"
-             BackgroundImageSource="BG.jpg" Visual="Material">
+             BackgroundColor="AntiqueWhite" Visual="Material">
     <ContentPage.Content>
         <ScrollView VerticalScrollBarVisibility="Never">
             <Grid x:Name="profgrid" RowSpacing="0" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto">
 
-                            <!-- Profile picture-->
-                            <Frame Grid.Row="0" Margin="100,0,100,20" TranslationY="90"  BorderColor="White" VerticalOptions="Start" HorizontalOptions="End" WidthRequest="220" HeightRequest="220" HasShadow="False" CornerRadius="110" Padding="0" IsClippedToBounds="True">
-                                <Image Source="{Binding propics}" Aspect="AspectFit"/>
-                            </Frame>
-                            <!-- Name & Description-->
-                            <Label Grid.Row="1" Text="{Binding fname}" Style="{StaticResource StProfileName}" />
-                            <Label Grid.Row="2" Text="{Binding lname}" Style="{StaticResource StProfileName1}" />
-                            <Label Grid.Row="3" Text="{Binding pnum}"  Style="{StaticResource StProfileDesc}"/>
+                <!-- Profile picture-->
+                <Frame Grid.Row="0" Margin="100,0,100,20" TranslationY="90"  BorderColor="White" VerticalOptions="Start" HorizontalOptions="End" WidthRequest="220" HeightRequest="220" HasShadow="False" CornerRadius="110" Padding="0" IsClippedToBounds="True">
+                    <Image Source="{Binding propics}" Aspect="AspectFit"/>
+                </Frame>
+                <!-- Name & Description-->
+                <Label Grid.Row="1" Text="{Binding fname}" Style="{StaticResource StProfileName}" />
+                <Label Grid.Row="2" Text="{Binding lname}" Style="{StaticResource StProfileName1}" />
+                <Label Grid.Row="3" Text="{Binding pnum}"  Style="{StaticResource StProfileDesc}"/>
 
-                            <!--Android Buttons-->
-                            <Grid Grid.Row="4" ColumnDefinitions="50,50,50" RowDefinitions="50,Auto" Padding="0,10" IsVisible="{OnPlatform iOS=False, Android=True}"  HorizontalOptions="CenterAndExpand" ColumnSpacing="30">
+                <!--Android Buttons-->
+                <Grid Grid.Row="4" ColumnDefinitions="50,50,50" RowDefinitions="50,Auto" Padding="0,10" IsVisible="{OnPlatform iOS=False, Android=True}"  HorizontalOptions="CenterAndExpand" ColumnSpacing="30">
 
-                                <Button Grid.Row="0" Grid.Column="0" WidthRequest="50" CornerRadius ="30" BackgroundColor="#ebedf0" ImageSource="pen.png" TextColor="Black" FontSize="Medium" Clicked="BtnEdit" />
-                                <Label Grid.Row="1" Grid.Column="0"  Text="Edit Profile" Style="{StaticResource StAndroidLabel}"/>
+                    <Button Grid.Row="0" Grid.Column="0" WidthRequest="50" CornerRadius ="30" BackgroundColor="#ebedf0" ImageSource="pen.png" TextColor="Black" FontSize="Medium" Clicked="BtnEdit" />
+                    <Label Grid.Row="1" Grid.Column="0"  Text="Edit Profile" Style="{StaticResource StAndroidLabel}"/>
 
-                                <Button Grid.Row="0" Grid.Column="1" CornerRadius ="30" 
+                    <Button Grid.Row="0" Grid.Column="1" CornerRadius ="30" 
                                  ImageSource="reports.png" BackgroundColor="#ebedf0" Clicked="reportButton_Clicked" />
-                                <Label Grid.Row="1" Grid.Column="1"  Text="Report an Account" Style="{StaticResource StAndroidLabel}"/>
+                    <Label Grid.Row="1" Grid.Column="1"  Text="Report an Account" Style="{StaticResource StAndroidLabel}"/>
 
-                                <Button Grid.Row="0" Grid.Column="2" CornerRadius ="30" ImageSource="out.png" BackgroundColor="#ebedf0" Clicked="BtnLog" />
-                                <Label Grid.Row="1" Grid.Column="2"  Text="Logout" Style="{StaticResource StAndroidLabel}"/>
-                            </Grid>
-                        </Grid>
-                  
+                    <Button Grid.Row="0" Grid.Column="2" CornerRadius ="30" ImageSource="out.png" BackgroundColor="#ebedf0" Clicked="BtnLog" />
+                    <Label Grid.Row="1" Grid.Column="2"  Text="Logout" Style="{StaticResource StAndroidLabel}"/>
+                </Grid>
+                <Grid Grid.Row="5" IsVisible="{OnPlatform iOS=False, Android=True}"  HorizontalOptions="CenterAndExpand" ColumnSpacing="10">
+                    <Label Style="{StaticResource StProfileName3}" Text="HOuse Address:" Grid.Column="0" Grid.Row="0"/>
+                    <Label Style="{StaticResource StProfileName3}" Text="City:" Grid.Column="0" Grid.Row="1"/>
+                    <Label Style="{StaticResource StProfileName2}" Text="{Binding addr}" Grid.Column="1" Grid.Row="0"/>
+                    <Label Style="{StaticResource StProfileName2}" Text="{Binding city}" Grid.Column="1" Grid.Row="1"/>
+                </Grid>
+            </Grid>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
