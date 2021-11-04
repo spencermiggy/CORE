@@ -38,11 +38,13 @@
                 <Setter Property="FontSize"            Value="Medium"/>
                 <Setter Property="FontAttributes"      Value="Bold"/>
                 <Setter Property="TextColor"           Value="Black"/>
+                <Setter Property="FontFamily"          Value="let1"/>
             </Style>
             <Style x:Key="StProfileName3"              TargetType="Label">
                 <Setter Property="FontSize"            Value="Medium"/>
                 <Setter Property="HorizontalTextAlignment" Value="Start"/>
                 <Setter Property="FontAttributes"      Value="Bold"/>
+                <Setter Property="FontFamily"          Value="let1"/>
                 <Setter Property="TextColor"           Value="Black"/>
             </Style>
             
