@@ -13,7 +13,7 @@
 
                     <StackLayout>
                         <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Margin="0,50,0,0">
-                            <Label Text="Choose Below" FontFamily="let" HorizontalOptions="CenterAndExpand" FontSize="Title" TextColor="Black"/>
+                            <Label Text="Choose Below" Style="{StaticResource StProfileName2}" HorizontalOptions="CenterAndExpand" FontSize="Title" TextColor="Black"/>
                         </StackLayout>
 
                         <StackLayout Margin="50,50,50,50">
@@ -21,11 +21,11 @@
                             <Grid ColumnDefinitions="*,*">
                                 <StackLayout Grid.Column="0" Grid.Row="0">
                                     <ImageButton x:Name="btnCusreg" Source="@drawable/cus.png" WidthRequest="50" HeightRequest="50" BackgroundColor="Transparent" CornerRadius="100" Clicked="cur_Clicked"/>
-                                    <Label Text="Customer" Style="{StaticResource StAndroidLabel}" TextColor="Black" HorizontalOptions="Center"/>
+                                    <Label Text="Customer" Style="{StaticResource StAndroidLabel}" FontSize="12" TextColor="Black" HorizontalOptions="Center"/>
                                 </StackLayout>
                                 <StackLayout Grid.Column="1" Grid.Row="0">
                                     <ImageButton x:Name="btnRepreg" Source="@drawable/rep.jpg" WidthRequest="50" HeightRequest="50" BackgroundColor="Transparent" CornerRadius="100" Clicked="rep_Clicked"/>
-                                    <Label Text="Repairer" Style="{StaticResource StAndroidLabel}" TextColor="Black" HorizontalOptions="Center"/>
+                                    <Label Text="Repairer" Style="{StaticResource StAndroidLabel}" FontSize="12" TextColor="Black" HorizontalOptions="Center"/>
                                 </StackLayout>
                             </Grid>
 

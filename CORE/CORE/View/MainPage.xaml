@@ -30,7 +30,7 @@
                                         <Image Source="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png" Aspect="AspectFill" Margin="0"/>
                                     </Frame>
 
-                                    <local:CustomEntry x:Name="Pnumb" Placeholder="Phone Number" BackgroundColor="WhiteSmoke" PlaceholderColor="Gray" Keyboard="Numeric" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                    <local:CustomEntry x:Name="Pnumb" Style="{StaticResource StProfileName2}" Placeholder="Phone Number" BackgroundColor="WhiteSmoke" PlaceholderColor="Gray" Keyboard="Numeric" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
                                 </StackLayout>
                             </Frame>
 
@@ -40,13 +40,13 @@
                                         <Image Source="https://icon-library.com/images/show-password-icon/show-password-icon-4.jpg" Aspect="AspectFill" Margin="0"/>
                                     </Frame>
 
-                                    <local:CustomEntry x:Name="Passw" Placeholder="Password" BackgroundColor="WhiteSmoke" PlaceholderColor="Gray" IsPassword="True" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                    <local:CustomEntry x:Name="Passw" Style="{StaticResource StProfileName2}" Placeholder="Password" BackgroundColor="WhiteSmoke" PlaceholderColor="Gray" IsPassword="True" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
                                 </StackLayout>
                             </Frame>
                             <StackLayout>
                                 <Grid RowDefinitions="*,*" Margin="20">
-                                    <Button Text="CUSTOMER" BackgroundColor="LightPink" FontFamily="let" CornerRadius="100" Grid.Column="0" Grid.Row="0" Clicked="CusLog_Clicked" FontSize="Caption"/>
-                                    <Button Text="REPAIRER" BackgroundColor="LightPink" FontFamily="let" CornerRadius="100" Grid.Column="1" Grid.Row="0" Clicked="RepLog_Clicked" FontSize="Caption"/>
+                                    <Button Text="CUSTOMER" BackgroundColor="LightPink" Style="{StaticResource StProfileName2}" TextColor="White" CornerRadius="100" Grid.Column="0" Grid.Row="0" Clicked="CusLog_Clicked" FontSize="Caption"/>
+                                    <Button Text="REPAIRER" BackgroundColor="LightPink" Style="{StaticResource StProfileName2}" TextColor="White" CornerRadius="100" Grid.Column="1" Grid.Row="0" Clicked="RepLog_Clicked" FontSize="Caption"/>
                                 </Grid>
                             </StackLayout>
                             
@@ -54,7 +54,7 @@
                                 <Label Text="Still Not Connected ?" TextColor="DarkGray" FontSize="Small"/>
                             </StackLayout>
                             <StackLayout>
-                                <Button Text="SIGN UP" BackgroundColor="White" TextColor="HotPink" CornerRadius="30" HorizontalOptions="Center" HeightRequest="30" FontSize="10" Clicked="addAcc_Clicked"/>
+                                <Button Text="SIGN UP" BackgroundColor="White" Style="{StaticResource StProfileName2}" TextColor="HotPink" CornerRadius="30" HorizontalOptions="Center" HeightRequest="30" FontSize="10" Clicked="addAcc_Clicked"/>
                             </StackLayout>
 
                         </StackLayout>

@@ -33,43 +33,43 @@
 
                                 <Frame BackgroundColor="DarkGray" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                     <StackLayout Orientation="Horizontal">
-                                        <local:CustomEntry x:Name="firstname" Placeholder="First Name" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
+                                        <local:CustomEntry x:Name="firstname" Style="{StaticResource StProfileName2}" Placeholder="First Name" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
                                     </StackLayout>
                                 </Frame>
 
                                 <Frame BackgroundColor="DarkGray" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                     <StackLayout Orientation="Horizontal">
-                                        <local:CustomEntry x:Name="lastname" Placeholder="Last Name" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
+                                        <local:CustomEntry x:Name="lastname" Style="{StaticResource StProfileName2}" Placeholder="Last Name" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
                                     </StackLayout>
                                 </Frame>
 
                                 <Frame BackgroundColor="DarkGray" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                     <StackLayout Orientation="Horizontal">
-                                        <local:CustomEntry x:Name="Job" Placeholder="Job as a repairer?" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
+                                        <local:CustomEntry x:Name="Job" Style="{StaticResource StProfileName2}" Placeholder="Job as a repairer?" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
                                     </StackLayout>
                                 </Frame>
 
                                 <Frame BackgroundColor="DarkGray" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                     <StackLayout Orientation="Horizontal">
-                                        <local:CustomEntry x:Name="Pnumb" Placeholder="Phone Number" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
+                                        <local:CustomEntry x:Name="Pnumb" Style="{StaticResource StProfileName2}" Placeholder="Phone Number" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
                                     </StackLayout>
                                 </Frame>
 
                                 <Frame BackgroundColor="DarkGray" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                     <StackLayout Orientation="Horizontal">
-                                        <local:CustomEntry x:Name="Addre" Placeholder="Address" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
+                                        <local:CustomEntry x:Name="Addre" Style="{StaticResource StProfileName2}" Placeholder="Address" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
                                     </StackLayout>
                                 </Frame>
 
                                 <Frame BackgroundColor="DarkGray" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                     <StackLayout Orientation="Horizontal">
-                                        <local:CustomEntry x:Name="Citys" Placeholder="City" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
+                                        <local:CustomEntry x:Name="Citys" Style="{StaticResource StProfileName2}" Placeholder="City" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
                                     </StackLayout>
                                 </Frame>
 
                                 <Frame BackgroundColor="DarkGray" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                     <StackLayout Orientation="Horizontal">
-                                        <local:CustomEntry x:Name="Passw" Placeholder="Password" BackgroundColor="White" IsPassword="True" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
+                                        <local:CustomEntry x:Name="Passw" Style="{StaticResource StProfileName2}" Placeholder="Password" BackgroundColor="White" IsPassword="True" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
                                     </StackLayout>
                                 </Frame>
 

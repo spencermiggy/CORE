@@ -11,13 +11,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="FontFamily\BUNCH-BONARIE.ttf" />
+    <None Remove="FontFamily\Font-Awesome-6-Brands-Regular-400.otf" />
     <None Remove="FontFamily\GREENSEA-Awesome.otf" />
     <None Remove="FontFamily\GREENSEA.otf" />
+    <None Remove="FontFamily\RompiesRegular-WyKYG.otf" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="FontFamily\BUNCH-BONARIE.ttf" />
+    <EmbeddedResource Include="FontFamily\Font-Awesome-6-Brands-Regular-400.otf" />
     <EmbeddedResource Include="FontFamily\GREENSEA-Awesome.otf" />
     <EmbeddedResource Include="FontFamily\GREENSEA.otf" />
+    <EmbeddedResource Include="FontFamily\RompiesRegular-WyKYG.otf" />
   </ItemGroup>
 
   <ItemGroup>
