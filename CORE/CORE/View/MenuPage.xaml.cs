@@ -102,5 +102,55 @@ namespace CORE.View
         {
             await Navigation.PushModalAsync(new MapPage());
         }
+
+        private async void Laptop_Clicked(object sender, EventArgs e)
+        {
+            var products = await MobileService.GetTable<repairer>().Take(100).ToListAsync();
+            ShowPeople.ItemsSource = products.Where(p => p.job.ToLower().Contains(Laptop.Text.ToLower())).ToList();
+        }
+
+        private async void Android_Clicked(object sender, EventArgs e)
+        {
+            var products = await MobileService.GetTable<repairer>().Take(100).ToListAsync();
+            ShowPeople.ItemsSource = products.Where(p => p.job.ToLower().Contains(Android.Text.ToLower())).ToList();
+        }
+
+        private async void IOS_Clicked(object sender, EventArgs e)
+        {
+            var products = await MobileService.GetTable<repairer>().Take(100).ToListAsync();
+            ShowPeople.ItemsSource = products.Where(p => p.job.ToLower().Contains(IOS.Text.ToLower())).ToList();
+        }
+
+        private async void Desktop_Clicked(object sender, EventArgs e)
+        {
+            var products = await MobileService.GetTable<repairer>().Take(100).ToListAsync();
+            ShowPeople.ItemsSource = products.Where(p => p.job.ToLower().Contains(Desktop.Text.ToLower())).ToList();
+        }
+
+        private async void Plumber_Clicked(object sender, EventArgs e)
+        {
+            var products = await MobileService.GetTable<repairer>().Take(100).ToListAsync();
+            ShowPeople.ItemsSource = products.Where(p => p.job.ToLower().Contains(Plumber.Text.ToLower())).ToList();
+        }
+        private async void Developer_Clicked(object sender, EventArgs e)
+        {
+            var products = await MobileService.GetTable<repairer>().Take(100).ToListAsync();
+            ShowPeople.ItemsSource = products.Where(p => p.job.ToLower().Contains(Developer.Text.ToLower())).ToList();
+        }
+        private async void Electric_Clicked(object sender, EventArgs e)
+        {
+            var products = await MobileService.GetTable<repairer>().Take(100).ToListAsync();
+            ShowPeople.ItemsSource = products.Where(p => p.job.ToLower().Contains(Electric.Text.ToLower())).ToList();
+        }
+        private async void Keypad_Clicked(object sender, EventArgs e)
+        {
+            var products = await MobileService.GetTable<repairer>().Take(100).ToListAsync();
+            ShowPeople.ItemsSource = products.Where(p => p.job.ToLower().Contains(Keypad.Text.ToLower())).ToList();
+        }
+        private async void RefreshView_Refreshing(object sender, EventArgs e)
+        {
+            await GetRepairer();
+            refreshme.IsRefreshing = false;
+        }
     }
 }

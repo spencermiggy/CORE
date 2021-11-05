@@ -5,21 +5,63 @@
              BackgroundColor="AntiqueWhite">
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout HeightRequest="100" Margin="0,-10,0,-15">
-                <Grid ColumnDefinitions="*,*,*,*" Margin="20">
-                    <Button ImageSource="user.png" BackgroundColor="Transparent" Clicked="ProfBtn" Grid.Column="0" Grid.Row="0" BorderColor="Transparent"/>
-                    <Frame Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" CornerRadius="30" HeightRequest="10" BackgroundColor="White" IsClippedToBounds="True">
-                        <SearchBar Style="{StaticResource StProfileName2}" x:Name="Search1" Placeholder="Search" BackgroundColor="Transparent" VerticalOptions="Start" TextColor="Black" CancelButtonColor="Black" PlaceholderColor="Black"
-                                TextChanged="Search1_TextChanged"/>
-                    </Frame>
-                    <Button ImageSource="mapa.png" BackgroundColor="Transparent" Clicked="Button_Clicked" Grid.Column="3" Grid.Row="0" BorderColor="Transparent"/>
-                </Grid>
+            <Frame HasShadow="True" IsClippedToBounds="True">
+                <StackLayout HeightRequest="100" Margin="-30" BackgroundColor="AntiqueWhite">
+                    <Grid ColumnDefinitions="*,*,*,*" Margin="20">
+                        <Button ImageSource="user.png" BackgroundColor="Transparent" Clicked="ProfBtn" Grid.Column="0" Grid.Row="0" BorderColor="Transparent"/>
+                        <Frame Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" CornerRadius="30" HeightRequest="10" BackgroundColor="White" IsClippedToBounds="True">
+                            <SearchBar Style="{StaticResource StProfileName2}" x:Name="Search1" Placeholder="Search" BackgroundColor="Transparent" VerticalOptions="Start" TextColor="Black" CancelButtonColor="Black" PlaceholderColor="Black"
+                                TextChanged="Search1_TextChanged" FontSize="Micro"/>
+                        </Frame>
+                        <Button ImageSource="mapa.png" BackgroundColor="Transparent" Clicked="Button_Clicked" Grid.Column="3" Grid.Row="0" BorderColor="Transparent"/>
+                    </Grid>
+                </StackLayout>
+            </Frame>
+            <StackLayout HorizontalOptions="Center" Margin="0,5,0,0">
+                <Label Text="Categories" TextColor="Black" Style="{StaticResource StProfileName2}"/>
             </StackLayout>
-            <ScrollView>
+            <ScrollView HeightRequest="100" IsClippedToBounds="True" Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout Padding="20,0,20,0">
+                        <ImageButton Source="laptop" BackgroundColor="Transparent" Aspect="Fill" CornerRadius="30" WidthRequest="60" HeightRequest="60" Clicked="Laptop_Clicked"/>
+                        <Label x:Name="Laptop" Text="Laptop" Style="{StaticResource StProfileName3}" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout Padding="20,0,20,0">
+                        <ImageButton Source="androidp" BackgroundColor="Transparent" Aspect="Fill" CornerRadius="30" WidthRequest="60" HeightRequest="60" Clicked="Android_Clicked"/>
+                        <Label x:Name="Android" Text="Android" Style="{StaticResource StProfileName3}" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout Padding="20,0,20,0">
+                        <ImageButton Source="iosp" BackgroundColor="Transparent" Aspect="Fill" CornerRadius="30" WidthRequest="60" HeightRequest="60" Clicked="IOS_Clicked"/>
+                        <Label x:Name="IOS" Text="IOS" Style="{StaticResource StProfileName3}" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout Padding="20,0,20,0">
+                        <ImageButton Source="desktop" BackgroundColor="Transparent" Aspect="Fill" CornerRadius="30" WidthRequest="60" HeightRequest="60" Clicked="Desktop_Clicked"/>
+                        <Label x:Name="Desktop" Text="Desktop" Style="{StaticResource StProfileName3}" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout Padding="20,0,20,0">
+                        <ImageButton Source="plumber" BackgroundColor="Transparent" Aspect="Fill" CornerRadius="30" WidthRequest="60" HeightRequest="60" Clicked="Plumber_Clicked"/>
+                        <Label x:Name="Plumber" Text="Plumber" Style="{StaticResource StProfileName3}" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout Padding="20,0,20,0">
+                        <ImageButton Source="developer" BackgroundColor="Transparent" Aspect="Fill" CornerRadius="30" WidthRequest="60" HeightRequest="60" Clicked="Developer_Clicked"/>
+                        <Label x:Name="Developer" Text="Developer" Style="{StaticResource StProfileName3}" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout Padding="20,0,20,0">
+                        <ImageButton Source="electric" BackgroundColor="Transparent" Aspect="Fill" CornerRadius="30" WidthRequest="60" HeightRequest="60" Clicked="Electric_Clicked"/>
+                        <Label x:Name="Electric" Text="Electric" Style="{StaticResource StProfileName3}" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout Padding="20,0,20,0">
+                        <ImageButton Source="keypad" BackgroundColor="Transparent" Aspect="Fill" CornerRadius="30" WidthRequest="60" HeightRequest="60" Clicked="Keypad_Clicked"/>
+                        <Label x:Name="Keypad" Text="Keypad" Style="{StaticResource StProfileName3}" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+
+            <RefreshView x:Name="refreshme" Refreshing="RefreshView_Refreshing">
                 <CollectionView x:Name="ShowPeople">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <sharpndado:MaterialFrame VerticalOptions="Center" Margin="20" Padding="20" Style="{StaticResource AcrylicFrame}">
+                        <sharpndado:MaterialFrame VerticalOptions="Center" Margin="20" Padding="20" Style="{StaticResource AcrylicFrame}">
                                 <SwipeView BackgroundColor="Transparent">
                                     <SwipeView.LeftItems>
                                         <SwipeItems>
@@ -31,36 +73,36 @@
                                          IconImageSource="sms.png"
                                          BackgroundColor="Transparent"
                                          Clicked="TextBtn"/>
-                                        <SwipeItem Text="Report"
+                                            <SwipeItem Text="Report"
                                          IconImageSource="report.png"
                                          BackgroundColor="Transparent"
                                          Clicked="reportButton_Clicked"/>
-                                    </SwipeItems>
-                                </SwipeView.LeftItems>
-                                <Frame BackgroundColor="Transparent" BorderColor="Transparent" Margin="0,-25,0,-40" Padding="0" IsClippedToBounds="True">
-                                    <Grid Margin="10" Padding="20">
+                                        </SwipeItems>
+                                    </SwipeView.LeftItems>
+                                    <Frame BackgroundColor="Transparent" BorderColor="Transparent" Margin="0,-25,0,-40" Padding="0" IsClippedToBounds="True">
+                                        <Grid Margin="10" Padding="20">
                                             <Label Style="{StaticResource StProfileName2}" TextColor="Blue" Text="Mobile #:" Grid.Column="0" Grid.Row="0"/>
                                             <Label Style="{StaticResource StProfileName2}" TextColor="Blue" Text="Job Discription:" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2"/>
                                             <Label Style="{StaticResource StProfileName2}" TextColor="Blue" Text="Time Available:" Grid.Column="0" Grid.Row="2" Grid.RowSpan="2"/>
                                             <Label Style="{StaticResource StProfileName2}" TextColor="Blue" Text="Status:" Grid.Column="0" Grid.Row="3" Grid.RowSpan="2"/>
                                             <Label Style="{StaticResource StProfileName2}" FontSize="Medium" Text="{Binding fname}" Grid.Column="2" Grid.Row="4" HorizontalOptions="Center"/>
                                             <Label Style="{StaticResource StProfileName3}" Text="{Binding statusact}" Grid.Column="1" Grid.Row="3"/>
-                                        <Label Style="{StaticResource StProfileName3}" Text="{Binding job}" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"/>
-                                        <Label Style="{StaticResource StProfileName3}" Text="{Binding activetime}" Grid.Column="1" Grid.Row="2"/>
-                                        <Label Style="{StaticResource StProfileName2}" Text="{Binding pnum}" FontSize="18" Grid.Column="1" Grid.Row="0"/>
+                                            <Label Style="{StaticResource StProfileName3}" Text="{Binding job}" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"/>
+                                            <Label Style="{StaticResource StProfileName3}" Text="{Binding activetime}" Grid.Column="1" Grid.Row="2"/>
+                                            <Label Style="{StaticResource StProfileName2}" Text="{Binding pnum}" FontSize="18" Grid.Column="1" Grid.Row="0"/>
                                             <Frame Grid.Column="2" Grid.Row="0" Grid.RowSpan="4" BorderColor="White" VerticalOptions="Start"
                                                HorizontalOptions="End" WidthRequest="100" HeightRequest="100"
                                                HasShadow="False" CornerRadius="110" Padding="0" IsClippedToBounds="True">
                                                 <Image Source="{Binding propics}" Aspect="Fill"/>
                                             </Frame>
                                         </Grid>
-                                </Frame>
-                            </SwipeView>
-                          </sharpndado:MaterialFrame>
+                                    </Frame>
+                                </SwipeView>
+                            </sharpndado:MaterialFrame>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
-            </ScrollView>
+            </RefreshView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
