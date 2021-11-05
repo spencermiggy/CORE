@@ -5,34 +5,37 @@
              BackgroundColor="AntiqueWhite" Visual="Material">
     <ContentPage.Content>
         <StackLayout>
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+                <Image Source="homeicon.png" Aspect="AspectFit" Margin="50,70,50,-20"/>
+            </StackLayout>
             <Grid>
                 <StackLayout Padding="0" Margin="50,100,50,100" HorizontalOptions="FillAndExpand">
-                    <Frame  BackgroundColor="White" HeightRequest="500" HasShadow="True" Padding="0" Margin="0">
+                    <Frame  BackgroundColor="White" HeightRequest="500" HasShadow="True" Padding="0" Margin="0" CornerRadius="30">
 
                         <StackLayout>
 
 
                             <StackLayout Margin="10">
-                                <Label Text="Set Status" TextColor="Black" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+                                <Label Text="Set Status" Style="{StaticResource StAndroidLabel}" FontSize="12" TextColor="Black" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
                             </StackLayout>
 
-                            <StackLayout Padding="0" Margin="15,10">
+                            <StackLayout Margin="20,50,20,0">
 
                                 <Frame BackgroundColor="DarkGray" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                     <StackLayout Orientation="Horizontal">
-                                        <local:CustomEntry x:Name="stat" PlaceholderColor="Black" Placeholder="Set status" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                        <local:CustomEntry x:Name="stat" FontSize="14" FontFamily="letttt" PlaceholderColor="Black" BackgroundColor="White" Placeholder="Set status Ex.active, inactive, busy" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
                                     </StackLayout>
                                 </Frame>
 
                                 <Frame BackgroundColor="DarkGray" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                     <StackLayout Orientation="Horizontal">
-                                        <local:CustomEntry x:Name="time" PlaceholderColor="Black" Placeholder="Set time Ex.1am to 9pm" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                        <local:CustomEntry x:Name="time" FontSize="14" FontFamily="letttt" PlaceholderColor="Black" BackgroundColor="White" Placeholder="Set time Ex.1am to 9pm" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
                                     </StackLayout>
                                 </Frame>
 
                                 <StackLayout>
-                                    <Grid Margin="20">
-                                        <Button Text="Update" BackgroundColor="LightPink" CornerRadius="100" Grid.Column="1" Grid.Row="0" Clicked="Btnupd"/>
+                                    <Grid ColumnDefinitions="*,*,*">
+                                        <Button Text="Set Status" Margin="-10,30,-10,20" FontFamily="letttt" BackgroundColor="LightPink" CornerRadius="100" Grid.Column="1" Grid.Row="0" Clicked="Btnupd"/>
                                     </Grid>
                                 </StackLayout>
                             </StackLayout>

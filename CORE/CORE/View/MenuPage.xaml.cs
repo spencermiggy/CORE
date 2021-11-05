@@ -147,6 +147,21 @@ namespace CORE.View
             var products = await MobileService.GetTable<repairer>().Take(100).ToListAsync();
             ShowPeople.ItemsSource = products.Where(p => p.job.ToLower().Contains(Keypad.Text.ToLower())).ToList();
         }
+        private async void Technician_Clicked(object sender, EventArgs e)
+        {
+            var products = await MobileService.GetTable<repairer>().Take(100).ToListAsync();
+            ShowPeople.ItemsSource = products.Where(p => p.job.ToLower().Contains(Technician.Text.ToLower())).ToList();
+        }
+        private async void Internet_Clicked(object sender, EventArgs e)
+        {
+            var products = await MobileService.GetTable<repairer>().Take(100).ToListAsync();
+            ShowPeople.ItemsSource = products.Where(p => p.job.ToLower().Contains(Internet.Text.ToLower())).ToList();
+        }
+        private async void Openline_Clicked(object sender, EventArgs e)
+        {
+            var products = await MobileService.GetTable<repairer>().Take(100).ToListAsync();
+            ShowPeople.ItemsSource = products.Where(p => p.job.ToLower().Contains(Openline.Text.ToLower())).ToList();
+        }
         private async void RefreshView_Refreshing(object sender, EventArgs e)
         {
             await GetRepairer();
