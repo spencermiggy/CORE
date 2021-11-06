@@ -19,19 +19,6 @@ namespace CORE.View
             InitializeComponent();
             BindingContext = new PickerMVVMViewModel();
         }
-        protected override async void OnAppearing()
-        {
-            try
-            {
-                var getprofile = (await MobileService.GetTable<repairer>().Where(profile => profile.id == repairer_id).ToListAsync()).FirstOrDefault();
-                schedy.BindingContext = getprofile;
-            }
-            catch
-            {
-                await DisplayAlert("Error", "Please Check Your Internet Connection", "OK");
-            }
-
-        }
         private async void Btnupd(object sender, EventArgs e)
         {
             repairer repairer = new repairer
