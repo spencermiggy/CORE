@@ -31,37 +31,37 @@
 
                             <Frame BackgroundColor="DarkGray" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                 <StackLayout Orientation="Horizontal">
-                                    <local:CustomEntry x:Name="firstname"  Style="{StaticResource StProfileName2}" Placeholder="First Name" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
+                                    <local:CustomEntry x:Name="firstname" Text="{Binding fname}"  Style="{StaticResource StProfileName2}" Placeholder="First Name" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
                                 </StackLayout>
                             </Frame>
 
                             <Frame BackgroundColor="DarkGray" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                 <StackLayout Orientation="Horizontal">
-                                    <local:CustomEntry x:Name="lastname"  Style="{StaticResource StProfileName2}" Placeholder="Last Name" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
+                                    <local:CustomEntry x:Name="lastname" Text="{Binding lname}"  Style="{StaticResource StProfileName2}" Placeholder="Last Name" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
                                 </StackLayout>
                             </Frame>
 
                             <Frame BackgroundColor="DarkGray" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                 <StackLayout Orientation="Horizontal">
-                                    <local:CustomEntry x:Name="Pnumb"  Style="{StaticResource StProfileName2}" Placeholder="Phone Number" BackgroundColor="White" Keyboard="Numeric" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
+                                    <local:CustomEntry x:Name="Pnumb" Text="{Binding pnum}"  Style="{StaticResource StProfileName2}" Placeholder="Phone Number" BackgroundColor="White" Keyboard="Numeric" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
                                 </StackLayout>
                             </Frame>
 
                             <Frame BackgroundColor="DarkGray" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                 <StackLayout Orientation="Horizontal">
-                                    <local:CustomEntry x:Name="Addre" Style="{StaticResource StProfileName2}" Placeholder="Address" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
+                                    <local:CustomEntry x:Name="Addre" Text="{Binding addr}" Style="{StaticResource StProfileName2}" Placeholder="Address" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
                                 </StackLayout>
                             </Frame>
 
                             <Frame BackgroundColor="DarkGray" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                 <StackLayout Orientation="Horizontal">
-                                    <local:CustomEntry x:Name="Citys" Style="{StaticResource StProfileName2}" Placeholder="City" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
+                                    <local:CustomEntry x:Name="Citys" Text="{Binding city}" Style="{StaticResource StProfileName2}" Placeholder="City" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
                                 </StackLayout>
                             </Frame>
 
                             <Frame BackgroundColor="DarkGray" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                 <StackLayout Orientation="Horizontal">
-                                    <local:CustomEntry x:Name="Passw" Style="{StaticResource StProfileName2}" Placeholder="Password" IsPassword="True" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
+                                    <local:CustomEntry x:Name="Passw" Text="{Binding pass}" Style="{StaticResource StProfileName2}" Placeholder="Password" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
                                 </StackLayout>
                             </Frame>
 

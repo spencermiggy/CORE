@@ -103,5 +103,17 @@ namespace CORE.View
                 }
             }
         }
+
+        private void ShowPass_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+            if(ShowPass.IsChecked == true)
+            {
+                Passw.IsPassword = false;
+            }
+            else
+            {
+                Passw.IsPassword = true;
+            }
+        }
     }
 }

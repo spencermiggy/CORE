@@ -4,7 +4,7 @@
              x:Class="CORE.View.SchedPage"
              BackgroundColor="AntiqueWhite" Visual="Material">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout x:Name="schedy">
             <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
                 <Image Source="homeicon.png" Aspect="AspectFit" Margin="50,70,50,-20"/>
             </StackLayout>
@@ -23,13 +23,25 @@
 
                                 <Frame BackgroundColor="DarkGray" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                     <StackLayout Orientation="Horizontal">
-                                        <local:CustomEntry x:Name="stat" FontSize="14" FontFamily="letttt" PlaceholderColor="Black" BackgroundColor="White" Placeholder="Set status Ex.active, inactive, busy" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
+                                        <local:CustomEntry x:Name="stat" Text="{Binding mystat}" FontSize="14" FontFamily="letttt" PlaceholderColor="Black" BackgroundColor="White" Placeholder="Click Circle Button" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
+                                        <Frame CornerRadius="30" BackgroundColor="LightPink" IsClippedToBounds="True" Padding="0,0,-10,-10" Margin="-10,5,10,5">
+                                            <Picker Title="........Select Status........" TitleColor="LightPink" FontFamily="letttt" FontSize="20"
+                                          ItemsSource="{Binding statuslist}"
+                                          ItemDisplayBinding="{Binding Value}"
+                                          SelectedItem="{Binding Selectedstat}" BackgroundColor="LightPink" TextColor="LightPink"/>
+                                        </Frame>
                                     </StackLayout>
                                 </Frame>
 
                                 <Frame BackgroundColor="DarkGray" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                     <StackLayout Orientation="Horizontal">
-                                        <local:CustomEntry x:Name="time" FontSize="14" FontFamily="letttt" PlaceholderColor="Black" BackgroundColor="White" Placeholder="Set time Ex.1am to 9pm" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
+                                        <local:CustomEntry x:Name="time" Text="{Binding mytime}" FontSize="14" FontFamily="letttt" PlaceholderColor="Black" BackgroundColor="White" Placeholder="Click Circle Button" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
+                                        <Frame CornerRadius="30" BackgroundColor="LightPink" IsClippedToBounds="True" Padding="0,0,-10,-10" Margin="-10,5,10,5">
+                                            <Picker Title="........Select Time........" TitleColor="LightPink" FontFamily="letttt" FontSize="20"
+                                          ItemsSource="{Binding timelist}"
+                                          ItemDisplayBinding="{Binding Values}"
+                                          SelectedItem="{Binding Selectedtime}" BackgroundColor="LightPink" TextColor="LightPink"/>
+                                        </Frame>
                                     </StackLayout>
                                 </Frame>
 

@@ -54,15 +54,15 @@ namespace CORE.View
                 propics = $"{urlImage}",
                 picstr = $"{imgID}.jpg"
             };
-            if (firstname.Text == null || lastname.Text == null || Pnumb.Text == null || Addre.Text == null || Citys.Text == null || Passw.Text == null)
+            if (firstname.Text == null || lastname.Text == null || Pnumb.Text == null || Addre.Text == null || Citys.Text == null || Passw.Text == null || SelectedImage.Source is null)
             {
-                await DisplayAlert("Error", "Please fill the blanks", "OK");
+                await DisplayAlert("Error", "Please fill the blanks or Change the Profile Picture", "OK");
             }
             else
             {
                 await customer.Update(customer);
-                await DisplayAlert("Success", "Info Updated.... We will logout you to confirm changes", "Ok");
-                App.Current.MainPage = new MainPage();
+                await DisplayAlert("Success", "Info Updated", "Ok");
+                App.Current.MainPage = new MenuPage();
             }
         }
         private async void SelectButton_Clicked(object sender, EventArgs e)
@@ -90,6 +90,7 @@ namespace CORE.View
             SelectedImage.Source = ImageSource.FromStream(() => selectedImageFile.GetStream());
 
             UploadImage(selectedImageFile.GetStream());
+            await DisplayAlert("Success","Image Successfully Selected","OK");
         }
         private async void UploadImage(Stream stream)
         {
