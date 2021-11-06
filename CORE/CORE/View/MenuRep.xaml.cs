@@ -101,7 +101,15 @@ namespace CORE.View
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new MapPage1());
+            try
+            {
+                await Navigation.PushModalAsync(new MapPage1());
+            }
+            catch
+            {
+                await DisplayAlert("Error", "Please turn on your Location", "OK");
+                return;
+            }
         }
         private async void Laptop_Clicked(object sender, EventArgs e)
         {
