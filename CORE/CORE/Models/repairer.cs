@@ -22,6 +22,7 @@ namespace CORE.Models
         public string statusact { get; set; }
         public string latt { get; set; }
         public string longg { get; set; }
+        public string currentloc { get; set; }
 
         public static async Task Insert(repairer repairer)
         {

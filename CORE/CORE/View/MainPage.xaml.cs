@@ -90,6 +90,7 @@ namespace CORE.View
                         App.statusact = users.statusact;
                         App.latt = users.latt;
                         App.longg = users.longg;
+                        App.currentloc = users.currentloc;
                         App.Current.MainPage = new MenuRep();
                     }
                     else

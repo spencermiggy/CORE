@@ -12,12 +12,12 @@
               MapType="Hybrid"/>
         <Grid BackgroundColor="AntiqueWhite" Margin="20">
             <Grid Grid.Row="0" ColumnDefinitions="*,*,*,*,*">
-                <Entry x:Name="Lat" FontFamily="letttt" TextColor="Black" FontSize="12" PlaceholderColor="Black" Placeholder="Latitude" Grid.Row="0" Grid.Column="1" HorizontalOptions="CenterAndExpand"/>
-                <Entry x:Name="Long" FontFamily="letttt" TextColor="Black" FontSize="12" PlaceholderColor="Black"  Placeholder="Longitude" Grid.Row="0" Grid.Column="3" HorizontalOptions="CenterAndExpand"/>
+                <Label x:Name="Lat" FontFamily="letttt" TextColor="Black" FontSize="12" Grid.Row="0" Grid.Column="1" HorizontalOptions="CenterAndExpand"/>
+                <Label x:Name="Long" FontFamily="letttt" TextColor="Black" FontSize="12" Grid.Row="0" Grid.Column="3" HorizontalOptions="CenterAndExpand"/>
             </Grid>
             <Grid Grid.Row="1">
                 <Button x:Name="GetLoc" FontFamily="letttt" BackgroundColor="LightPink" TextColor="Black" Text="Get Location" Grid.Row="0" Grid.Column="0" VerticalOptions="Start" HorizontalOptions="Start" CornerRadius="30" FontSize="Small" Clicked="GetLoc_Clicked"/>
-                <Label x:Name="lugar" Text="Location Info" HorizontalOptions="CenterAndExpand" TextColor="Black" VerticalOptions="Start" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0"/>
+                <Label x:Name="lugar" Text="Location Info" FontSize="10" FontFamily="letttt" HorizontalOptions="CenterAndExpand" TextColor="Black" VerticalOptions="Start" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0"/>
                 <Button x:Name="SetLoc" FontFamily="letttt" BackgroundColor="LightPink" TextColor="Black" Text="Refresh Lat/Long" Grid.Row="0" Grid.Column="3" VerticalOptions="Start" HorizontalOptions="End" CornerRadius="30" FontSize="Small" Clicked="SetLoc_Clicked"/>
             </Grid>
         </Grid>

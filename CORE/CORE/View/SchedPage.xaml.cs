@@ -43,6 +43,8 @@ namespace CORE.View
             }
             else
             {
+                statusact = stat.Text;
+                activetime = time.Text;
                 await repairer.Update(repairer);
                 await DisplayAlert("Success", "Schedule Submitted", "Ok");
                 stat.Text = null;

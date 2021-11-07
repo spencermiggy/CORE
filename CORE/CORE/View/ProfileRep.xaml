@@ -33,11 +33,17 @@
                     <Label Grid.Row="1" Grid.Column="3"  Text="Logout" Style="{StaticResource StAndroidLabel}"/>
                 </Grid>
                 <Grid Grid.Row="6" IsVisible="{OnPlatform iOS=False, Android=True}"  HorizontalOptions="CenterAndExpand" ColumnSpacing="10">
-                    <Label Style="{StaticResource StProfileName3}" Text="HOuse Address:" Grid.Column="0" Grid.Row="0"/>
-                    <Label Style="{StaticResource StProfileName3}" Text="City:" Grid.Column="0" Grid.Row="1"/>
+                    <Label Style="{StaticResource StProfileName3}" Text="HOuse Address:" TextColor="Blue" Grid.Column="0" Grid.Row="0"/>
+                    <Label Style="{StaticResource StProfileName3}" Text="City:" TextColor="Blue" Grid.Column="0" Grid.Row="1"/>
                     <Label Style="{StaticResource StProfileName2}" Text="{Binding addr}" Grid.Column="1" Grid.Row="0"/>
                     <Label Style="{StaticResource StProfileName2}" Text="{Binding city}" Grid.Column="1" Grid.Row="1"/>
                 </Grid>
+                <StackLayout Grid.Row="7" Margin="0,20,0,0" BackgroundColor="AntiqueWhite" IsClippedToBounds="True">
+                    <Grid HorizontalOptions="Center" ColumnSpacing="10" ColumnDefinitions="50,50,50">
+                        <Label Style="{StaticResource StProfileName2}" Text="Your Shared Location:" TextColor="Blue" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" HorizontalOptions="Center" VerticalOptions="End"/>
+                        <Label Style="{StaticResource StProfileName2}" Text="{Binding currentloc}" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1" FontSize="16"/>
+                    </Grid>
+                </StackLayout>
             </Grid>
 
         </ScrollView>

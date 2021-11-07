@@ -99,8 +99,12 @@ namespace CORE.View
                     propics = propics,
                     picstr = picstr,
                     latt = Lat.Text,
-                    longg = Long.Text
+                    longg = Long.Text,
+                    currentloc = lugar.Text
                 };
+            latt = Lat.Text;
+            longg = Long.Text;
+            currentloc = lugar.Text;
                 await repairer.Update(repairer);
                 await DisplayAlert("Message", "SUCCESS", "Ok");
         }
