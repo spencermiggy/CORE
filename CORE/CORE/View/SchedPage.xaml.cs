@@ -34,6 +34,7 @@ namespace CORE.View
                 propics = propics,
                 latt = latt,
                 longg = longg,
+                currentloc = currentloc,
                 statusact = stat.Text,
                 activetime = time.Text
             };

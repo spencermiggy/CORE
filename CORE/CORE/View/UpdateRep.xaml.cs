@@ -56,6 +56,7 @@ namespace CORE.View
                 latt = latt,
                 longg = longg,
                 statusact = statusact,
+                currentloc = currentloc,
                 propics = $"{urlImage}",
                 picstr = $"{imgID}.jpg"
             };
