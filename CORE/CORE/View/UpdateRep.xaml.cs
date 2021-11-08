@@ -66,6 +66,7 @@ namespace CORE.View
             }
             else
             {
+                city = Citys.Text;
                 await repairer.Update(repairer);
                 await DisplayAlert("Success", "Info Updated", "Ok");
                 App.Current.MainPage = new MenuRep();

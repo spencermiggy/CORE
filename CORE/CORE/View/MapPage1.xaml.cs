@@ -111,6 +111,9 @@ namespace CORE.View
 
         private void SetLoc_Clicked(object sender, EventArgs e)
         {
+            Nomappic.IsVisible = false;
+            locationsMap.IsVisible = true;
+            GetLoc.IsVisible = true;
             GetLocation1();
         }
         public async void GetLocation1()

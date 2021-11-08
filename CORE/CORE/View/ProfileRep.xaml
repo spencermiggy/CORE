@@ -32,11 +32,11 @@
                     <Button Grid.Row="0" Grid.Column="3" CornerRadius ="30" ImageSource="out.png" BackgroundColor="#ebedf0" Clicked="BtnLog" />
                     <Label Grid.Row="1" Grid.Column="3"  Text="Logout" Style="{StaticResource StAndroidLabel}"/>
                 </Grid>
-                <Grid Grid.Row="6" IsVisible="{OnPlatform iOS=False, Android=True}"  HorizontalOptions="CenterAndExpand" ColumnSpacing="10">
-                    <Label Style="{StaticResource StProfileName3}" Text="HOuse Address:" TextColor="Blue" Grid.Column="0" Grid.Row="0"/>
-                    <Label Style="{StaticResource StProfileName3}" Text="City:" TextColor="Blue" Grid.Column="0" Grid.Row="1"/>
-                    <Label Style="{StaticResource StProfileName2}" Text="{Binding addr}" Grid.Column="1" Grid.Row="0"/>
-                    <Label Style="{StaticResource StProfileName2}" Text="{Binding city}" Grid.Column="1" Grid.Row="1"/>
+                <Grid Grid.Row="6" IsVisible="{OnPlatform iOS=False, Android=True}" HorizontalOptions="CenterAndExpand" ColumnSpacing="10">
+                    <Label Style="{StaticResource StProfileName3}" Text="Home Address:" HorizontalTextAlignment="Start" TextColor="Blue" Grid.Column="0" Grid.Row="0"/>
+                    <Label Style="{StaticResource StProfileName3}" Text="City:" HorizontalTextAlignment="Start" TextColor="Blue" Grid.Column="0" Grid.Row="1"/>
+                    <Label Style="{StaticResource StProfileName2}" Text="{Binding addr}" HorizontalTextAlignment="End" Grid.Column="1" Grid.Row="0"/>
+                    <Label Style="{StaticResource StProfileName2}" Text="{Binding city}" HorizontalTextAlignment="End" Grid.Column="1" Grid.Row="1"/>
                 </Grid>
                 <StackLayout Grid.Row="7" Margin="0,20,0,0" BackgroundColor="AntiqueWhite" IsClippedToBounds="True">
                     <Grid HorizontalOptions="Center" ColumnSpacing="10" ColumnDefinitions="50,50,50">

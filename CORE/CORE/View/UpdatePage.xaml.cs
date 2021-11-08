@@ -60,6 +60,7 @@ namespace CORE.View
             }
             else
             {
+                city = Citys.Text;
                 await customer.Update(customer);
                 await DisplayAlert("Success", "Info Updated", "Ok");
                 App.Current.MainPage = new MenuPage();

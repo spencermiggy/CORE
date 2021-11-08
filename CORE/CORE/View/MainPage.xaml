@@ -46,7 +46,7 @@
                             <Grid ColumnDefinitions="*,*,*,*">
                                 <CheckBox x:Name="ShowPass" CheckedChanged="ShowPass_CheckedChanged" Grid.Column="0" Grid.Row="0"/>
                                 <Label Text="SHOW PASSWORD" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="0" VerticalOptions="Center" 
-                                       Margin="-35,0,0,0" TextColor="Black" Style="{StaticResource StProfileName2}"/>
+                                       Margin="-35,0,0,0" TextColor="Gray" Style="{StaticResource StProfileName2}"/>
                             </Grid>
                             <StackLayout>
                                 <Grid RowDefinitions="*,*" Margin="20">
@@ -60,6 +60,10 @@
                             </StackLayout>
                             <StackLayout>
                                 <Button Text="SIGN UP" BackgroundColor="White" Style="{StaticResource StProfileName2}" TextColor="HotPink" CornerRadius="30" HorizontalOptions="Center" HeightRequest="30" FontSize="10" Clicked="addAcc_Clicked"/>
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="Center" Margin="0,30,0,0">
+                                <Label Text="© Copyright" Style="{StaticResource StAndroidLabel1}" TextColor="Gray"/>
+                                <Label Text="DongSpensTeam" Style="{StaticResource StAndroidLabel1}" TextColor="Gray"/>
                             </StackLayout>
 
                         </StackLayout>
