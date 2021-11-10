@@ -206,8 +206,8 @@ namespace CORE.View
                         Accdec = "Pending"
                     };
                     await Transact.Insert(transact);
+                    smsSend.SendSms(model.pnum, "HI please check your app for my request");
                     await DisplayAlert("Success", "Your Request is Send", "Ok");
-                    smsSend.SendSmsInBackground(model.pnum, "HI please check your app for my request");
                 }
                 catch
                 {

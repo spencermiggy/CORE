@@ -149,10 +149,10 @@ namespace CORE.View
                         Accdec = ongo
                     };
                     await Transact.Update(transact);
+                    smsSend.SendSms(model.Cnum, "Tinatanggap ng Repairer ang iyong Request");
                     refreshme.IsRefreshing = true;
                     await DisplayAlert("Success", "Request Accepted", "Ok");
                     refreshme.IsRefreshing = false;
-                    smsSend.SendSmsInBackground(model.Cnum, "Tinatanggap ng Repairer ang iyong Request");
                 }
                 catch
                 {
@@ -189,15 +189,15 @@ namespace CORE.View
                             Accdec = model.Accdec
                         };
                         await Transact.Delete(transact);
+                        smsSend.SendSms(model.Cnum, "Sorry ang repairer na ito ay hindi pa available or na decline ang iyong request");
                         refreshme.IsRefreshing = true;
                         await DisplayAlert("Success", "Decline Succesfully", "Ok");
                         refreshme.IsRefreshing = false;
-                        smsSend.SendSmsInBackground(model.Cnum, "Sorry ang repairer na ito ay hindi pa available or na decline ang iyong request");
 
                     }
                     catch
                     {
-                        await DisplayAlert("ERROR", "Check Internet Connection", "OK");
+                        await DisplayAlert("ERROR", "Decline Unsuccessful", "OK");
                     }
                 }
             }
