@@ -49,9 +49,9 @@ namespace CORE.View
             await Navigation.PushModalAsync(new SchedPage());
         }
 
-        private void reportButton_Clicked(object sender, EventArgs e)
+        private async void reportButton_Clicked(object sender, EventArgs e)
         {
-            CrossShare.Current.OpenBrowser("https://web.facebook.com/misgkie/");
+            await Navigation.PushModalAsync(new HistoryRep());
         }
     }
 }

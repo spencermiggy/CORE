@@ -8,7 +8,8 @@
             <Frame HasShadow="True" IsClippedToBounds="True" HeightRequest="50" Padding="0,15">
                 <StackLayout HeightRequest="100" Margin="-30" BackgroundColor="AntiqueWhite">
                     <Grid ColumnDefinitions="*,*,*,*" Margin="20">
-                        <Button ImageSource="user.png" BackgroundColor="Transparent" Clicked="ProfBtn" Grid.Column="0" Grid.Row="0" BorderColor="Transparent"/>
+                        <ImageButton x:Name="pro" Source="{Binding propics}" Aspect="Fill" CornerRadius="100" Margin="30,0,20,0"  
+                                     BackgroundColor="Transparent" Clicked="ProfBtn" Grid.Column="0" Grid.Row="0" BorderColor="Transparent"/>
                         <Frame Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" CornerRadius="30" HeightRequest="10" BackgroundColor="White" IsClippedToBounds="True">
                             <SearchBar Style="{StaticResource StProfileName2}" x:Name="Search1" Placeholder="Search" BackgroundColor="Transparent" VerticalOptions="Start" TextColor="Black" CancelButtonColor="Black" PlaceholderColor="Black"
                                 TextChanged="Search1_TextChanged" FontSize="14" Margin="-25,0,0,0"/>
@@ -75,6 +76,12 @@
                         <DataTemplate>
                         <sharpndado:MaterialFrame VerticalOptions="Center" Margin="20" Padding="20" Style="{StaticResource AcrylicFrame}">
                                 <SwipeView BackgroundColor="Transparent">
+                                    <SwipeView.RightItems>
+                                        <SwipeItem Text="Request A Job"
+                                         IconImageSource="user.png"
+                                         BackgroundColor="Transparent"
+                                         Clicked="SwipeItem_Clicked_1"/>
+                                    </SwipeView.RightItems>
                                     <SwipeView.LeftItems>
                                         <SwipeItems>
                                             <SwipeItem Text="Locate Now"

@@ -50,5 +50,10 @@ namespace CORE.View
         {
             CrossShare.Current.OpenBrowser("https://web.facebook.com/misgkie/");
         }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new CusHistory());
+        }
     }
 }

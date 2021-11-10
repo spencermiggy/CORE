@@ -25,6 +25,16 @@ namespace CORE.View
         protected override async void OnAppearing()
         {
             await GetRepairer();
+            try
+            {
+                var profile = (await MobileService.GetTable<customer>().Where(x => x.id == customer_id).ToListAsync()).FirstOrDefault();
+                pro.BindingContext = profile;
+            }
+            catch
+            {
+
+                await DisplayAlert("Network Error", "A network error occured, please check your internet connectivity and try again.", "OK");
+            }
         }
         private async Task GetRepairer()
         {
@@ -107,7 +117,6 @@ namespace CORE.View
             catch
             {
                 await DisplayAlert("Error","Please turn on your Location","OK");
-                return;
             }
         }
 
@@ -174,6 +183,37 @@ namespace CORE.View
         {
             await GetRepairer();
             refreshme.IsRefreshing = false;
+        }
+
+        private async void SwipeItem_Clicked_1(object sender, EventArgs e)
+        {
+            var item = sender as SwipeItem;
+            var smsSend = CrossMessaging.Current.SmsMessenger;
+            if (item?.BindingContext is repairer model)
+            {
+                try
+                {
+                    Transact transact = new Transact
+                    {
+                        Cfname = fname,
+                        Clname = lname,
+                        Cusid = customer_id,
+                        Caddr = addr,
+                        Clatt = latt,
+                        Clongg = longg,
+                        Cnum = pnum,
+                        Repid = model.id,
+                        Accdec = "Pending"
+                    };
+                    await Transact.Insert(transact);
+                    await DisplayAlert("Success", "Your Request is Send", "Ok");
+                    smsSend.SendSmsInBackground(model.pnum, "HI please check your app for my request");
+                }
+                catch
+                {
+                    await DisplayAlert("INFO","Auto Message didn't sent please load your sim","OK");
+                }
+            }
         }
     }
 }

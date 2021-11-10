@@ -81,5 +81,52 @@ namespace CORE.View
             status = await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
             return status;
         }
+        private async void GetLoc_Clicked(object sender, EventArgs e)
+        {
+            customer customer = new customer
+            {
+                id = customer_id,
+                fname = fname,
+                lname = lname,
+                pnum = pnum,
+                city = city,
+                pass = pass,
+                propics = propics,
+                picstr = picstr,
+                latt = Lat.Text,
+                longg = Long.Text,
+                addr = lugar.Text
+            };
+            latt = Lat.Text;
+            longg = Long.Text;
+            addr = lugar.Text;
+            await customer.Update(customer);
+            await DisplayAlert("Message", "SUCCESS", "Ok");
+        }
+        private void SetLoc_Clicked(object sender, EventArgs e)
+        {
+            Nomappic.IsVisible = false;
+            locationsMap.IsVisible = true;
+            GetLoc.IsVisible = true;
+            GetLocation1();
+        }
+        public async void GetLocation1()
+        {
+            Location location = await Geolocation.GetLastKnownLocationAsync();
+            if (location == null)
+            {
+                location = await Geolocation.GetLocationAsync(new GeolocationRequest
+                {
+                    DesiredAccuracy = GeolocationAccuracy.Medium,
+                    Timeout = TimeSpan.FromSeconds(30)
+                }); ;
+            }
+            Lat.Text = location.Latitude.ToString();
+            Long.Text = location.Longitude.ToString();
+            var placemark = await Geocoding.GetPlacemarksAsync(location.Latitude, location.Longitude);
+            var place = placemark?.FirstOrDefault();
+            var geocodeaddress = $"{place.Locality}, {place.SubThoroughfare}, {place.FeatureName}, {place.CountryName}";
+            lugar.Text = geocodeaddress;
+        }
     }
 }
