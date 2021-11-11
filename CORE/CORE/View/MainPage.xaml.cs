@@ -91,6 +91,7 @@ namespace CORE.View
                         App.latt = users.latt;
                         App.longg = users.longg;
                         App.currentloc = users.currentloc;
+                        App.TotalRate = users.TotalRate;
                         App.Current.MainPage = new MenuRep();
                     }
                     else

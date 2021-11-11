@@ -98,6 +98,7 @@ namespace CORE.View
                     pass = pass,
                     propics = propics,
                     picstr = picstr,
+                    TotalRate = TotalRate,
                     latt = Lat.Text,
                     longg = Long.Text,
                     currentloc = lugar.Text

@@ -53,5 +53,33 @@ namespace CORE.View
         {
             await Navigation.PushModalAsync(new HistoryRep());
         }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            var item = await RatingTBLL.Read();
+            var items = new RatingTBLL();
+            repairer repairer = new repairer
+            {
+                id = repairer_id,
+                fname = fname,
+                lname = lname,
+                latt = latt,
+                longg = longg,
+                activetime = activetime,
+                statusact = statusact,
+                addr = addr,
+                city = city,
+                currentloc = currentloc,
+                job = job,
+                pass = pass,
+                picstr = picstr,
+                pnum = pnum,
+                propics = propics,
+                TotalRate = items.TotRate
+            };
+            TotalRate = items.TotRate;
+            await repairer.Update(repairer);
+            await DisplayAlert("Success","Done Refreshing","OK");
+        }
     }
 }

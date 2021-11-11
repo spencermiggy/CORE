@@ -57,6 +57,7 @@ namespace CORE.View
                 longg = longg,
                 statusact = statusact,
                 currentloc = currentloc,
+                TotalRate = TotalRate,
                 propics = $"{urlImage}",
                 picstr = $"{imgID}.jpg"
             };
@@ -66,6 +67,8 @@ namespace CORE.View
             }
             else
             {
+                propics = $"{urlImage}";
+                picstr = $"{imgID}.jpg";
                 city = Citys.Text;
                 await repairer.Update(repairer);
                 await DisplayAlert("Success", "Info Updated", "Ok");
@@ -98,7 +101,6 @@ namespace CORE.View
             SelectedImage.Source = ImageSource.FromStream(() => selectedImageFile.GetStream());
 
             UploadImage(selectedImageFile.GetStream());
-            await DisplayAlert("Success", "Image Successfully Selected", "OK");
         }
         private async void UploadImage(Stream stream)
         {

@@ -32,9 +32,11 @@ namespace CORE.View
                 city = city,
                 pass = pass,
                 propics = propics,
+                picstr = picstr,
                 latt = latt,
                 longg = longg,
                 currentloc = currentloc,
+                TotalRate = TotalRate,
                 statusact = stat.Text,
                 activetime = time.Text
             };

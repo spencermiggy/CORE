@@ -124,6 +124,7 @@ namespace CORE.View
         {
             await GetRepairer();
             refreshme.IsRefreshing = false;
+            
         }
 
         private async void accepted_Clicked(object sender, EventArgs e)
