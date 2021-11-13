@@ -40,6 +40,7 @@ namespace CORE.View
         {
             var repairers = await Transact.Read();
             ShowPeople.ItemsSource = repairers.Where(x => x.Repid == repairer_id).ToList();
+            var repairerss = await RatingTBL.Read();
         }
 
         private void TextBtn(object sender, EventArgs e)
@@ -124,7 +125,6 @@ namespace CORE.View
         {
             await GetRepairer();
             refreshme.IsRefreshing = false;
-            
         }
 
         private async void accepted_Clicked(object sender, EventArgs e)

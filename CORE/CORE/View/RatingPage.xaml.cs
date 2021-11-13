@@ -26,31 +26,20 @@ namespace CORE.View
 
         private async void SubBtn_Clicked(object sender, EventArgs e)
         {
-              try
+            var item = sender as SwipeItem;
+            if (item?.BindingContext is repairer model)
+            {
+                try
                 {
                     if (Ratedk.SelectedStarValue == 1)
                     {
-                    RatingTBL transact = new RatingTBL
-                    {
-                        Repid = RepID.Text,
-                        star = Ratedk.SelectedStarValue,
-                        CusCount = 1
+                        RatingTBL transact = new RatingTBL
+                        {
+                            Repid = RepID.Text,
+                            star = Ratedk.SelectedStarValue,
+                            CusCount = 1
                         };
-                    int tota1 = transact.CusCount * transact.star;
-                    int tota2 = transact.CusCount * transact.stars;
-                    int tota3 = transact.CusCount * transact.starss;
-                    int tota4 = transact.CusCount * transact.starsss;
-                    int tota5 = transact.CusCount * transact.starssss;
-                    int tota6 = tota1 + tota2 + tota3 + tota4 + tota5;
-                    int tota7 = transact.CusCount;
-                    int tota8 = tota6 / tota7;
-                    await RatingTBL.Insert(transact);
-                    RatingTBLL ratingTBL = new RatingTBLL
-                    {
-                        Repid = transact.Repid,
-                        TotRate = tota8
-                    };
-                    await RatingTBLL.Insert(ratingTBL);
+                        await RatingTBL.Insert(transact);
                         await DisplayAlert("Success", "THANK YOU FOR GIVING YOUR FEEDBACK", "OK");
                     }
                     else if (Ratedk.SelectedStarValue == 2)
@@ -58,101 +47,46 @@ namespace CORE.View
                         RatingTBL transact = new RatingTBL
                         {
                             Repid = RepID.Text,
-                            stars = Ratedk.SelectedStarValue,
+                            star = Ratedk.SelectedStarValue,
                             CusCount = 1
                         };
-                    int tota1 = transact.CusCount * transact.star;
-                    int tota2 = transact.CusCount * transact.stars;
-                    int tota3 = transact.CusCount * transact.starss;
-                    int tota4 = transact.CusCount * transact.starsss;
-                    int tota5 = transact.CusCount * transact.starssss;
-                    int tota6 = tota1 + tota2 + tota3 + tota4 + tota5;
-                    int tota7 = transact.CusCount;
-                    int tota8 = tota6 / tota7;
-                    await RatingTBL.Insert(transact);
-                    RatingTBLL ratingTBL = new RatingTBLL
-                    {
-                        Repid = transact.Repid,
-                        TotRate = tota8
-                    };
-                    await RatingTBLL.Insert(ratingTBL);
-                    await DisplayAlert("Success", "THANK YOU FOR GIVING YOUR FEEDBACK", "OK");
+                        await RatingTBL.Insert(transact);
+                        await DisplayAlert("Success", "THANK YOU FOR GIVING YOUR FEEDBACK", "OK");
                     }
                     else if (Ratedk.SelectedStarValue == 3)
                     {
                         RatingTBL transact = new RatingTBL
                         {
                             Repid = RepID.Text,
-                            starss = Ratedk.SelectedStarValue,
+                            star = Ratedk.SelectedStarValue,
                             CusCount = 1
                         };
-                    int tota1 = transact.CusCount * transact.star;
-                    int tota2 = transact.CusCount * transact.stars;
-                    int tota3 = transact.CusCount * transact.starss;
-                    int tota4 = transact.CusCount * transact.starsss;
-                    int tota5 = transact.CusCount * transact.starssss;
-                    int tota6 = tota1 + tota2 + tota3 + tota4 + tota5;
-                    int tota7 = transact.CusCount;
-                    int tota8 = tota6 / tota7;
-                    await RatingTBL.Insert(transact);
-                    RatingTBLL ratingTBL = new RatingTBLL
-                    {
-                        Repid = transact.Repid,
-                        TotRate = tota8
-                    };
-                    await RatingTBLL.Insert(ratingTBL);
-                    await DisplayAlert("Success", "THANK YOU FOR GIVING YOUR FEEDBACK", "OK");
+                        await RatingTBL.Insert(transact);
+                        await DisplayAlert("Success", "THANK YOU FOR GIVING YOUR FEEDBACK", "OK");
                     }
                     else if (Ratedk.SelectedStarValue == 4)
                     {
                         RatingTBL transact = new RatingTBL
                         {
                             Repid = RepID.Text,
-                            starsss = Ratedk.SelectedStarValue,
+                            star = Ratedk.SelectedStarValue,
                             CusCount = 1
                         };
-                    int tota1 = transact.CusCount * transact.star;
-                    int tota2 = transact.CusCount * transact.stars;
-                    int tota3 = transact.CusCount * transact.starss;
-                    int tota4 = transact.CusCount * transact.starsss;
-                    int tota5 = transact.CusCount * transact.starssss;
-                    int tota6 = tota1 + tota2 + tota3 + tota4 + tota5;
-                    int tota7 = transact.CusCount;
-                    int tota8 = tota6 / tota7;
-                    await RatingTBL.Insert(transact);
-                    RatingTBLL ratingTBL = new RatingTBLL
-                    {
-                        Repid = transact.Repid,
-                        TotRate = tota8
-                    };
-                    await RatingTBLL.Insert(ratingTBL);
-                    await DisplayAlert("Success", "THANK YOU FOR GIVING YOUR FEEDBACK", "OK");
+                        await RatingTBL.Insert(transact);
+                        await DisplayAlert("Success", "THANK YOU FOR GIVING YOUR FEEDBACK", "OK");
                     }
                     else if (Ratedk.SelectedStarValue == 5)
                     {
                         RatingTBL transact = new RatingTBL
                         {
                             Repid = RepID.Text,
-                            starssss = Ratedk.SelectedStarValue,
+                            star = Ratedk.SelectedStarValue,
                             CusCount = 1
                         };
-                    int tota1 = transact.CusCount * transact.star;
-                    int tota2 = transact.CusCount * transact.stars;
-                    int tota3 = transact.CusCount * transact.starss;
-                    int tota4 = transact.CusCount * transact.starsss;
-                    int tota5 = transact.CusCount * transact.starssss;
-                    int tota6 = tota1 + tota2 + tota3 + tota4 + tota5;
-                    int tota7 = transact.CusCount;
-                    int tota8 = tota6 / tota7;
-                    await RatingTBL.Insert(transact);
-                    RatingTBLL ratingTBL = new RatingTBLL
-                    {
-                        Repid = transact.Repid,
-                        TotRate = tota8
-                    };
-                    await RatingTBLL.Insert(ratingTBL);
-                    await DisplayAlert("Success", "THANK YOU FOR GIVING YOUR FEEDBACK", "OK");
+                        await RatingTBL.Insert(transact);
+                        await DisplayAlert("Success", "THANK YOU FOR GIVING YOUR FEEDBACK", "OK");
                     }
+
                     else if (Ratedk.SelectedStarValue == 0)
                     {
                         await DisplayAlert("Message", "You didn't select a star", "OK");
@@ -160,8 +94,9 @@ namespace CORE.View
                 }
                 catch
                 {
-                    await DisplayAlert("ERROR", "Check Internet Connection", "OK");
+                    //await DisplayAlert("ERROR", "Check Internet Connection", "OK");
                 }
+            }
         }
     }
 }

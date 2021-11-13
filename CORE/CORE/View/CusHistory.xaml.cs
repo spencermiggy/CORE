@@ -58,9 +58,9 @@ namespace CORE.View
             }
         }
 
-        private async void SwipeItem_Clicked_1(object sender, EventArgs e)
+        private void SubmitBtn_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new RatingPage());
+
         }
     }
 }

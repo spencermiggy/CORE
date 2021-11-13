@@ -24,6 +24,11 @@ namespace CORE.Models
         public string longg { get; set; }
         public string currentloc { get; set; }
         public int TotalRate { get; set; }
+        public int star { get; set; }
+        public int stars { get; set; }
+        public int starss { get; set; }
+        public int starsss { get; set; }
+        public int starssss { get; set; }
 
         public static async Task Insert(repairer repairer)
         {

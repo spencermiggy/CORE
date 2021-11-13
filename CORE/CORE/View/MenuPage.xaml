@@ -116,7 +116,8 @@
                                             </Frame>
                                             <fRating:RatingBar x:Name="rate" SelectedStarValue="{Binding TotalRate}" ImageHeight="20" ImageWidth="20"
                                                                EmptyStarImage="emptystar.png" FillStarImage="fullstar.png" Grid.Column="0" Grid.Row="4"/>
-                                            <Label x:Name="rated" Text="{Binding TotalRate}" Grid.Column="1" Grid.Row="4" HorizontalTextAlignment="Start" FontSize="10"/>
+                                            <Label x:Name="rated" Text="{Binding TotalRate}" Style="{StaticResource StAndroidLabel1}" Grid.Column="1" Grid.Row="4" HorizontalTextAlignment="Center" Padding="-50,0,0,0"
+                                                   VerticalOptions="Center" FontSize="10"/>
                                         </Grid>
                                     </Frame>
                                 </SwipeView>
