@@ -81,6 +81,10 @@
                                          IconImageSource="user.png"
                                          BackgroundColor="Transparent"
                                          Clicked="SwipeItem_Clicked_1"/>
+                                        <SwipeItem Text="Feedbacks"
+                                                   IconImageSource="sms"
+                                                   BackgroundColor="Transparent"
+                                                   Clicked="SwipeItem_Clicked_2"/>
                                     </SwipeView.RightItems>
                                     <SwipeView.LeftItems>
                                         <SwipeItems>
@@ -114,10 +118,10 @@
                                                HasShadow="False" CornerRadius="110" Padding="0" IsClippedToBounds="True">
                                                 <Image Source="{Binding propics}" Aspect="Fill"/>
                                             </Frame>
-                                            <fRating:RatingBar x:Name="rate" SelectedStarValue="{Binding TotalRate}" ImageHeight="20" ImageWidth="20"
+                                            <fRating:RatingBar IsEnabled="False" x:Name="rate" SelectedStarValue="{Binding TotalRate}" ImageHeight="20" ImageWidth="20"
                                                                EmptyStarImage="emptystar.png" FillStarImage="fullstar.png" Grid.Column="0" Grid.Row="4"/>
                                             <Label x:Name="rated" Text="{Binding TotalRate}" Style="{StaticResource StAndroidLabel1}" Grid.Column="1" Grid.Row="4" HorizontalTextAlignment="Center" Padding="-50,0,0,0"
-                                                   VerticalOptions="Center" FontSize="10"/>
+                                                   VerticalOptions="Center" FontSize="16"/>
                                         </Grid>
                                     </Frame>
                                 </SwipeView>

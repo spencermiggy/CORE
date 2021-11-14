@@ -38,7 +38,7 @@ namespace CORE.View
         }
         private async Task GetRepairer()
         {
-            var repairers = await repairer.Read();
+            var repairers = await View_1.Read();
             ShowPeople.ItemsSource = repairers.Where(x => x.city.ToLower() == city.ToLower()).ToList();
         }
 
@@ -60,7 +60,7 @@ namespace CORE.View
         {
             try
             {
-                var products = await MobileService.GetTable<repairer>().Take(100).ToListAsync();
+                var products = await MobileService.GetTable<View_1>().Take(100).ToListAsync();
                 ShowPeople.ItemsSource = products.Where(p => p.job.ToLower().Contains(query.ToLower())).ToList();
             }
             catch
@@ -85,7 +85,7 @@ namespace CORE.View
         {
             var item = sender as SwipeItem;
             var smsSend = CrossMessaging.Current.SmsMessenger;
-            if (item?.BindingContext is repairer model)
+            if (item?.BindingContext is View_1 model)
             {
                 smsSend.SendSms("09959844622", $"Name: {model.fname} {model.lname}, " +
                     $"Job: {model.job}," +
@@ -99,7 +99,7 @@ namespace CORE.View
         private async void SwipeItem_Clicked(object sender, EventArgs e)
         {
             var item = sender as SwipeItem;
-            if (item?.BindingContext is repairer model)
+            if (item?.BindingContext is View_1 model)
             {
                 await Xamarin.Essentials.Map.OpenAsync(Convert.ToDouble(model.latt), Convert.ToDouble(model.longg), new MapLaunchOptions
                 {
@@ -122,61 +122,61 @@ namespace CORE.View
 
         private async void Laptop_Clicked(object sender, EventArgs e)
         {
-            var products = await MobileService.GetTable<repairer>().Take(100).ToListAsync();
+            var products = await MobileService.GetTable<View_1>().Take(100).ToListAsync();
             ShowPeople.ItemsSource = products.Where(p => p.job.ToLower().Contains(Laptop.Text.ToLower())).ToList();
         }
 
         private async void Android_Clicked(object sender, EventArgs e)
         {
-            var products = await MobileService.GetTable<repairer>().Take(100).ToListAsync();
+            var products = await MobileService.GetTable<View_1>().Take(100).ToListAsync();
             ShowPeople.ItemsSource = products.Where(p => p.job.ToLower().Contains(Android.Text.ToLower())).ToList();
         }
 
         private async void IOS_Clicked(object sender, EventArgs e)
         {
-            var products = await MobileService.GetTable<repairer>().Take(100).ToListAsync();
+            var products = await MobileService.GetTable<View_1>().Take(100).ToListAsync();
             ShowPeople.ItemsSource = products.Where(p => p.job.ToLower().Contains(IOS.Text.ToLower())).ToList();
         }
 
         private async void Desktop_Clicked(object sender, EventArgs e)
         {
-            var products = await MobileService.GetTable<repairer>().Take(100).ToListAsync();
+            var products = await MobileService.GetTable<View_1>().Take(100).ToListAsync();
             ShowPeople.ItemsSource = products.Where(p => p.job.ToLower().Contains(Desktop.Text.ToLower())).ToList();
         }
 
         private async void Plumber_Clicked(object sender, EventArgs e)
         {
-            var products = await MobileService.GetTable<repairer>().Take(100).ToListAsync();
+            var products = await MobileService.GetTable<View_1>().Take(100).ToListAsync();
             ShowPeople.ItemsSource = products.Where(p => p.job.ToLower().Contains(Plumber.Text.ToLower())).ToList();
         }
         private async void Developer_Clicked(object sender, EventArgs e)
         {
-            var products = await MobileService.GetTable<repairer>().Take(100).ToListAsync();
+            var products = await MobileService.GetTable<View_1>().Take(100).ToListAsync();
             ShowPeople.ItemsSource = products.Where(p => p.job.ToLower().Contains(Developer.Text.ToLower())).ToList();
         }
         private async void Electric_Clicked(object sender, EventArgs e)
         {
-            var products = await MobileService.GetTable<repairer>().Take(100).ToListAsync();
+            var products = await MobileService.GetTable<View_1>().Take(100).ToListAsync();
             ShowPeople.ItemsSource = products.Where(p => p.job.ToLower().Contains(Electric.Text.ToLower())).ToList();
         }
         private async void Keypad_Clicked(object sender, EventArgs e)
         {
-            var products = await MobileService.GetTable<repairer>().Take(100).ToListAsync();
+            var products = await MobileService.GetTable<View_1>().Take(100).ToListAsync();
             ShowPeople.ItemsSource = products.Where(p => p.job.ToLower().Contains(Keypad.Text.ToLower())).ToList();
         }
         private async void Technician_Clicked(object sender, EventArgs e)
         {
-            var products = await MobileService.GetTable<repairer>().Take(100).ToListAsync();
+            var products = await MobileService.GetTable<View_1>().Take(100).ToListAsync();
             ShowPeople.ItemsSource = products.Where(p => p.job.ToLower().Contains(Technician.Text.ToLower())).ToList();
         }
         private async void Internet_Clicked(object sender, EventArgs e)
         {
-            var products = await MobileService.GetTable<repairer>().Take(100).ToListAsync();
+            var products = await MobileService.GetTable<View_1>().Take(100).ToListAsync();
             ShowPeople.ItemsSource = products.Where(p => p.job.ToLower().Contains(Internet.Text.ToLower())).ToList();
         }
         private async void Openline_Clicked(object sender, EventArgs e)
         {
-            var products = await MobileService.GetTable<repairer>().Take(100).ToListAsync();
+            var products = await MobileService.GetTable<View_1>().Take(100).ToListAsync();
             ShowPeople.ItemsSource = products.Where(p => p.job.ToLower().Contains(Openline.Text.ToLower())).ToList();
         }
         private async void RefreshView_Refreshing(object sender, EventArgs e)
@@ -189,7 +189,7 @@ namespace CORE.View
         {
             var item = sender as SwipeItem;
             var smsSend = CrossMessaging.Current.SmsMessenger;
-            if (item?.BindingContext is repairer model)
+            if (item?.BindingContext is View_1 model)
             {
                 try
                 {
@@ -213,6 +213,15 @@ namespace CORE.View
                 {
                     await DisplayAlert("INFO","Auto Message didn't sent please load your sim","OK");
                 }
+            }
+        }
+
+        private async void SwipeItem_Clicked_2(object sender, EventArgs e)
+        {
+            var item = sender as SwipeItem;
+            if(item?.BindingContext is View_1 model)
+            {
+                await Clipboard.SetTextAsync(model.id);
             }
         }
     }

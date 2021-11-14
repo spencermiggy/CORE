@@ -40,7 +40,6 @@ namespace CORE.View
         {
             var repairers = await Transact.Read();
             ShowPeople.ItemsSource = repairers.Where(x => x.Repid == repairer_id).ToList();
-            var repairerss = await RatingTBL.Read();
         }
 
         private void TextBtn(object sender, EventArgs e)
@@ -124,6 +123,49 @@ namespace CORE.View
         private async void RefreshView_Refreshing(object sender, EventArgs e)
         {
             await GetRepairer();
+            try
+            {
+                var profiles = (await MobileService.GetTable<RatingTBL>().Where(x => x.Repid == repairer_id).ToListAsync()).FirstOrDefault();
+                int tota1 = profiles.star.ToString().Count() * 1;
+                int tota2 = profiles.stars.ToString().Count() * 2;
+                int tota3 = profiles.starss.ToString().Count() * 3;
+                int tota4 = profiles.starsss.ToString().Count() * 4;
+                int tota5 = profiles.starssss.ToString().Count() * 5;
+                int tota6 = profiles.star.ToString().Count() + profiles.stars.ToString().Count() + profiles.starss.ToString().Count() +
+                    profiles.starsss.ToString().Count() + profiles.starssss.ToString().Count();
+                int tota7 = tota1 + tota2 + tota3 + tota4 + tota5;
+                int tota8 = tota7 / tota6;
+                repairer repairer = new repairer
+                {
+                    id = repairer_id,
+                    activetime = activetime,
+                    addr = addr,
+                    city = city,
+                    currentloc = currentloc,
+                    fname = fname,
+                    job = job,
+                    latt = latt,
+                    lname = lname,
+                    longg = longg,
+                    pass = pass,
+                    picstr = picstr,
+                    pnum = pnum,
+                    propics = propics,
+                    statusact = statusact,
+                    star = profiles.star.ToString().Count(),
+                    stars = profiles.stars.ToString().Count(),
+                    starss = profiles.starss.ToString().Count(),
+                    starsss = profiles.starsss.ToString().Count(),
+                    starssss = profiles.starssss.ToString().Count(),
+                    TotalRate = tota8
+                };
+                await repairer.Update(repairer);
+            }
+            catch
+            {
+
+                await DisplayAlert("Network Error", "A network error occured, please check your internet connectivity and try again.", "OK");
+            }
             refreshme.IsRefreshing = false;
         }
 

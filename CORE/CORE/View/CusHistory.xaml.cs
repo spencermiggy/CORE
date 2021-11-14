@@ -8,6 +8,7 @@ using static CORE.App;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
 
 namespace CORE.View
 {
@@ -58,9 +59,14 @@ namespace CORE.View
             }
         }
 
-        private void SubmitBtn_Clicked(object sender, EventArgs e)
+        private async void SwipeItem_Clicked_1(object sender, EventArgs e)
         {
-
+            var item = sender as SwipeItem;
+            if (item?.BindingContext is TransactCus model)
+            {
+                await Clipboard.SetTextAsync(model.Repid);
+                await Navigation.PushModalAsync(new RatingPage());
+            }
         }
     }
 }

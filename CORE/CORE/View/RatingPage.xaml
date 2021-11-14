@@ -4,7 +4,8 @@
              x:Class="CORE.View.RatingPage" BackgroundColor="AntiqueWhite">
     <ContentPage.Content>
         <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
-            <Entry x:Name="RepID" HorizontalOptions="Center" Placeholder="Paste the Copied ID here" PlaceholderColor="Black" TextColor="Black"/>
+            <Entry x:Name="Comment" Placeholder="Please Send Us Your Feedback" PlaceholderColor="Gray" HeightRequest="50" WidthRequest="50" TextColor="Black"/>
+            <Label x:Name="RepID" HorizontalOptions="Center" Style="{StaticResource StProfileName2}" TextColor="Black"/>
             <fRating:RatingBar x:Name="Ratedk" SelectedStarValue="0" ImageHeight="30" ImageWidth="30"
                                VerticalOptions="Center" HorizontalOptions="Center" EmptyStarImage="emptystar"
                                FillStarImage="fullstar"></fRating:RatingBar>

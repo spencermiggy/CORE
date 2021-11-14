@@ -4,19 +4,24 @@
              x:Class="CORE.View.CusHistory" BackgroundColor="AntiqueWhite">
     <ContentPage.Content>
         <StackLayout>
+
             <StackLayout HorizontalOptions="Center" Margin="0,5,0,0">
                 <Label Text="Request History" TextColor="Black" Style="{StaticResource StProfileName2}" FontSize="20"/>
             </StackLayout>
+            <StackLayout>
 
             <RefreshView x:Name="refreshme" Refreshing="refreshme_Refreshing">
                 <CollectionView x:Name="ShowPeople" BackgroundColor="AntiqueWhite">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <sharpndado:MaterialFrame VerticalOptions="Center" Margin="80" Padding="20" Style="{StaticResource AcrylicFrame}">
+                            <sharpndado:MaterialFrame VerticalOptions="Center" Margin="20" Padding="20" Style="{StaticResource AcrylicFrame}">
                                 <SwipeView BackgroundColor="Transparent">
                                     <SwipeView.LeftItems>
                                         <SwipeItems>
-                                            <SwipeItem Text="Delete"
+                                                <SwipeItem Text="Rate"
+                                                           IconImageSource="fullstars"
+                                                           Clicked="SwipeItem_Clicked_1"/>
+                                                <SwipeItem Text="Delete"
                                          IconImageSource="delBtn"
                                          Clicked="SwipeItem_Clicked"/>
                                         </SwipeItems>
@@ -33,17 +38,9 @@
                                                 <Label Style="{StaticResource StProfileName3}" Text="{Binding Clname}" Grid.Column="3" Grid.Row="0"/>
                                                 <Label Style="{StaticResource StProfileName2}" Text="{Binding Caddr}" Grid.Column="3" Grid.Row="1" Grid.RowSpan="2"/>
                                                 <Label Style="{StaticResource StProfileName2}" Text="Repairer ID:" HorizontalTextAlignment="Center" TextColor="Blue" Grid.Column="0" Grid.Row="2"/>
-                                                <Label x:Name="RepID" Text="{Binding Repid}" TextColor="Black" Grid.Column="1" Grid.ColumnSpan="3"
+                                                <Label x:Name="RepID" Text="{Binding Repid}" TextColor="Black" Grid.Column="1" Grid.ColumnSpan="2"
                                                        Grid.Row="2" HorizontalTextAlignment="Center"/>
                                             </Grid>
-                                            <StackLayout Margin="0,-30,0,0">
-                                                <Entry x:Name="Comment" Placeholder="Comment Here" PlaceholderColor="Gray" HorizontalOptions="CenterAndExpand" BackgroundColor="WhiteSmoke"
-                                                       TextColor="Black"/>
-                                                <fRating:RatingBar SelectedStarValue="0" x:FieldModifier="rate" ImageHeight="40" ImageWidth="40" FlowDirection="LeftToRight"
-                                                                   FillStarImage="fullstar" EmptyStarImage="emptystar" HorizontalOptions="CenterAndExpand"/>
-                                                <Button x:Name="SubmitBtn" Text="Submit" CornerRadius="30" HorizontalOptions="Center"
-                                                        VerticalOptions="Center" Clicked="SubmitBtn_Clicked" BackgroundColor="LightPink"/>
-                                            </StackLayout>
                                         </StackLayout>
                                     </Frame>
                                 </SwipeView>
@@ -53,5 +50,6 @@
                 </CollectionView>
             </RefreshView>
         </StackLayout>
+       </StackLayout>
     </ContentPage.Content>
 </ContentPage>
