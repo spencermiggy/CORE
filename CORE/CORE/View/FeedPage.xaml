@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:sharpndado="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame"
+             x:Class="CORE.View.FeedPage" BackgroundColor="AntiqueWhite">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout HeightRequest="10">
+                <Label x:Name="RepID" TextColor="AntiqueWhite" BackgroundColor="Transparent"/>
+            </StackLayout>
+            <CollectionView x:Name="ShowPeople">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <sharpndado:MaterialFrame VerticalOptions="Center" Margin="5" Padding="20" Style="{StaticResource AcrylicFrame}">
+                            <StackLayout>
+                                <Grid ColumnDefinitions="*,*" HorizontalOptions="Center" Margin="20">
+                                    <Label Style="{StaticResource StProfileName2}" TextColor="Blue" FontSize="14" Text="Customer Alias ID:" Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Center"/>
+                                    <Label Style="{StaticResource StProfileName2}" TextColor="Black" FontSize="14" Text="{Binding id}" Grid.Column="1" Grid.Row="0" HorizontalTextAlignment="Start"/>
+                                </Grid>
+                                <Label Style="{StaticResource StProfileName2}" TextColor="Black" FontSize="Medium" Text="{Binding CusComment}" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            </StackLayout>
+                        </sharpndado:MaterialFrame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <StackLayout>
+                
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

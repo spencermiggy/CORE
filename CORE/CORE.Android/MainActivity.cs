@@ -8,7 +8,7 @@ using Android;
 
 namespace CORE.Droid
 {
-    [Activity(Label = "CORE", Icon = "@drawable/logoicon", ScreenOrientation = Android.Content.PM.ScreenOrientation.UserPortrait, Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize )]
+    [Activity(Label = "CORE", Icon = "@drawable/logoicon", ScreenOrientation = ScreenOrientation.Locked, Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize )]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         const int RequestLocationId = 0;

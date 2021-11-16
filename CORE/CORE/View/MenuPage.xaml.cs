@@ -46,7 +46,7 @@ namespace CORE.View
         {
             var item = sender as SwipeItem;
             var smsSend = CrossMessaging.Current.SmsMessenger;
-            if (item?.BindingContext is repairer model)
+            if (item?.BindingContext is View_1 model)
             {
                 smsSend.SendSms(model.pnum, "");
             }
@@ -219,9 +219,10 @@ namespace CORE.View
         private async void SwipeItem_Clicked_2(object sender, EventArgs e)
         {
             var item = sender as SwipeItem;
-            if(item?.BindingContext is View_1 model)
+            if (item?.BindingContext is View_1 model)
             {
                 await Clipboard.SetTextAsync(model.id);
+                await Navigation.PushModalAsync(new FeedPage());
             }
         }
     }

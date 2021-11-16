@@ -74,7 +74,7 @@
                 <CollectionView x:Name="ShowPeople">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                        <sharpndado:MaterialFrame VerticalOptions="Center" Margin="20" Padding="20" Style="{StaticResource AcrylicFrame}">
+                            <sharpndado:MaterialFrame VerticalOptions="Center" Margin="20" Padding="20" Style="{StaticResource AcrylicFrame}">
                                 <SwipeView BackgroundColor="Transparent">
                                     <SwipeView.RightItems>
                                         <SwipeItem Text="Request A Job"
@@ -82,9 +82,9 @@
                                          BackgroundColor="Transparent"
                                          Clicked="SwipeItem_Clicked_1"/>
                                         <SwipeItem Text="Feedbacks"
-                                                   IconImageSource="sms"
-                                                   BackgroundColor="Transparent"
-                                                   Clicked="SwipeItem_Clicked_2"/>
+                                         IconImageSource="sms"
+                                         BackgroundColor="Transparent"
+                                         Clicked="SwipeItem_Clicked_2"/>
                                     </SwipeView.RightItems>
                                     <SwipeView.LeftItems>
                                         <SwipeItems>

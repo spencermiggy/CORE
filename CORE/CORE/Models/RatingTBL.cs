@@ -14,9 +14,6 @@ namespace CORE.Models
         public int starss { get; set; }
         public int starsss { get; set; }
         public int starssss { get; set; }
-        public int CusCount { get; set; }
-        public int TotRate { get; set; }
-        public string CusComment { get; set; }
 
         public static async Task Insert(RatingTBL transact)
         {

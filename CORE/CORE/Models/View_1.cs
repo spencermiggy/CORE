@@ -22,8 +22,6 @@ namespace CORE.Models
         public string latt { get; set; }
         public string longg { get; set; }
         public string currentloc { get; set; }
-        public string Repid { get; set; }
-        public string Repid1 { get; set; }
         public int star { get; set; }
         public int stars { get; set; }
         public int starss { get; set; }

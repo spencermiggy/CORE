@@ -126,41 +126,55 @@ namespace CORE.View
             try
             {
                 var profiles = (await MobileService.GetTable<RatingTBL>().Where(x => x.Repid == repairer_id).ToListAsync()).FirstOrDefault();
-                int tota1 = profiles.star.ToString().Count() * 1;
-                int tota2 = profiles.stars.ToString().Count() * 2;
-                int tota3 = profiles.starss.ToString().Count() * 3;
-                int tota4 = profiles.starsss.ToString().Count() * 4;
-                int tota5 = profiles.starssss.ToString().Count() * 5;
-                int tota6 = profiles.star.ToString().Count() + profiles.stars.ToString().Count() + profiles.starss.ToString().Count() +
-                    profiles.starsss.ToString().Count() + profiles.starssss.ToString().Count();
-                int tota7 = tota1 + tota2 + tota3 + tota4 + tota5;
-                int tota8 = tota7 / tota6;
-                repairer repairer = new repairer
+                    int tot1 = profiles.star + star;
+                    int tot2 = profiles.stars + stars;
+                    int tot3 = profiles.starss + starss;
+                    int tot4 = profiles.starsss + starsss;
+                    int tot5 = profiles.starssss + starssss;
+                    int tota1 = tot1 * 1;
+                    int tota2 = tot2 * 2;
+                    int tota3 = tot3 * 3;
+                    int tota4 = tot4 * 4;
+                    int tota5 = tot5 * 5;
+                    int tota6 = tot1 + tot2 + tot3 + tot4 + tot5;
+                    int tota7 = tota1 + tota2 + tota3 + tota4 + tota5;
+                    int tota8 = tota7 / tota6;
+                    repairer repairer = new repairer
+                    {
+                        id = repairer_id,
+                        activetime = activetime,
+                        addr = addr,
+                        city = city,
+                        currentloc = currentloc,
+                        fname = fname,
+                        job = job,
+                        latt = latt,
+                        lname = lname,
+                        longg = longg,
+                        pass = pass,
+                        picstr = picstr,
+                        pnum = pnum,
+                        propics = propics,
+                        statusact = statusact,
+                        star = tot1,
+                        stars = tot2,
+                        starss = tot3,
+                        starsss = tot4,
+                        starssss = tot5,
+                        TotalRate = tota8
+                    };
+                    star = repairer.star;
+                    stars = repairer.stars;
+                    starss = repairer.starss;
+                    starsss = repairer.starsss;
+                    starssss = repairer.starssss;
+                    await repairer.Update(repairer);
+                RatingTBL ratingTBL = new RatingTBL
                 {
-                    id = repairer_id,
-                    activetime = activetime,
-                    addr = addr,
-                    city = city,
-                    currentloc = currentloc,
-                    fname = fname,
-                    job = job,
-                    latt = latt,
-                    lname = lname,
-                    longg = longg,
-                    pass = pass,
-                    picstr = picstr,
-                    pnum = pnum,
-                    propics = propics,
-                    statusact = statusact,
-                    star = profiles.star.ToString().Count(),
-                    stars = profiles.stars.ToString().Count(),
-                    starss = profiles.starss.ToString().Count(),
-                    starsss = profiles.starsss.ToString().Count(),
-                    starssss = profiles.starssss.ToString().Count(),
-                    TotalRate = tota8
+                    id = profiles.id
                 };
-                await repairer.Update(repairer);
-            }
+                await RatingTBL.Delete(ratingTBL);
+                }
             catch
             {
 

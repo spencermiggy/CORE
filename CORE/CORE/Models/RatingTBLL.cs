@@ -10,6 +10,7 @@ namespace CORE.Models
         public string id { get; set; }
         public string Repid { get; set; }
         public int TotalRate { get; set; }
+        public string CusComment { get; set; }
         public static async Task Insert(RatingTBLL transact)
         {
             await App.MobileService.GetTable<RatingTBLL>().InsertAsync(transact);

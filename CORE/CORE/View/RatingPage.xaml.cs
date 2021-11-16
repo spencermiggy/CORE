@@ -31,7 +31,7 @@ namespace CORE.View
 
         private async void SubBtn_Clicked(object sender, EventArgs e)
         {
-            var modell = sender as RatingTBLL;
+            var modell = sender as RatingTBL;
             try
             {
                 if (Ratedk.SelectedStarValue == 1 && Comment.Text != "")
@@ -39,19 +39,14 @@ namespace CORE.View
                     RatingTBL transact = new RatingTBL
                     {
                         Repid = RepID.Text,
-                        star = Ratedk.SelectedStarValue,
-                        CusComment = Comment.Text
+                        star = Ratedk.SelectedStarValue
                     };
                     await RatingTBL.Insert(transact);
-                    int tota1 = transact.star.ToString().Count() * 1;
-                    int tota2 = transact.stars.ToString().Count() * 2;
-                    int tota3 = transact.starss.ToString().Count() * 3;
-                    int tota4 = transact.starsss.ToString().Count() * 4;
-                    int tota5 = transact.starssss.ToString().Count() * 5;
-                    int tota6 = transact.star.ToString().Count() + transact.stars.ToString().Count() + transact.starss.ToString().Count() +
-                        transact.starsss.ToString().Count() + transact.starssss.ToString().Count();
-                    int tota7 = tota1 + tota2 + tota3 + tota4 + tota5;
-                    int tota8 = tota7 / tota6;
+                    RatingTBLL ratingTBLL = new RatingTBLL
+                    {
+                        CusComment = Comment.Text
+                    };
+                    await RatingTBLL.Insert(ratingTBLL);
                     await DisplayAlert("Success", "THANK YOU FOR GIVING YOUR FEEDBACK", "OK");
                 }
                 else if (Ratedk.SelectedStarValue == 2 && Comment.Text != "")
@@ -59,19 +54,14 @@ namespace CORE.View
                     RatingTBL transact = new RatingTBL
                     {
                         Repid = RepID.Text,
-                        stars = Ratedk.SelectedStarValue,
-                        CusComment = Comment.Text
+                        stars = Ratedk.SelectedStarValue
                     };
                     await RatingTBL.Insert(transact);
-                    int tota1 = transact.star.ToString().Count() * 1;
-                    int tota2 = transact.stars.ToString().Count() * 2;
-                    int tota3 = transact.starss.ToString().Count() * 3;
-                    int tota4 = transact.starsss.ToString().Count() * 4;
-                    int tota5 = transact.starssss.ToString().Count() * 5;
-                    int tota6 = transact.star.ToString().Count() + transact.stars.ToString().Count() + transact.starss.ToString().Count() +
-                        transact.starsss.ToString().Count() + transact.starssss.ToString().Count();
-                    int tota7 = tota1 + tota2 + tota3 + tota4 + tota5;
-                    int tota8 = tota7 / tota6;
+                    RatingTBLL ratingTBLL = new RatingTBLL
+                    {
+                        CusComment = Comment.Text
+                    };
+                    await RatingTBLL.Insert(ratingTBLL);
                     await DisplayAlert("Success", "THANK YOU FOR GIVING YOUR FEEDBACK", "OK");
                 }
                 else if (Ratedk.SelectedStarValue == 3 && Comment.Text != "")
@@ -79,19 +69,14 @@ namespace CORE.View
                     RatingTBL transact = new RatingTBL
                     {
                         Repid = RepID.Text,
-                        starss = Ratedk.SelectedStarValue,
-                        CusComment = Comment.Text
+                        starss = Ratedk.SelectedStarValue
                     };
                     await RatingTBL.Insert(transact);
-                    int tota1 = transact.star.ToString().Count() * 1;
-                    int tota2 = transact.stars.ToString().Count() * 2;
-                    int tota3 = transact.starss.ToString().Count() * 3;
-                    int tota4 = transact.starsss.ToString().Count() * 4;
-                    int tota5 = transact.starssss.ToString().Count() * 5;
-                    int tota6 = transact.star.ToString().Count() + transact.stars.ToString().Count() + transact.starss.ToString().Count() +
-                        transact.starsss.ToString().Count() + transact.starssss.ToString().Count();
-                    int tota7 = tota1 + tota2 + tota3 + tota4 + tota5;
-                    int tota8 = tota7 / tota6;
+                    RatingTBLL ratingTBLL = new RatingTBLL
+                    {
+                        CusComment = Comment.Text
+                    };
+                    await RatingTBLL.Insert(ratingTBLL);
                     await DisplayAlert("Success", "THANK YOU FOR GIVING YOUR FEEDBACK", "OK");
                 }
                 else if (Ratedk.SelectedStarValue == 4 && Comment.Text != "")
@@ -99,19 +84,14 @@ namespace CORE.View
                     RatingTBL transact = new RatingTBL
                     {
                         Repid = RepID.Text,
-                        starsss = Ratedk.SelectedStarValue,
-                        CusComment = Comment.Text
+                        starsss = Ratedk.SelectedStarValue
                     };
                     await RatingTBL.Insert(transact);
-                    int tota1 = transact.star.ToString().Count() * 1;
-                    int tota2 = transact.stars.ToString().Count() * 2;
-                    int tota3 = transact.starss.ToString().Count() * 3;
-                    int tota4 = transact.starsss.ToString().Count() * 4;
-                    int tota5 = transact.starssss.ToString().Count() * 5;
-                    int tota6 = transact.star.ToString().Count() + transact.stars.ToString().Count() + transact.starss.ToString().Count() +
-                        transact.starsss.ToString().Count() + transact.starssss.ToString().Count();
-                    int tota7 = tota1 + tota2 + tota3 + tota4 + tota5;
-                    int tota8 = tota7 / tota6;
+                    RatingTBLL ratingTBLL = new RatingTBLL
+                    {
+                        CusComment = Comment.Text
+                    };
+                    await RatingTBLL.Insert(ratingTBLL);
                     await DisplayAlert("Success", "THANK YOU FOR GIVING YOUR FEEDBACK", "OK");
                 }
                 else if (Ratedk.SelectedStarValue == 5 && Comment.Text != "")
@@ -119,19 +99,14 @@ namespace CORE.View
                     RatingTBL transact = new RatingTBL
                     {
                         Repid = RepID.Text,
-                        starssss = Ratedk.SelectedStarValue,
-                        CusComment = Comment.Text
+                        starssss = Ratedk.SelectedStarValue
                     };
                     await RatingTBL.Insert(transact);
-                    int tota1 = transact.star.ToString().Count() * 1;
-                    int tota2 = transact.stars.ToString().Count() * 2;
-                    int tota3 = transact.starss.ToString().Count() * 3;
-                    int tota4 = transact.starsss.ToString().Count() * 4;
-                    int tota5 = transact.starssss.ToString().Count() * 5;
-                    int tota6 = transact.star.ToString().Count() + transact.stars.ToString().Count() + transact.starss.ToString().Count() +
-                        transact.starsss.ToString().Count() + transact.starssss.ToString().Count();
-                    int tota7 = tota1 + tota2 + tota3 + tota4 + tota5;
-                    int tota8 = tota7 / tota6;
+                    RatingTBLL ratingTBLL = new RatingTBLL
+                    {
+                        CusComment = Comment.Text
+                    };
+                    await RatingTBLL.Insert(ratingTBLL);
                     await DisplayAlert("Success", "THANK YOU FOR GIVING YOUR FEEDBACK", "OK");
                 }
 
