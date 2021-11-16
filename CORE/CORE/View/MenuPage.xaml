@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:sharpndado="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame" xmlns:fRating="clr-namespace:Rating;assembly=Rating"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:sharpndado="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame" xmlns:fRating="clr-namespace:Rating;assembly=Rating" xmlns:rating="clr-namespace:Syncfusion.SfRating.XForms;assembly=Syncfusion.SfRating.XForms"
              x:Class="CORE.View.MenuPage"
              BackgroundColor="AntiqueWhite">
     <ContentPage.Content>
@@ -118,10 +118,10 @@
                                                HasShadow="False" CornerRadius="110" Padding="0" IsClippedToBounds="True">
                                                 <Image Source="{Binding propics}" Aspect="Fill"/>
                                             </Frame>
-                                            <fRating:RatingBar IsEnabled="False"  x:Name="rate" SelectedStarValue="{Binding TotalRate}" ImageHeight="20" ImageWidth="20"
-                                                               EmptyStarImage="emptystar.png" FillStarImage="fullstar.png" Grid.Column="0" Grid.Row="4"/>
-                                            <Label x:Name="rated" Text="{Binding TotalRate}" Style="{StaticResource StAndroidLabel1}" Grid.Column="1" Grid.Row="4" HorizontalTextAlignment="Center" Padding="-50,0,0,0"
-                                                   VerticalOptions="Center" FontSize="16"/>
+                                            <rating:SfRating ItemCount="5" Precision="Half" Value="{Binding TotalRate}" Grid.Column="0" Grid.Row="4" IsEnabled="False"
+                                                             FlowDirection="LeftToRight" ItemSize="15" HorizontalOptions="Center" VerticalOptions="Center" TooltipBackgroundColor="Gold"/>
+                                            <Label x:Name="rated" Text="{Binding TotalRate}" Style="{StaticResource StAndroidLabel1}" Grid.Column="1" Grid.Row="4" HorizontalTextAlignment="Center" Padding="0,0,85,5"
+                                                   VerticalOptions="Center" FontSize="19"/>
                                         </Grid>
                                     </Frame>
                                 </SwipeView>
