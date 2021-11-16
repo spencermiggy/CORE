@@ -44,10 +44,13 @@ namespace CORE.View
                     await RatingTBL.Insert(transact);
                     RatingTBLL ratingTBLL = new RatingTBLL
                     {
-                        CusComment = Comment.Text
+                        Repid = RepID.Text,
+                        CusComment = Comment.Text,
+                        TotalRate = Ratedk.SelectedStarValue
                     };
                     await RatingTBLL.Insert(ratingTBLL);
                     await DisplayAlert("Success", "THANK YOU FOR GIVING YOUR FEEDBACK", "OK");
+                    App.Current.MainPage = new MenuPage();
                 }
                 else if (Ratedk.SelectedStarValue == 2 && Comment.Text != "")
                 {
@@ -59,10 +62,13 @@ namespace CORE.View
                     await RatingTBL.Insert(transact);
                     RatingTBLL ratingTBLL = new RatingTBLL
                     {
-                        CusComment = Comment.Text
+                        Repid = RepID.Text,
+                        CusComment = Comment.Text,
+                        TotalRate = Ratedk.SelectedStarValue
                     };
                     await RatingTBLL.Insert(ratingTBLL);
                     await DisplayAlert("Success", "THANK YOU FOR GIVING YOUR FEEDBACK", "OK");
+                    App.Current.MainPage = new MenuPage();
                 }
                 else if (Ratedk.SelectedStarValue == 3 && Comment.Text != "")
                 {
@@ -74,10 +80,13 @@ namespace CORE.View
                     await RatingTBL.Insert(transact);
                     RatingTBLL ratingTBLL = new RatingTBLL
                     {
-                        CusComment = Comment.Text
+                        Repid = RepID.Text,
+                        CusComment = Comment.Text,
+                        TotalRate = Ratedk.SelectedStarValue
                     };
                     await RatingTBLL.Insert(ratingTBLL);
                     await DisplayAlert("Success", "THANK YOU FOR GIVING YOUR FEEDBACK", "OK");
+                    App.Current.MainPage = new MenuPage();
                 }
                 else if (Ratedk.SelectedStarValue == 4 && Comment.Text != "")
                 {
@@ -89,10 +98,13 @@ namespace CORE.View
                     await RatingTBL.Insert(transact);
                     RatingTBLL ratingTBLL = new RatingTBLL
                     {
-                        CusComment = Comment.Text
+                        Repid = RepID.Text,
+                        CusComment = Comment.Text,
+                        TotalRate = Ratedk.SelectedStarValue
                     };
                     await RatingTBLL.Insert(ratingTBLL);
                     await DisplayAlert("Success", "THANK YOU FOR GIVING YOUR FEEDBACK", "OK");
+                    App.Current.MainPage = new MenuPage();
                 }
                 else if (Ratedk.SelectedStarValue == 5 && Comment.Text != "")
                 {
@@ -104,10 +116,13 @@ namespace CORE.View
                     await RatingTBL.Insert(transact);
                     RatingTBLL ratingTBLL = new RatingTBLL
                     {
-                        CusComment = Comment.Text
+                        Repid = RepID.Text,
+                        CusComment = Comment.Text,
+                        TotalRate = Ratedk.SelectedStarValue
                     };
                     await RatingTBLL.Insert(ratingTBLL);
                     await DisplayAlert("Success", "THANK YOU FOR GIVING YOUR FEEDBACK", "OK");
+                    App.Current.MainPage = new MenuPage();
                 }
 
                 else if (Ratedk.SelectedStarValue == 0)

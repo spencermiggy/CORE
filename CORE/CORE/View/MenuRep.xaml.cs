@@ -138,7 +138,7 @@ namespace CORE.View
                     int tota5 = tot5 * 5;
                     int tota6 = tot1 + tot2 + tot3 + tot4 + tot5;
                     int tota7 = tota1 + tota2 + tota3 + tota4 + tota5;
-                    int tota8 = tota7 / tota6;
+                    double tota8 = tota7 / tota6;
                     repairer repairer = new repairer
                     {
                         id = repairer_id,
@@ -178,7 +178,7 @@ namespace CORE.View
             catch
             {
 
-                await DisplayAlert("Network Error", "A network error occured, please check your internet connectivity and try again.", "OK");
+                await GetRepairer();
             }
             refreshme.IsRefreshing = false;
         }
