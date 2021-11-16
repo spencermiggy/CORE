@@ -35,6 +35,63 @@ namespace CORE.View
 
                 await DisplayAlert("Network Error", "A network error occured, please check your internet connectivity and try again.", "OK");
             }
+            try
+            {
+                var profiles = (await MobileService.GetTable<RatingTBL>().Where(x => x.Repid == repairer_id).ToListAsync()).FirstOrDefault();
+                float tot1 = profiles.star + star;
+                float tot2 = profiles.stars + stars;
+                float tot3 = profiles.starss + starss;
+                float tot4 = profiles.starsss + starsss;
+                float tot5 = profiles.starssss + starssss;
+                float tota1 = tot1 * 1;
+                float tota2 = tot2 * 2;
+                float tota3 = tot3 * 3;
+                float tota4 = tot4 * 4;
+                float tota5 = tot5 * 5;
+                float tota6 = tot1 + tot2 + tot3 + tot4 + tot5;
+                float tota7 = tota1 + tota2 + tota3 + tota4 + tota5;
+                float tota8 = tota7 / tota6;
+                repairer repairer = new repairer
+                {
+                    id = repairer_id,
+                    activetime = activetime,
+                    addr = addr,
+                    city = city,
+                    currentloc = currentloc,
+                    fname = fname,
+                    job = job,
+                    latt = latt,
+                    lname = lname,
+                    longg = longg,
+                    pass = pass,
+                    picstr = picstr,
+                    pnum = pnum,
+                    propics = propics,
+                    statusact = statusact,
+                    star = tot1,
+                    stars = tot2,
+                    starss = tot3,
+                    starsss = tot4,
+                    starssss = tot5,
+                    TotalRate = tota8
+                };
+                star = repairer.star;
+                stars = repairer.stars;
+                starss = repairer.starss;
+                starsss = repairer.starsss;
+                starssss = repairer.starssss;
+                await repairer.Update(repairer);
+                RatingTBL ratingTBL = new RatingTBL
+                {
+                    id = profiles.id
+                };
+                await RatingTBL.Delete(ratingTBL);
+            }
+            catch
+            {
+
+                await GetRepairer();
+            }
         }
         private async Task GetRepairer()
         {
@@ -126,20 +183,20 @@ namespace CORE.View
             try
             {
                 var profiles = (await MobileService.GetTable<RatingTBL>().Where(x => x.Repid == repairer_id).ToListAsync()).FirstOrDefault();
-                    int tot1 = profiles.star + star;
-                    int tot2 = profiles.stars + stars;
-                    int tot3 = profiles.starss + starss;
-                    int tot4 = profiles.starsss + starsss;
-                    int tot5 = profiles.starssss + starssss;
-                    int tota1 = tot1 * 1;
-                    int tota2 = tot2 * 2;
-                    int tota3 = tot3 * 3;
-                    int tota4 = tot4 * 4;
-                    int tota5 = tot5 * 5;
-                    int tota6 = tot1 + tot2 + tot3 + tot4 + tot5;
-                    int tota7 = tota1 + tota2 + tota3 + tota4 + tota5;
-                    double tota8 = tota7 / tota6;
-                    repairer repairer = new repairer
+                float tot1 = profiles.star + star;
+                float tot2 = profiles.stars + stars;
+                float tot3 = profiles.starss + starss;
+                float tot4 = profiles.starsss + starsss;
+                float tot5 = profiles.starssss + starssss;
+                float tota1 = tot1 * 1;
+                float tota2 = tot2 * 2;
+                float tota3 = tot3 * 3;
+                float tota4 = tot4 * 4;
+                float tota5 = tot5 * 5;
+                float tota6 = tot1 + tot2 + tot3 + tot4 + tot5;
+                float tota7 = tota1 + tota2 + tota3 + tota4 + tota5;
+                float tota8 = tota7 / tota6;
+                repairer repairer = new repairer
                     {
                         id = repairer_id,
                         activetime = activetime,

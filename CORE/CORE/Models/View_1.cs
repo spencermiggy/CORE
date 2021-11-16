@@ -22,12 +22,12 @@ namespace CORE.Models
         public string latt { get; set; }
         public string longg { get; set; }
         public string currentloc { get; set; }
-        public int star { get; set; }
-        public int stars { get; set; }
-        public int starss { get; set; }
-        public int starsss { get; set; }
-        public int starssss { get; set; }
-        public int TotalRate { get; set; }
+        public float star { get; set; }
+        public float stars { get; set; }
+        public float starss { get; set; }
+        public float starsss { get; set; }
+        public float starssss { get; set; }
+        public float TotalRate { get; set; }
         public static async Task Insert(View_1 transact)
         {
             await App.MobileService.GetTable<View_1>().InsertAsync(transact);
