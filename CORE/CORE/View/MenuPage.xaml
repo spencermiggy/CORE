@@ -121,7 +121,7 @@
                                             <rating:SfRating ItemCount="5" Precision="Half" Value="{Binding TotalRate}" Grid.Column="0" Grid.Row="4" IsEnabled="False"
                                                              FlowDirection="LeftToRight" ItemSize="15" HorizontalOptions="Center" VerticalOptions="Center" TooltipBackgroundColor="Gold"/>
                                             <Label x:Name="rated" Text="{Binding TotalRate}" Style="{StaticResource StAndroidLabel1}" Grid.Column="1" Grid.Row="4" HorizontalTextAlignment="Center" Padding="0,0,85,5"
-                                                   VerticalOptions="Center" FontSize="19"/>
+                                                   VerticalOptions="Center" FontSize="18"/>
                                         </Grid>
                                     </Frame>
                                 </SwipeView>

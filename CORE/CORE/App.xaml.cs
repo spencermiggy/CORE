@@ -24,6 +24,7 @@ namespace CORE
             propics, picstr, fname, lname, job, city, pnum, pass, addr, activetime, statusact;
         public App()
         {
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NTM1MjA0QDMxMzkyZTMzMmUzMEsxd0M2UE0vSFY2VW83SThxTWJmOFNkSjRQUDFPaS85K0VlL2dnNjQvd1k9");
             InitializeComponent();
 
             MainPage = new MainPage();
