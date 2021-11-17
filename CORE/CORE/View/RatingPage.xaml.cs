@@ -31,7 +31,7 @@ namespace CORE.View
 
         private async void SubBtn_Clicked(object sender, EventArgs e)
         {
-            var modell = sender as RatingTBL;
+            var profilesss = (await MobileService.GetTable<TransactCus>().Where(x => x.Cusid == customer_id).ToListAsync()).FirstOrDefault();
             try
             {
                 if (Ratedk.SelectedStarValue == 1 && Comment.Text != "")
@@ -49,6 +49,11 @@ namespace CORE.View
                         TotalRate = Ratedk.SelectedStarValue
                     };
                     await RatingTBLL.Insert(ratingTBLL);
+                    TransactCus transacts = new TransactCus
+                    {
+                        id = profilesss.id
+                    };
+                    await TransactCus.Delete(transacts);
                     await DisplayAlert("Success", "THANK YOU FOR GIVING YOUR FEEDBACK", "OK");
                     App.Current.MainPage = new MenuPage();
                 }
@@ -67,6 +72,11 @@ namespace CORE.View
                         TotalRate = Ratedk.SelectedStarValue
                     };
                     await RatingTBLL.Insert(ratingTBLL);
+                    TransactCus transacts = new TransactCus
+                    {
+                        id = profilesss.id
+                    };
+                    await TransactCus.Delete(transacts);
                     await DisplayAlert("Success", "THANK YOU FOR GIVING YOUR FEEDBACK", "OK");
                     App.Current.MainPage = new MenuPage();
                 }
@@ -85,6 +95,11 @@ namespace CORE.View
                         TotalRate = Ratedk.SelectedStarValue
                     };
                     await RatingTBLL.Insert(ratingTBLL);
+                    TransactCus transacts = new TransactCus
+                    {
+                        id = profilesss.id
+                    };
+                    await TransactCus.Delete(transacts);
                     await DisplayAlert("Success", "THANK YOU FOR GIVING YOUR FEEDBACK", "OK");
                     App.Current.MainPage = new MenuPage();
                 }
@@ -103,6 +118,11 @@ namespace CORE.View
                         TotalRate = Ratedk.SelectedStarValue
                     };
                     await RatingTBLL.Insert(ratingTBLL);
+                    TransactCus transacts = new TransactCus
+                    {
+                        id = profilesss.id
+                    };
+                    await TransactCus.Delete(transacts);
                     await DisplayAlert("Success", "THANK YOU FOR GIVING YOUR FEEDBACK", "OK");
                     App.Current.MainPage = new MenuPage();
                 }
@@ -121,6 +141,11 @@ namespace CORE.View
                         TotalRate = Ratedk.SelectedStarValue
                     };
                     await RatingTBLL.Insert(ratingTBLL);
+                    TransactCus transacts = new TransactCus
+                    {
+                        id = profilesss.id
+                    };
+                    await TransactCus.Delete(transacts);
                     await DisplayAlert("Success", "THANK YOU FOR GIVING YOUR FEEDBACK", "OK");
                     App.Current.MainPage = new MenuPage();
                 }

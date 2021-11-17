@@ -36,29 +36,6 @@ namespace CORE.View
             refreshme.IsRefreshing = false;
         }
 
-        private async void SwipeItem_Clicked(object sender, EventArgs e)
-        {
-            var item = sender as SwipeItem;
-            if (item?.BindingContext is TransactCus model)
-            {
-                try
-                {
-                    TransactCus transact = new TransactCus
-                    {
-                        id = model.id
-                    };
-                    await TransactCus.Delete(transact);
-                    await DisplayAlert("Success", "Success Deleted", "Ok");
-                    refreshme.IsRefreshing = true;
-                    refreshme.IsRefreshing = false;
-                }
-                catch
-                {
-                    await DisplayAlert("ERROR", "Check Internet Connection", "OK");
-                }
-            }
-        }
-
         private async void SwipeItem_Clicked_1(object sender, EventArgs e)
         {
             var item = sender as SwipeItem;

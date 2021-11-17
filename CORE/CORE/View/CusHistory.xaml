@@ -21,10 +21,7 @@
                                                 <SwipeItem Text="Rate"
                                                            IconImageSource="fullstars"
                                                            Clicked="SwipeItem_Clicked_1"/>
-                                                <SwipeItem Text="Delete"
-                                         IconImageSource="delBtn"
-                                         Clicked="SwipeItem_Clicked"/>
-                                        </SwipeItems>
+                                            </SwipeItems>
                                     </SwipeView.LeftItems>
                                     <Frame BackgroundColor="Transparent" BorderColor="Transparent" Margin="0,-25,0,-30" IsClippedToBounds="True">
                                         <StackLayout>
