@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:sharpndado="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame"
-             x:Class="CORE.View.MenuRep" BackgroundImageSource="BG.jpg">
+             x:Class="CORE.View.MenuRep" BackgroundColor="FloralWhite">
     <ContentPage.Content>
         <StackLayout>
             <Frame HasShadow="True" IsClippedToBounds="True" HeightRequest="50" Padding="0,15">
-            <StackLayout HeightRequest="100" Margin="-30" BackgroundColor="AntiqueWhite">
+            <StackLayout HeightRequest="100" Margin="-30" BackgroundColor="Indigo">
                     <Grid ColumnDefinitions="*,*,*,*" Margin="25">
-                        <ImageButton x:Name="pro" Source="{Binding propics}" Aspect="Fill" CornerRadius="100" Margin="30,0,20,0"  
+                        <ImageButton x:Name="pro" Source="{Binding propics}" Aspect="Fill" CornerRadius="100" HorizontalOptions="Center" Margin="30,0,20,0"  
                                      BackgroundColor="White" Clicked="ProfBtn" Grid.Column="0" Grid.Row="0" BorderColor="Transparent"/>
                         <Frame Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" CornerRadius="30" HeightRequest="10" BackgroundColor="White" IsClippedToBounds="True">
                             <SearchBar Style="{StaticResource StProfileName2}" x:Name="Search1" Placeholder="Search" BackgroundColor="Transparent" VerticalOptions="Start" TextColor="Black" CancelButtonColor="Black" PlaceholderColor="Black"
@@ -21,19 +21,17 @@
                 <Label Text="Request List" TextColor="Black" Style="{StaticResource StProfileName2}"/>
             </StackLayout>
 
-            <RefreshView x:Name="refreshme" Refreshing="RefreshView_Refreshing">
-                <CollectionView x:Name="ShowPeople" BackgroundColor="AntiqueWhite">
+            <RefreshView x:Name="refreshme" Refreshing="RefreshView_Refreshing" IsRefreshing="True" RefreshColor="Indigo">
+                <CollectionView x:Name="ShowPeople" BackgroundColor="FloralWhite">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <sharpndado:MaterialFrame VerticalOptions="Center" Margin="22" Padding="20" Style="{StaticResource AcrylicFrame}">
                                 <SwipeView BackgroundColor="Transparent">
                                     <SwipeView.RightItems>
                                         <SwipeItem x:Name="accepted" Text="Accept"
-                                                   BackgroundColor="SkyBlue"
+                                                   BackgroundColor="Transparent"
+                                                   IconImageSource="requests.png"
                                                    Clicked="accepted_Clicked"/>
-                                        <SwipeItem x:Name="declined" Text="Decline"
-                                                   BackgroundColor="OrangeRed"
-                                                   Clicked="declined_Clicked"/>
                                         <SwipeItem x:Name="DoneBtn" Text="Done"
                                                        IconImageSource="doneImg.png"
                                                        BackgroundColor="Transparent"
@@ -55,12 +53,12 @@
                                          Clicked="reportButton_Clicked"/>
                                         </SwipeItems>
                                     </SwipeView.LeftItems>
-                                    <Frame BackgroundColor="Transparent" BorderColor="Transparent" Margin="0,-25,0,-30" IsClippedToBounds="True">
+                                    <Frame BackgroundColor="FloralWhite" Margin="0,-25,0,-30" IsClippedToBounds="True">
                                         <Grid ColumnDefinitions="*,*,*">
-                                            <Label Style="{StaticResource StProfileName2}" HorizontalTextAlignment="Center" TextColor="Blue" Text="Mobile #:" Grid.Column="0" Grid.Row="0"/>
-                                            <Label Style="{StaticResource StProfileName2}" HorizontalTextAlignment="Center" TextColor="Blue" Text="First Name:" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2"/>
-                                            <Label Style="{StaticResource StProfileName2}" HorizontalTextAlignment="Center" TextColor="Blue" Text="Last Name:" Grid.Column="0" Grid.Row="2" Grid.RowSpan="2"/>
-                                            <Label Style="{StaticResource StProfileName2}" HorizontalTextAlignment="Center" TextColor="Blue" Text="Address:" Grid.Column="0" Grid.Row="3" Grid.RowSpan="2"/>
+                                            <Label Style="{StaticResource StProfileName2}" HorizontalTextAlignment="Center" TextColor="Indigo" Text="Mobile #:" Grid.Column="0" Grid.Row="0"/>
+                                            <Label Style="{StaticResource StProfileName2}" HorizontalTextAlignment="Center" TextColor="Indigo" Text="First Name:" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2"/>
+                                            <Label Style="{StaticResource StProfileName2}" HorizontalTextAlignment="Center" TextColor="Indigo" Text="Last Name:" Grid.Column="0" Grid.Row="2" Grid.RowSpan="2"/>
+                                            <Label Style="{StaticResource StProfileName2}" HorizontalTextAlignment="Center" TextColor="Indigo" Text="Address:" Grid.Column="0" Grid.Row="3" Grid.RowSpan="2"/>
                                             <Label Style="{StaticResource StProfileName3}" Text="{Binding Cnum}" Grid.Column="1" Grid.Row="0"/>
                                             <Label Style="{StaticResource StProfileName3}" Text="{Binding Cfname}" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"/>
                                             <Label Style="{StaticResource StProfileName3}" Text="{Binding Clname}" Grid.Column="1" Grid.Row="2"/>

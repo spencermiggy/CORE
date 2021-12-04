@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:CORE.CustomRenderer" xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              x:Class="CORE.View.SchedPage"
-             BackgroundColor="AntiqueWhite" Visual="Material">
+             BackgroundColor="Indigo" Visual="Material">
     <ContentPage.Content>
         <StackLayout x:Name="schedy">
             <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
@@ -10,7 +10,7 @@
             </StackLayout>
             <Grid>
                 <StackLayout Padding="0" Margin="50,100,50,100" HorizontalOptions="FillAndExpand">
-                    <Frame  BackgroundColor="White" HeightRequest="500" HasShadow="True" Padding="0" Margin="0" CornerRadius="30">
+                    <Frame  BackgroundColor="FloralWhite" HeightRequest="500" HasShadow="True" Padding="0" Margin="0" CornerRadius="30">
 
                         <StackLayout>
 
@@ -21,7 +21,7 @@
 
                             <StackLayout Margin="20,50,20,0">
 
-                                <Frame BackgroundColor="DarkGray" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                <Frame BackgroundColor="Indigo" BorderColor="Indigo" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                     <StackLayout Orientation="Horizontal">
                                         <local:CustomEntry x:Name="stat" Text="{Binding mystat}" FontSize="14" FontFamily="letttt" PlaceholderColor="Black" BackgroundColor="White" Placeholder="Click Circle Button" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
                                         <Frame CornerRadius="30" BackgroundColor="LightPink" IsClippedToBounds="True" Padding="0,0,-10,-10" Margin="-10,5,10,5">
@@ -33,7 +33,7 @@
                                     </StackLayout>
                                 </Frame>
 
-                                <Frame BackgroundColor="DarkGray" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                <Frame BackgroundColor="Indigo" BorderColor="Indigo" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                     <StackLayout Orientation="Horizontal">
                                         <local:CustomEntry x:Name="time" Text="{Binding mytime}" FontSize="14" FontFamily="letttt" PlaceholderColor="Black" BackgroundColor="White" Placeholder="Click Circle Button" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
                                         <Frame CornerRadius="30" BackgroundColor="LightPink" IsClippedToBounds="True" Padding="0,0,-10,-10" Margin="-10,5,10,5">
@@ -47,7 +47,7 @@
 
                                 <StackLayout>
                                     <Grid ColumnDefinitions="*,*,*">
-                                        <Button Text="Set Status" Margin="-10,30,-10,20" FontFamily="letttt" BackgroundColor="LightPink" CornerRadius="100" Grid.Column="1" Grid.Row="0" Clicked="Btnupd"/>
+                                        <Button Text="Set Status" Margin="-10,30,-10,20" FontFamily="letttt" BackgroundColor="Indigo" CornerRadius="100" Grid.Column="1" Grid.Row="0" Clicked="Btnupd"/>
                                     </Grid>
                                 </StackLayout>
                             </StackLayout>

@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:CORE.CustomRenderer"
              mc:Ignorable="d"
              x:Class="CORE.View.MainPage"
-             BackgroundColor="AntiqueWhite" Visual="Material">
+             BackgroundColor="Indigo" Visual="Material">
 
     <StackLayout>
         <Grid>
@@ -13,7 +13,7 @@
                 <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
                     <Image Source="homeicon.png" Aspect="AspectFit" Margin="{OnIdiom Phone=20}"/>
                 </StackLayout>
-                <Frame BackgroundColor="WhiteSmoke" HeightRequest="{OnIdiom Phone=500}" HasShadow="True" Padding="0" Margin="0" CornerRadius="30">
+                <Frame BackgroundColor="FloralWhite" HeightRequest="{OnIdiom Phone=500}" HasShadow="True" Padding="0" Margin="0" CornerRadius="30">
 
                     <StackLayout>
 
@@ -24,9 +24,9 @@
 
                         <StackLayout Padding="0" Margin="15,10">
 
-                            <Frame BackgroundColor="DarkGray" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30" IsClippedToBounds="True">
+                            <Frame BackgroundColor="Indigo" BorderColor="Indigo" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30" IsClippedToBounds="True">
                                 <StackLayout Orientation="Horizontal">
-                                    <Frame BackgroundColor="DarkGray" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                    <Frame BackgroundColor="FloralWhite" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
                                         <Image Source="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png" Aspect="AspectFill" Margin="0"/>
                                     </Frame>
 
@@ -34,9 +34,9 @@
                                 </StackLayout>
                             </Frame>
 
-                            <Frame BackgroundColor="DarkGray" BorderColor="DarkGray" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30" IsClippedToBounds="True">
+                            <Frame BackgroundColor="Indigo" BorderColor="Indigo" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30" IsClippedToBounds="True">
                                 <StackLayout Orientation="Horizontal">
-                                    <Frame BackgroundColor="DarkGray" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                    <Frame BackgroundColor="FloralWhite" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
                                         <Image Source="https://icon-library.com/images/show-password-icon/show-password-icon-4.jpg" Aspect="AspectFill" Margin="0"/>
                                     </Frame>
 
@@ -50,8 +50,8 @@
                             </Grid>
                             <StackLayout>
                                 <Grid RowDefinitions="*,*" Margin="20">
-                                    <Button Text="CUSTOMER" BackgroundColor="LightPink" Style="{StaticResource StProfileName2}" TextColor="White" CornerRadius="100" Grid.Column="0" Grid.Row="0" Clicked="CusLog_Clicked" FontSize="Caption"/>
-                                    <Button Text="REPAIRER" BackgroundColor="LightPink" Style="{StaticResource StProfileName2}" TextColor="White" CornerRadius="100" Grid.Column="1" Grid.Row="0" Clicked="RepLog_Clicked" FontSize="Caption"/>
+                                    <Button Text="CUSTOMER" BackgroundColor="Indigo" Style="{StaticResource StProfileName2}" TextColor="White" CornerRadius="100" Grid.Column="0" Grid.Row="0" Clicked="CusLog_Clicked" FontSize="Caption"/>
+                                    <Button Text="REPAIRER" BackgroundColor="Indigo" Style="{StaticResource StProfileName2}" TextColor="White" CornerRadius="100" Grid.Column="1" Grid.Row="0" Clicked="RepLog_Clicked" FontSize="Caption"/>
                                 </Grid>
                             </StackLayout>
                             
@@ -59,7 +59,7 @@
                                 <Label Text="Still Not Connected ?" Style="{StaticResource StAndroidLabel}" TextColor="DarkGray" FontSize="Small"/>
                             </StackLayout>
                             <StackLayout>
-                                <Button Text="SIGN UP" BackgroundColor="White" Style="{StaticResource StProfileName2}" TextColor="HotPink" CornerRadius="30" HorizontalOptions="Center" HeightRequest="30" FontSize="10" Clicked="addAcc_Clicked"/>
+                                <Button Text="SIGN UP" BackgroundColor="White" Style="{StaticResource StProfileName2}" TextColor="Indigo" CornerRadius="30" HorizontalOptions="Center" HeightRequest="30" FontSize="10" Clicked="addAcc_Clicked"/>
                             </StackLayout>
                             <StackLayout HorizontalOptions="Center" Margin="0,30,0,0">
                                 <Label Text="© Copyright" Style="{StaticResource StAndroidLabel1}" TextColor="Gray"/>

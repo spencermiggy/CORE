@@ -11,12 +11,14 @@ using Xamarin.Forms.Xaml;
 using Plugin.Messaging;
 using Xamarin.Essentials;
 using Xamarin.Forms.Maps;
+using Acr.UserDialogs;
 
 namespace CORE.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MenuPage : ContentPage
     {
+        private const string Message = "HI please check your app for my request";
         private readonly Geocoder geocoder = new Geocoder();
         public MenuPage()
         {
@@ -38,8 +40,15 @@ namespace CORE.View
         }
         private async Task GetRepairer()
         {
-            var repairers = await View_1.Read();
-            ShowPeople.ItemsSource = repairers.Where(x => x.city.ToLower() == city.ToLower()).ToList();
+            try
+            {
+                var repairers = await View_1.Read();
+                ShowPeople.ItemsSource = repairers.Where(x => x.city.ToLower() == city.ToLower()).ToList();
+            }
+            catch
+            {
+                await DisplayAlert("Error","Please check your internet connection","OK");
+            }
         }
 
         private void TextBtn(object sender, EventArgs e)
@@ -185,35 +194,52 @@ namespace CORE.View
             refreshme.IsRefreshing = false;
         }
 
-        private async void SwipeItem_Clicked_1(object sender, EventArgs e)
+        private void SwipeItem_Clicked_1(object sender, EventArgs e)
         {
             var item = sender as SwipeItem;
-            var smsSend = CrossMessaging.Current.SmsMessenger;
-            if (item?.BindingContext is View_1 model)
+            _ = UserDialogs.Instance.Confirm(new ConfirmConfig
             {
-                try
+                Message = "Are you sure to request from this repairer?",
+                OkText = "Yes",
+                CancelText = "No",
+                Title = "REQUEST",
+                OnAction = async (confirmed) =>
                 {
-                    Transact transact = new Transact
+                    if (confirmed)
                     {
-                        Cfname = fname,
-                        Clname = lname,
-                        Cusid = customer_id,
-                        Caddr = addr,
-                        Clatt = latt,
-                        Clongg = longg,
-                        Cnum = pnum,
-                        Repid = model.id,
-                        Accdec = "Pending"
-                    };
-                    await Transact.Insert(transact);
-                    smsSend.SendSms(model.pnum, "HI please check your app for my request");
-                    await DisplayAlert("Success", "Your Request is Send", "Ok");
-                }
-                catch
-                {
-                    await DisplayAlert("INFO","Auto Message didn't sent please load your sim","OK");
-                }
-            }
+                        if (item?.BindingContext is View_1 model)
+                        {
+                            try
+                            {
+                                if (model.statusact == "Inactive" || model.activetime == "Not Available")
+                                {
+                                    await DisplayAlert("Message", "Sorry! This repairer is currently not available", "OK");
+                                }
+                                else
+                                {
+                                    Transact transact = new Transact
+                                    {
+                                        Cfname = fname,
+                                        Clname = lname,
+                                        Cusid = customer_id,
+                                        Caddr = addr,
+                                        Clatt = latt,
+                                        Clongg = longg,
+                                        Cnum = pnum,
+                                        Repid = model.id,
+                                        Accdec = "Pending"
+                                    };
+                                    await Transact.Insert(transact);
+                                }
+                            }
+                            catch
+                            {
+
+                            }
+                        }
+                    }
+                },
+            });
         }
 
         private async void SwipeItem_Clicked_2(object sender, EventArgs e)

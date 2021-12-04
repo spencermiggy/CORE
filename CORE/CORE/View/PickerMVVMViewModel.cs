@@ -99,9 +99,7 @@ namespace CORE.View
             var cities = new List<City>()
             {
                 new City(){Key =  1, Value= "Active"},
-                new City(){Key =  2, Value= "Inactive"},
-                new City(){Key =  3, Value= "Busy"},
-                new City(){Key =  4, Value= "Not Available"}
+                new City(){Key =  2, Value= "Inactive"}
             };
 
             return cities;
@@ -110,12 +108,8 @@ namespace CORE.View
         {
             var citiess = new List<City>()
             {
-                new City(){Keys =  1, Values= "6am to 7pm"},
-                new City(){Keys =  2, Values= "7am to 8pm"},
-                new City(){Keys =  3, Values= "8am to 9pm"},
-                new City(){Keys =  4, Values= "9am to 8pm"},
-                new City(){Keys =  5, Values= "24/7"},
-                new City(){Keys =  6, Values= "Not Available"}
+                new City(){Keys =  1, Values= "Available"},
+                new City(){Keys =  2, Values= "Not Available"}
             };
 
             return citiess;

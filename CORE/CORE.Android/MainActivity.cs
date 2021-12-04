@@ -5,6 +5,7 @@ using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
 using Android;
+using Acr.UserDialogs;
 
 namespace CORE.Droid
 {
@@ -39,6 +40,7 @@ namespace CORE.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            UserDialogs.Init(this);
             Xamarin.FormsMaps.Init(this, savedInstanceState);
             LoadApplication(new App());
         }

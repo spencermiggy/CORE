@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:sharpndado="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame"
-             x:Class="CORE.View.HistoryRep" BackgroundColor="AntiqueWhite">
+             x:Class="CORE.View.HistoryRep" BackgroundColor="Indigo">
     <ContentPage.Content>
         <StackLayout>
             <StackLayout HorizontalOptions="Center" Margin="0,5,0,0">
@@ -9,7 +9,7 @@
             </StackLayout>
 
             <RefreshView x:Name="refreshme" Refreshing="refreshme_Refreshing">
-                <CollectionView x:Name="ShowPeople" BackgroundColor="AntiqueWhite">
+                <CollectionView x:Name="ShowPeople" BackgroundColor="FloralWhite">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <sharpndado:MaterialFrame VerticalOptions="Center" Margin="22" Padding="20" Style="{StaticResource AcrylicFrame}">
@@ -17,16 +17,17 @@
                                     <SwipeView.LeftItems>
                                         <SwipeItems>
                                             <SwipeItem Text="Delete"
+                                                       BackgroundColor="Indigo"
                                          IconImageSource="delBtn.png"
                                          Clicked="SwipeItem_Clicked"/>
                                         </SwipeItems>
                                     </SwipeView.LeftItems>
-                                    <Frame BackgroundColor="Transparent" BorderColor="Transparent" Margin="0,-25,0,-30" IsClippedToBounds="True">
+                                    <Frame BackgroundColor="FloralWhite" BorderColor="Transparent" Margin="0,-25,0,-30" IsClippedToBounds="True">
                                         <Grid ColumnDefinitions="*,*,*">
-                                            <Label Style="{StaticResource StProfileName2}" HorizontalTextAlignment="Center" TextColor="Blue" Text="Mobile #:" Grid.Column="0" Grid.Row="0"/>
-                                            <Label Style="{StaticResource StProfileName2}" HorizontalTextAlignment="Center" TextColor="Blue" Text="First Name:" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2"/>
-                                            <Label Style="{StaticResource StProfileName2}" HorizontalTextAlignment="Center" TextColor="Blue" Text="Last Name:" Grid.Column="0" Grid.Row="2" Grid.RowSpan="2"/>
-                                            <Label Style="{StaticResource StProfileName2}" HorizontalTextAlignment="Center" TextColor="Blue" Text="Address:" Grid.Column="0" Grid.Row="3" Grid.RowSpan="2"/>
+                                            <Label Style="{StaticResource StProfileName2}" HorizontalTextAlignment="Center" TextColor="Indigo" Text="Mobile #:" Grid.Column="0" Grid.Row="0"/>
+                                            <Label Style="{StaticResource StProfileName2}" HorizontalTextAlignment="Center" TextColor="Indigo" Text="First Name:" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2"/>
+                                            <Label Style="{StaticResource StProfileName2}" HorizontalTextAlignment="Center" TextColor="Indigo" Text="Last Name:" Grid.Column="0" Grid.Row="2" Grid.RowSpan="2"/>
+                                            <Label Style="{StaticResource StProfileName2}" HorizontalTextAlignment="Center" TextColor="Indigo" Text="Address:" Grid.Column="0" Grid.Row="3" Grid.RowSpan="2"/>
                                             <Label Style="{StaticResource StProfileName3}" Text="{Binding Cnum}" Grid.Column="1" Grid.Row="0"/>
                                             <Label Style="{StaticResource StProfileName3}" Text="{Binding Cfname}" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"/>
                                             <Label Style="{StaticResource StProfileName3}" Text="{Binding Clname}" Grid.Column="1" Grid.Row="2"/>

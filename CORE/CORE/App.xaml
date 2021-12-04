@@ -15,11 +15,9 @@
                 <Setter Property="BackgroundColor"  Value="Transparent"/>
                 <Setter Property="Margin"           Value="0,0,0,20"/>
             </Style>-->
-            <Color x:Key="AcrylicFrameBackgroundColor">#f1d2c2</Color>
+            <Color x:Key="AcrylicFrameBackgroundColor">floralwhite</Color>
             <Style x:Key="AcrylicFrame" TargetType="sharpnado:MaterialFrame">
                 <Setter Property="MaterialTheme" Value="Acrylic"/>
-                <Setter Property="CornerRadius" Value="25"/>
-                <Setter Property="HasShadow" Value="True"/>
                 <Setter Property="HeightRequest" Value="110"/>
                 <Setter Property="LightThemeBackgroundColor" Value="{StaticResource AcrylicFrameBackgroundColor}"/>
             </Style>
@@ -31,20 +29,17 @@
                 <Setter Property="FontSize"            Value="20"/>
                 <Setter Property="Margin"              Value="20,80,20,0"/>
                 <Setter Property="TextColor"           Value="Black"/>
-                <Setter Property="FontFamily"              Value="letttt"/>
             </Style>
 
             <Style x:Key="StProfileName2"              TargetType="Label">
                 <Setter Property="FontSize"            Value="15"/>
                 <Setter Property="FontAttributes"      Value="Bold"/>
                 <Setter Property="TextColor"           Value="Black"/>
-                <Setter Property="FontFamily"          Value="letttt"/>
             </Style>
             <Style x:Key="StProfileName3"              TargetType="Label">
                 <Setter Property="FontSize"            Value="16"/>
                 <Setter Property="FontAttributes"      Value="Bold"/>
                 <Setter Property="HorizontalTextAlignment" Value="Start"/>
-                <Setter Property="FontFamily"          Value="letttt"/>
                 <Setter Property="TextColor"           Value="Black"/>
             </Style>
             
@@ -54,7 +49,6 @@
                 <Setter Property="FontSize"            Value="20"/>
                 <Setter Property="Margin"              Value="20,0,20,0"/>
                 <Setter Property="TextColor"           Value="Black"/>
-                <Setter Property="FontFamily"              Value="letttt"/>
             </Style>
 
             <Style x:Key="StProfileDesc"                  TargetType="Label">
@@ -62,7 +56,6 @@
                 <Setter Property="HorizontalTextAlignment" Value="Center"/>
                 <Setter Property="HorizontalOptions"       Value="CenterAndExpand"/>
                 <Setter Property="TextColor"               Value="Black"/>
-                <Setter Property="FontFamily"              Value="letttt"/>
                 <Setter Property="FontSize"                Value="Subtitle"/>
             </Style>
 
@@ -70,13 +63,11 @@
                 <Setter Property="HorizontalTextAlignment" Value="Center"/>
                 <Setter Property="FontSize"                Value ="Micro"/>
                 <Setter Property="TextColor"               Value="Black"/>
-                <Setter Property="FontFamily"              Value="letttt"/>
             </Style>
             <Style x:Key="StAndroidLabel1"                  TargetType="Label">
                 <Setter Property="HorizontalTextAlignment" Value="Center"/>
                 <Setter Property="FontSize"                Value ="Small"/>
                 <Setter Property="TextColor"               Value="Black"/>
-                <Setter Property="FontFamily"              Value="letttt"/>
             </Style>
 
 
