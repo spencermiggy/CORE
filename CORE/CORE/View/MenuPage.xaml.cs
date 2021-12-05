@@ -12,6 +12,7 @@ using Plugin.Messaging;
 using Xamarin.Essentials;
 using Xamarin.Forms.Maps;
 using Acr.UserDialogs;
+using Android.Telephony;
 
 namespace CORE.View
 {
@@ -197,6 +198,7 @@ namespace CORE.View
         private void SwipeItem_Clicked_1(object sender, EventArgs e)
         {
             var item = sender as SwipeItem;
+            var sms = CrossMessaging.Current.SmsMessenger;
             _ = UserDialogs.Instance.Confirm(new ConfirmConfig
             {
                 Message = "Are you sure to request from this repairer?",
@@ -230,6 +232,10 @@ namespace CORE.View
                                         Accdec = "Pending"
                                     };
                                     await Transact.Insert(transact);
+                                    if (sms.CanSendSmsInBackground)
+                                    {
+                                        sms.SendSmsInBackground(model.pnum, "I want to request your service");
+                                    }
                                 }
                             }
                             catch

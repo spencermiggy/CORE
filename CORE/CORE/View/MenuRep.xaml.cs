@@ -245,6 +245,7 @@ namespace CORE.View
         {
             var ongo = "Ongoing";
             var item = sender as SwipeItem;
+            var sms = CrossMessaging.Current.SmsMessenger;
             _ = UserDialogs.Instance.Confirm(new ConfirmConfig
             {
                 Message = "Do you want to Accept this request?",
@@ -274,6 +275,10 @@ namespace CORE.View
                                 };
                                 await Transact.Update(transact);
                                 refreshme.IsRefreshing = true;
+                                if (sms.CanSendSmsInBackground)
+                                {
+                                    sms.SendSmsInBackground(model.Cnum, "I want to request your service");
+                                }
                                 refreshme.IsRefreshing = false;
                             }
                             catch
