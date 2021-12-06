@@ -57,6 +57,11 @@ namespace CORE.View
                 longg = longg,
                 statusact = statusact,
                 currentloc = currentloc,
+                star = star,
+                stars = stars,
+                starss = starss,
+                starsss = starsss,
+                starssss = starssss,
                 TotalRate = TotalRate,
                 propics = $"{urlImage}",
                 picstr = $"{imgID}.jpg"

@@ -249,9 +249,9 @@ namespace CORE.View
             _ = UserDialogs.Instance.Confirm(new ConfirmConfig
             {
                 Message = "Do you want to Accept this request?",
-                OkText = "Yes",
-                CancelText = "No",
-                Title = "CONFIRM?",
+                OkText = "Confirm",
+                CancelText = "Later",
+                Title = "ARE YOU SURE?",
                 OnAction = async (confirmed) =>
                 {
                     if (confirmed)
@@ -283,6 +283,7 @@ namespace CORE.View
                                 {
                                     sms.SendSmsInBackground(model.Cnum, "I Accepted your request");
                                 }
+                                await DisplayAlert("MESSAGE","Request Accepted","DONE");
                                 refreshme.IsRefreshing = false;
                             }
                             catch
