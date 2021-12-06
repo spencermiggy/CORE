@@ -24,11 +24,11 @@
                                 <Frame BackgroundColor="Indigo" BorderColor="Indigo" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                     <StackLayout Orientation="Horizontal">
                                         <local:CustomEntry x:Name="stat" Text="{Binding mystat}" FontSize="14" FontFamily="letttt" PlaceholderColor="Black" BackgroundColor="White" Placeholder="Click Circle Button" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
-                                        <Frame CornerRadius="30" BackgroundColor="LightPink" IsClippedToBounds="True" Padding="0,0,-10,-10" Margin="-10,5,10,5">
-                                            <Picker Title="Select Status" TitleColor="LightPink" FontFamily="letttt" FontSize="20"
+                                        <Frame CornerRadius="30" BackgroundColor="FloralWhite" IsClippedToBounds="True" Padding="0,0,-10,-10" Margin="-10,5,10,5">
+                                            <Picker Title="Select Status" TitleColor="FloralWhite" FontFamily="letttt" FontSize="20"
                                           ItemsSource="{Binding statuslist}"
                                           ItemDisplayBinding="{Binding Value}"
-                                          SelectedItem="{Binding Selectedstat}" BackgroundColor="LightPink" TextColor="LightPink"/>
+                                          SelectedItem="{Binding Selectedstat}" BackgroundColor="FloralWhite" TextColor="FloralWhite"/>
                                         </Frame>
                                     </StackLayout>
                                 </Frame>
@@ -36,11 +36,11 @@
                                 <Frame BackgroundColor="Indigo" BorderColor="Indigo" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
                                     <StackLayout Orientation="Horizontal">
                                         <local:CustomEntry x:Name="time" Text="{Binding mytime}" FontSize="14" FontFamily="letttt" PlaceholderColor="Black" BackgroundColor="White" Placeholder="Click Circle Button" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
-                                        <Frame CornerRadius="30" BackgroundColor="LightPink" IsClippedToBounds="True" Padding="0,0,-10,-10" Margin="-10,5,10,5">
-                                            <Picker Title="Select Time" TitleColor="LightPink" FontFamily="letttt" FontSize="20"
+                                        <Frame CornerRadius="30" BackgroundColor="FloralWhite" IsClippedToBounds="True" Padding="0,0,-10,-10" Margin="-10,5,10,5">
+                                            <Picker Title="Select Time" TitleColor="FloralWhite" FontFamily="letttt" FontSize="20"
                                           ItemsSource="{Binding timelist}"
                                           ItemDisplayBinding="{Binding Values}"
-                                          SelectedItem="{Binding Selectedtime}" BackgroundColor="LightPink" TextColor="LightPink"/>
+                                          SelectedItem="{Binding Selectedtime}" BackgroundColor="FloralWhite" TextColor="FloralWhite"/>
                                         </Frame>
                                     </StackLayout>
                                 </Frame>

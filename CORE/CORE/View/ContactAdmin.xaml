@@ -9,7 +9,7 @@
                 <Image Source="homeicon.png" Aspect="AspectFit" Margin="60"/>
             </StackLayout>
             <StackLayout Margin="30">
-                <Frame CornerRadius="30" VerticalOptions="CenterAndExpand">
+                <Frame CornerRadius="30" VerticalOptions="CenterAndExpand" BackgroundColor="FloralWhite">
                     <StackLayout Margin="50" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Spacing="40" BackgroundColor="FloralWhite">
                         <Grid ColumnDefinitions="*,*">
                             <ImageButton x:Name="fbbtn" Source="fb.png" BackgroundColor="Transparent" WidthRequest="60" Grid.Column="0" Grid.Row="0" Clicked="fbbtn_Clicked"/>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:sharpndado="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame"
-             x:Class="CORE.View.MenuRep" BackgroundColor="FloralWhite">
+             x:Class="CORE.View.MenuRep" BackgroundImageSource="BG1.jpg">
     <ContentPage.Content>
         <StackLayout>
             <Frame HasShadow="True" IsClippedToBounds="True" HeightRequest="50" Padding="0,15">
@@ -72,6 +72,9 @@
                     </CollectionView.ItemTemplate>
                 </CollectionView>
             </RefreshView>
+            <StackLayout  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0,0,0,15" BackgroundColor="Indigo">
+                <Label Text="margin rani" TextColor="Indigo"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

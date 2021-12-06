@@ -11,8 +11,8 @@
                                VerticalOptions="Center" HorizontalOptions="Center" EmptyStarImage="emptystar"
                                FillStarImage="fullstar"></fRating:RatingBar>
             <Grid ColumnDefinitions="*,*,*" Margin="0,20,0,0">
-                <Button x:Name="SubBtn" Text="Submit" Clicked="SubBtn_Clicked" CornerRadius="30" Grid.Column="1" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"
-                        BackgroundColor="PaleVioletRed"/>
+                <Button x:Name="SubBtn" Text="Submit" TextColor="Black" Clicked="SubBtn_Clicked" CornerRadius="30" Grid.Column="1" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"
+                        BackgroundColor="FloralWhite"/>
             </Grid>
         </StackLayout>
     </ContentPage.Content>

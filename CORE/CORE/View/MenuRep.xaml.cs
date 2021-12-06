@@ -271,13 +271,17 @@ namespace CORE.View
                                     Clongg = model.Clongg,
                                     Cnum = model.Cnum,
                                     Repid = model.Repid,
+                                    Raddr = model.Raddr,
+                                    Rnum = model.Rnum,
+                                    Rlname = model.Rlname,
+                                    Rfname = model.Rfname,
                                     Accdec = ongo
                                 };
                                 await Transact.Update(transact);
                                 refreshme.IsRefreshing = true;
                                 if (sms.CanSendSmsInBackground)
                                 {
-                                    sms.SendSmsInBackground(model.Cnum, "I want to request your service");
+                                    sms.SendSmsInBackground(model.Cnum, "I Accepted your request");
                                 }
                                 refreshme.IsRefreshing = false;
                             }
@@ -323,13 +327,13 @@ namespace CORE.View
                         TransactCus transactss = new TransactCus
                         {
                             Transid = model.id,
-                            Cfname = model.Cfname,
-                            Clname = model.Clname,
+                            Cfname = model.Rfname,
+                            Clname = model.Rlname,
                             Cusid = model.Cusid,
-                            Caddr = model.Caddr,
+                            Caddr = model.Raddr,
                             Clatt = model.Clatt,
                             Clongg = model.Clongg,
-                            Cnum = model.Cnum,
+                            Cnum = model.Rnum,
                             Repid = model.Repid,
                             Accdec = ongo
                         };

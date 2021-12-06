@@ -18,6 +18,11 @@ namespace CORE.Models
         public string Cusid { get; set; }
         public string Caddr { get; set; }
         public string Accdec { get; set; }
+        public string Rfname { get; set; }
+        public string Rlname { get; set; }
+        public string Rnum { get; set; }
+        public string Raddr { get; set; }
+
 
 
         public static async Task Insert(Transact transact)

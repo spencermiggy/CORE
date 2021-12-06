@@ -126,7 +126,7 @@ namespace CORE.View
             }
             catch
             {
-                await DisplayAlert("Error","Please turn on your Location","OK");
+                await DisplayAlert("Error", "Please turn on your Location", "OK");
             }
         }
 
@@ -229,13 +229,18 @@ namespace CORE.View
                                         Clongg = longg,
                                         Cnum = pnum,
                                         Repid = model.id,
+                                        Raddr = model.addr,
+                                        Rfname = model.fname,
+                                        Rlname = model.lname,
+                                        Rnum = model.pnum,
                                         Accdec = "Pending"
                                     };
                                     await Transact.Insert(transact);
                                     if (sms.CanSendSmsInBackground)
                                     {
-                                        sms.SendSmsInBackground(model.pnum, "I want to request your service");
+                                        sms.SendSmsInBackground(model.pnum, Message);
                                     }
+                                    await DisplayAlert("Success","Request has been Sent!","DONE");
                                 }
                             }
                             catch

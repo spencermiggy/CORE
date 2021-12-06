@@ -19,7 +19,7 @@
                 </StackLayout>
             </Frame>
             <StackLayout HorizontalOptions="Center" Margin="0,5,0,0">
-                <Label Text="Categories" TextColor="Black" Style="{StaticResource StProfileName2}"/>
+                <Label Text="CATEGORIES" TextColor="Black" Style="{StaticResource StProfileName2}"/>
             </StackLayout>
             <ScrollView HeightRequest="100" IsClippedToBounds="True" Orientation="Horizontal">
                 <StackLayout Orientation="Horizontal">
@@ -77,14 +77,16 @@
                             <sharpndado:MaterialFrame VerticalOptions="Center" Margin="20" Padding="20" Style="{StaticResource AcrylicFrame}">
                                 <SwipeView BackgroundColor="Transparent">
                                     <SwipeView.RightItems>
-                                        <SwipeItem Text="Request"
+                                        <SwipeItems>
+                                            <SwipeItem Text="Request"
                                          IconImageSource="requests.png"
                                          BackgroundColor="Transparent"
                                          Clicked="SwipeItem_Clicked_1"/>
-                                        <SwipeItem Text="Feedbacks"
+                                            <SwipeItem Text="Feedbacks"
                                          IconImageSource="feedb.png"
                                          BackgroundColor="Transparent"
                                          Clicked="SwipeItem_Clicked_2"/>
+                                        </SwipeItems>
                                     </SwipeView.RightItems>
                                     <SwipeView.LeftItems>
                                         <SwipeItems>
@@ -130,6 +132,9 @@
                     </CollectionView.ItemTemplate>
                 </CollectionView>
             </RefreshView>
+            <StackLayout  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0,0,0,15" BackgroundColor="Indigo">
+                <Label Text="margin rani" TextColor="Indigo"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

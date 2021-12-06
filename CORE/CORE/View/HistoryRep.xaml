@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout HorizontalOptions="Center" Margin="0,5,0,0">
-                <Label Text="Job History" TextColor="Black" Style="{StaticResource StProfileName2}" FontSize="20"/>
+                <Label Text="Job History" TextColor="White" Style="{StaticResource StProfileName2}" FontSize="20"/>
             </StackLayout>
 
             <RefreshView x:Name="refreshme" Refreshing="refreshme_Refreshing">
@@ -23,15 +23,15 @@
                                         </SwipeItems>
                                     </SwipeView.LeftItems>
                                     <Frame BackgroundColor="FloralWhite" BorderColor="Transparent" Margin="0,-25,0,-30" IsClippedToBounds="True">
-                                        <Grid ColumnDefinitions="*,*,*">
+                                        <Grid ColumnDefinitions="*,*,*" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
                                             <Label Style="{StaticResource StProfileName2}" HorizontalTextAlignment="Center" TextColor="Indigo" Text="Mobile #:" Grid.Column="0" Grid.Row="0"/>
                                             <Label Style="{StaticResource StProfileName2}" HorizontalTextAlignment="Center" TextColor="Indigo" Text="First Name:" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2"/>
                                             <Label Style="{StaticResource StProfileName2}" HorizontalTextAlignment="Center" TextColor="Indigo" Text="Last Name:" Grid.Column="0" Grid.Row="2" Grid.RowSpan="2"/>
                                             <Label Style="{StaticResource StProfileName2}" HorizontalTextAlignment="Center" TextColor="Indigo" Text="Address:" Grid.Column="0" Grid.Row="3" Grid.RowSpan="2"/>
-                                            <Label Style="{StaticResource StProfileName3}" Text="{Binding Cnum}" Grid.Column="1" Grid.Row="0"/>
-                                            <Label Style="{StaticResource StProfileName3}" Text="{Binding Cfname}" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"/>
-                                            <Label Style="{StaticResource StProfileName3}" Text="{Binding Clname}" Grid.Column="1" Grid.Row="2"/>
-                                            <Label Style="{StaticResource StProfileName2}" Text="{Binding Caddr}" Grid.Column="1" Grid.Row="3" Grid.RowSpan="2"/>
+                                            <Label Style="{StaticResource StProfileName3}" FontSize="16" Text="{Binding Cnum}" Grid.Column="1" Grid.Row="0"/>
+                                            <Label Style="{StaticResource StProfileName3}" FontSize="14" Text="{Binding Cfname}" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"/>
+                                            <Label Style="{StaticResource StProfileName3}" FontSize="14" Text="{Binding Clname}" Grid.Column="1" Grid.Row="2"/>
+                                            <Label Style="{StaticResource StProfileName2}" FontSize="14" Text="{Binding Caddr}" Grid.Column="1" Grid.Row="3" Grid.RowSpan="2"/>
                                             <Label x:Name="sawadika" Style="{StaticResource StProfileName2}" Text="{Binding Accdec}" FontSize="18" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2"/>
                                         </Grid>
                                     </Frame>
@@ -41,6 +41,9 @@
                     </CollectionView.ItemTemplate>
                 </CollectionView>
             </RefreshView>
+            <StackLayout HorizontalOptions="Center" Margin="0,5,0,0">
+                <Label Text="Margin rani" TextColor="Indigo"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
