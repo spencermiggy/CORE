@@ -82,8 +82,8 @@
                                          IconImageSource="requests.png"
                                          BackgroundColor="Transparent"
                                          Clicked="SwipeItem_Clicked_1"/>
-                                            <SwipeItem Text="Feedbacks"
-                                         IconImageSource="feedb.png"
+                                            <SwipeItem Text="Profile"
+                                         IconImageSource="user.png"
                                          BackgroundColor="Transparent"
                                          Clicked="SwipeItem_Clicked_2"/>
                                         </SwipeItems>
@@ -120,7 +120,7 @@
                                                HasShadow="False" CornerRadius="110" Padding="0" IsClippedToBounds="True">
                                                 <Image Source="{Binding propics}" Aspect="Fill"/>
                                             </Frame>
-                                            <rating:SfRating ItemCount="5" Precision="Half" Value="{Binding TotalRate}" Grid.Column="0" Grid.Row="4" IsEnabled="False"
+                                            <rating:SfRating x:Name="starrater" ItemCount="5" Precision="Half" Value="{Binding TotalRate}" Grid.Column="0" Grid.Row="4" IsEnabled="False"
                                                              FlowDirection="LeftToRight" ItemSize="15" HorizontalOptions="Center" VerticalOptions="Center" Visual="Material"/>
                                             <Label x:Name="rated" Text="{Binding TotalRate}" Style="{StaticResource StAndroidLabel1}" Grid.Column="1" Grid.Row="4" HorizontalTextAlignment="Center" Padding="0,0,85,5"
                                                    VerticalOptions="Center" FontSize="Subtitle"/>

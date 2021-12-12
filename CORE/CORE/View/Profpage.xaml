@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CORE.View.Profpage" BackgroundColor="Indigo">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout BackgroundColor="Indigo">
+                <Label x:Name="RepID" Text="{Binding id}" TextColor="Indigo"/>
+            </StackLayout>
+            <ScrollView VerticalScrollBarVisibility="Never">
+                <Grid x:Name="profgrid1" RowSpacing="0" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto">
+
+                    <!-- Profile picture-->
+                    <Frame Grid.Row="0" Margin="100,0,100,20" TranslationY="90"  BorderColor="White" VerticalOptions="Start" HorizontalOptions="End" WidthRequest="220" HeightRequest="220" HasShadow="False" CornerRadius="110" Padding="0" IsClippedToBounds="True">
+                        <Image Source="{Binding propics}" Aspect="AspectFit"/>
+                    </Frame>
+                    <!-- Name & Description-->
+                    <Label Grid.Row="1" Text="{Binding fname}" Style="{StaticResource StProfileName}" TextColor="White"/>
+                    <Grid Grid.Row="2" ColumnDefinitions="50,50" RowDefinitions="50,Auto" Padding="0,10" IsVisible="{OnPlatform iOS=False, Android=True}"  HorizontalOptions="CenterAndExpand" ColumnSpacing="30">
+
+                        <Image Source="fullstars.png" Grid.Row="0" Grid.Column="0" BackgroundColor="Indigo"/>
+                        <Label Grid.Row="1" Grid.Column="0"  Text="{Binding TotalRate}" Style="{StaticResource StFriendsDesc}" FontSize="12" TextColor="White"/>
+
+                        <Button Grid.Row="0" Grid.Column="1" CornerRadius ="30" ImageSource="feedb.png" BackgroundColor="Indigo" Clicked="ImageButton_Clicked"/>
+                        <Label Grid.Row="1" Grid.Column="1"  Text="FEEDBACKS" Style="{StaticResource StAndroidLabel}" TextColor="White"/>
+                    </Grid>
+                    <Label Grid.Row="3" Text="{Binding pnum}"  Style="{StaticResource StProfileDesc}" TextColor="White"/>
+                    <Label Grid.Row="4" Text="{Binding job}" Style="{StaticResource StProfileName1}" TextColor="White"/>
+
+                    <Grid Grid.Row="5" IsVisible="{OnPlatform iOS=False, Android=True}" HorizontalOptions="CenterAndExpand" ColumnSpacing="10">
+                        <Label Style="{StaticResource StProfileName3}" Text="Home Address:" HorizontalTextAlignment="Start" TextColor="FloralWhite" Grid.Column="0" Grid.Row="0"/>
+                        <Label Style="{StaticResource StProfileName3}" Text="City:" HorizontalTextAlignment="Start" TextColor="FloralWhite" Grid.Column="0" Grid.Row="1"/>
+                        <Label Style="{StaticResource StProfileName2}" Text="{Binding addr}" TextColor="White" HorizontalTextAlignment="End" Grid.Column="1" Grid.Row="0"/>
+                        <Label Style="{StaticResource StProfileName2}" Text="{Binding city}" TextColor="White" HorizontalTextAlignment="End" Grid.Column="1" Grid.Row="1"/>
+                    </Grid>
+                </Grid>
+
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

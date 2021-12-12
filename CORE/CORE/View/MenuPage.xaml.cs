@@ -259,7 +259,7 @@ namespace CORE.View
             if (item?.BindingContext is View_1 model)
             {
                 await Clipboard.SetTextAsync(model.id);
-                await Navigation.PushModalAsync(new FeedPage());
+                await Navigation.PushModalAsync(new Profpage());
             }
         }
     }

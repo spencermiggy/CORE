@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using static CORE.App;
@@ -52,6 +52,12 @@ namespace CORE.View
         private async void reportButton_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new HistoryRep());
+        }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await Clipboard.SetTextAsync(repairer_id);
+            await Navigation.PushModalAsync(new FeedPage());
         }
     }
 }

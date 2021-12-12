@@ -15,13 +15,13 @@
                     <DataTemplate>
                         <sharpndado:MaterialFrame VerticalOptions="Center" Margin="5" Padding="20" Style="{StaticResource AcrylicFrame}">
                             <StackLayout>
-                                <Grid ColumnDefinitions="*,*" HorizontalOptions="Center" Margin="20">
-                                    <Label Style="{StaticResource StProfileName2}" TextColor="Indigo" FontSize="14" Text="Customer Alias ID:" Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Center"/>
-                                    <Label Style="{StaticResource StProfileName2}" TextColor="Black" FontSize="14" Text="{Binding id}" Grid.Column="1" Grid.Row="0" HorizontalTextAlignment="Start"/>
+                                <Grid ColumnDefinitions="50,50,50,50,50">
+                                    <Entry Style="{StaticResource StProfileName2}" TextColor="Black" FontSize="14" Text="{Binding id}" HorizontalOptions="Start" Grid.Column="0" Grid.Row="0"
+                                           BackgroundColor="FloralWhite" IsReadOnly="True"/>
+                                    <fRating:RatingBar IsEnabled="False" x:Name="rate" SelectedStarValue="{Binding TotalRate}" ImageHeight="10" ImageWidth="10"
+                                                               EmptyStarImage="emptystar.png" FillStarImage="fullstar.png" Grid.Column="1" Grid.Row="0" HorizontalOptions="StartAndExpand"/>
                                 </Grid>
-                                <fRating:RatingBar IsEnabled="False" x:Name="rate" SelectedStarValue="{Binding TotalRate}" ImageHeight="20" ImageWidth="20"
-                                                               EmptyStarImage="emptystar.png" FillStarImage="fullstar.png" Grid.Column="0" Grid.Row="4" HorizontalOptions="CenterAndExpand"/>
-                                <Label Style="{StaticResource StProfileName2}" TextColor="Black" FontSize="Medium" Text="{Binding CusComment}" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                <Label Style="{StaticResource StProfileName2}" TextColor="Black" FontSize="Medium" Text="{Binding CusComment}" HorizontalOptions="Start" VerticalOptions="Start"/>
                             </StackLayout>
                         </sharpndado:MaterialFrame>
                     </DataTemplate>
