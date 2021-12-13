@@ -221,6 +221,31 @@ namespace CORE.View
                                     Accdec = ongo
                                 };
                                 await Transact.Update(transact);
+                                repairer repairer = new repairer
+                                {
+                                    id = repairer_id,
+                                    fname = fname,
+                                    lname = lname,
+                                    activetime = "Not Available",
+                                    addr = addr,
+                                    city = city,
+                                    currentloc = currentloc,
+                                    job = job,
+                                    latt = latt,
+                                    longg = longg,
+                                    pass = pass,
+                                    picstr = picstr,
+                                    pnum = pnum,
+                                    propics = propics,
+                                    star = star,
+                                    stars = stars,
+                                    starss = starss,
+                                    starsss = starsss,
+                                    starssss = starssss,
+                                    statusact = "Inactive",
+                                    TotalRate = TotalRate,
+                                };
+                                await repairer.Update(repairer);
                                 refreshme.IsRefreshing = true;
                                 if (sms.CanSendSmsInBackground)
                                 {
@@ -282,6 +307,31 @@ namespace CORE.View
                             Accdec = ongo
                         };
                         await TransactCus.Insert(transactss);
+                        repairer repairer = new repairer
+                        {
+                            id = repairer_id,
+                            fname = fname,
+                            lname = lname,
+                            activetime = "Available",
+                            addr = addr,
+                            city = city,
+                            currentloc = currentloc,
+                            job = job,
+                            latt = latt,
+                            longg = longg,
+                            pass = pass,
+                            picstr = picstr,
+                            pnum = pnum,
+                            propics = propics,
+                            star = star,
+                            stars = stars,
+                            starss = starss,
+                            starsss = starsss,
+                            starssss = starssss,
+                            statusact = "Active",
+                            TotalRate = TotalRate,
+                        };
+                        await repairer.Update(repairer);
                         await DisplayAlert("Success", "Done Transaction", "Ok");
 
                         Transact transacts = new Transact
