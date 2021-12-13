@@ -186,6 +186,8 @@ namespace CORE.View
 
         private void accepted_Clicked(object sender, EventArgs e)
         {
+            var ongo1 = "Inactive";
+            var ongo2 = "Not Available";
             var ongo = "Ongoing";
             var item = sender as SwipeItem;
             var sms = CrossMessaging.Current.SmsMessenger;
@@ -226,7 +228,7 @@ namespace CORE.View
                                     id = repairer_id,
                                     fname = fname,
                                     lname = lname,
-                                    activetime = "Not Available",
+                                    activetime = ongo2,
                                     addr = addr,
                                     city = city,
                                     currentloc = currentloc,
@@ -242,9 +244,11 @@ namespace CORE.View
                                     starss = starss,
                                     starsss = starsss,
                                     starssss = starssss,
-                                    statusact = "Inactive",
+                                    statusact = ongo1,
                                     TotalRate = TotalRate,
                                 };
+                                statusact = ongo1;
+                                activetime = ongo2;
                                 await repairer.Update(repairer);
                                 refreshme.IsRefreshing = true;
                                 if (sms.CanSendSmsInBackground)
@@ -266,6 +270,8 @@ namespace CORE.View
 
         private async void DoneBtn_Clicked(object sender, EventArgs e)
         {
+            var ongo1 = "Active";
+            var ongo2 = "Available";
             var ongo = "Done";
                 var item = sender as SwipeItem;
                 if (item?.BindingContext is Transact model)
@@ -312,7 +318,7 @@ namespace CORE.View
                             id = repairer_id,
                             fname = fname,
                             lname = lname,
-                            activetime = "Available",
+                            activetime = ongo2,
                             addr = addr,
                             city = city,
                             currentloc = currentloc,
@@ -328,9 +334,11 @@ namespace CORE.View
                             starss = starss,
                             starsss = starsss,
                             starssss = starssss,
-                            statusact = "Active",
+                            statusact = ongo1,
                             TotalRate = TotalRate,
                         };
+                        statusact = ongo1;
+                        activetime = ongo2;
                         await repairer.Update(repairer);
                         await DisplayAlert("Success", "Done Transaction", "Ok");
 
