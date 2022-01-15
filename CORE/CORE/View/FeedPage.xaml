@@ -16,8 +16,8 @@
                         <sharpndado:MaterialFrame VerticalOptions="Center" Margin="5" Padding="20" Style="{StaticResource AcrylicFrame}">
                             <StackLayout>
                                 <Grid ColumnDefinitions="50,50,50,50,50">
-                                    <Entry Style="{StaticResource StProfileName2}" TextColor="Black" FontSize="14" Text="{Binding id}" HorizontalOptions="Start" Grid.Column="0" Grid.Row="0"
-                                           BackgroundColor="FloralWhite" IsReadOnly="True"/>
+                                    <Label Style="{StaticResource StProfileName2}" TextColor="Black" FontSize="14" Text="{Binding id}" HorizontalOptions="Start" Grid.Column="0" Grid.Row="0"
+                                           BackgroundColor="FloralWhite" MaxLines="1"/>
                                     <fRating:RatingBar IsEnabled="False" x:Name="rate" SelectedStarValue="{Binding TotalRate}" ImageHeight="10" ImageWidth="10"
                                                                EmptyStarImage="emptystar.png" FillStarImage="fullstar.png" Grid.Column="1" Grid.Row="0" HorizontalOptions="StartAndExpand"/>
                                 </Grid>
