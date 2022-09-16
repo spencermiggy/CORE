@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:fRating="clr-namespace:Rating;assembly=Rating"
+             x:Class="CORE.View.RatingPage" BackgroundColor="Indigo">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+            <Entry x:Name="Comment" Placeholder="Please Send Us Your Feedback" PlaceholderColor="Gray" HeightRequest="200" Margin="50,0,50,0"
+                   BackgroundColor="WhiteSmoke" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="Black"/>
+            <Label x:Name="RepID" HorizontalOptions="Center" Style="{StaticResource StProfileName2}" TextColor="Indigo"/>
+            <fRating:RatingBar x:Name="Ratedk" SelectedStarValue="0" ImageHeight="30" ImageWidth="30"
+                               VerticalOptions="Center" HorizontalOptions="Center" EmptyStarImage="emptystar"
+                               FillStarImage="fullstar"></fRating:RatingBar>
+            <Grid ColumnDefinitions="*,*,*" Margin="0,20,0,0">
+                <Button x:Name="SubBtn" Text="Submit" TextColor="Black" Clicked="SubBtn_Clicked" CornerRadius="30" Grid.Column="1" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"
+                        BackgroundColor="FloralWhite"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

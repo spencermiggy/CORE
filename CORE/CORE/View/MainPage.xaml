@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:CORE.CustomRenderer"
+             mc:Ignorable="d"
+             x:Class="CORE.View.MainPage"
+             BackgroundColor="Indigo" Visual="Material">
+
+    <StackLayout>
+        <Grid>
+            <StackLayout Padding="0" Margin="70,60,70,100" HorizontalOptions="FillAndExpand">
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+                    <Image Source="homeicon.png" Aspect="AspectFit" Margin="{OnIdiom Phone=20}"/>
+                </StackLayout>
+                <Frame BackgroundColor="FloralWhite" HeightRequest="{OnIdiom Phone=500}" HasShadow="True" Padding="0" Margin="0" CornerRadius="30">
+
+                    <StackLayout>
+
+
+                        <StackLayout Margin="10">
+                            <Label Text="SIGN IN" TextColor="Black" Style="{StaticResource StProfileName2}" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+                        </StackLayout>
+
+                        <StackLayout Padding="0" Margin="15,10">
+
+                            <Frame BackgroundColor="Indigo" BorderColor="Indigo" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30" IsClippedToBounds="True">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="FloralWhite" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                        <Image Source="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png" Aspect="AspectFill" Margin="0"/>
+                                    </Frame>
+
+                                    <local:CustomEntry x:Name="Pnumb" Style="{StaticResource StProfileName2}" Placeholder="Phone Number" BackgroundColor="WhiteSmoke" PlaceholderColor="Gray" Keyboard="Numeric" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame BackgroundColor="Indigo" BorderColor="Indigo" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30" IsClippedToBounds="True">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="FloralWhite" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                        <Image Source="https://icon-library.com/images/show-password-icon/show-password-icon-4.jpg" Aspect="AspectFill" Margin="0"/>
+                                    </Frame>
+
+                                    <local:CustomEntry x:Name="Passw" Style="{StaticResource StProfileName2}" Placeholder="Password" BackgroundColor="WhiteSmoke" PlaceholderColor="Gray" IsPassword="True" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                </StackLayout>
+                            </Frame>
+                            <Grid ColumnDefinitions="*,*,*,*">
+                                <CheckBox x:Name="ShowPass" CheckedChanged="ShowPass_CheckedChanged" Grid.Column="0" Grid.Row="0"/>
+                                <Label Text="SHOW PASSWORD" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="0" VerticalOptions="Center" 
+                                       Margin="-35,0,0,0" TextColor="Gray" Style="{StaticResource StProfileName2}"/>
+                            </Grid>
+                            <StackLayout>
+                                <Grid RowDefinitions="*,*" Margin="20">
+                                    <Button Text="CUSTOMER" BackgroundColor="Indigo" Style="{StaticResource StProfileName2}" TextColor="White" CornerRadius="100" Grid.Column="0" Grid.Row="0" Clicked="CusLog_Clicked" FontSize="Caption"/>
+                                    <Button Text="REPAIRER" BackgroundColor="Indigo" Style="{StaticResource StProfileName2}" TextColor="White" CornerRadius="100" Grid.Column="1" Grid.Row="0" Clicked="RepLog_Clicked" FontSize="Caption"/>
+                                </Grid>
+                            </StackLayout>
+                            
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                <Label Text="Still Not Connected ?" Style="{StaticResource StAndroidLabel}" TextColor="DarkGray" FontSize="Small"/>
+                            </StackLayout>
+                            <StackLayout>
+                                <Button Text="SIGN UP" BackgroundColor="White" Style="{StaticResource StProfileName2}" TextColor="Indigo" CornerRadius="30" HorizontalOptions="Center" HeightRequest="30" FontSize="10" Clicked="addAcc_Clicked"/>
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="Center" Margin="0,30,0,0">
+                                <Label Text="© Copyright" Style="{StaticResource StAndroidLabel1}" TextColor="Gray"/>
+                                <Label Text="DongSpensTeam" Style="{StaticResource StAndroidLabel1}" TextColor="Gray"/>
+                            </StackLayout>
+
+                        </StackLayout>
+
+
+                    </StackLayout>
+
+                </Frame>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>

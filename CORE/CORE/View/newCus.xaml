@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:CORE.CustomRenderer"
+             x:Class="CORE.View.newCus"
+             BackgroundColor="Indigo" Visual="Material">
+    <ContentPage.Content>
+        <StackLayout Padding="0" Margin="50" HorizontalOptions="FillAndExpand">
+            <StackLayout VerticalOptions="Start">
+                <Frame BorderColor="White" VerticalOptions="Start"
+                                               HorizontalOptions="Center" WidthRequest="100" HeightRequest="100"
+                                               HasShadow="False" CornerRadius="110" Padding="0" IsClippedToBounds="True" BackgroundColor="White">
+                    <Image x:Name="SelectedImage" Aspect="AspectFit"/>
+                </Frame>
+            </StackLayout>
+            <StackLayout>
+                <Button x:Name="BtnUploadImage" FontSize="Small" FontAttributes="Bold" BackgroundColor="Indigo"
+                            Text="Select from Gallery" Clicked="SelectButton_Clicked" CornerRadius="100"
+                                HeightRequest="45" BorderColor="AntiqueWhite" TextColor="White" Margin="70,0,70,-10"/>
+            </StackLayout>
+            <Grid>
+                <StackLayout>
+                    <Frame  BackgroundColor="FloralWhite" HeightRequest="600" HasShadow="True" Padding="0" Margin="0" CornerRadius="30">
+
+                        <StackLayout>
+
+
+                            <StackLayout Margin="10">
+                                <Label Text="Customer Registration" TextColor="Black" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+                            </StackLayout>
+
+                            <StackLayout Padding="0" Margin="15,10">
+
+                                <Image />
+
+                                <Frame BackgroundColor="Indigo" BorderColor="Indigo" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                    <StackLayout Orientation="Horizontal">
+                                        <local:CustomEntry x:Name="firstname" Style="{StaticResource StProfileName2}" Placeholder="First Name" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame BackgroundColor="Indigo" BorderColor="Indigo" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                    <StackLayout Orientation="Horizontal">
+                                        <local:CustomEntry x:Name="lastname" Style="{StaticResource StProfileName2}" Placeholder="Last Name" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame BackgroundColor="Indigo" BorderColor="Indigo" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                    <StackLayout Orientation="Horizontal">
+                                        <local:CustomEntry x:Name="Pnumb" Style="{StaticResource StProfileName2}" Placeholder="Phone Number" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame BackgroundColor="Indigo" BorderColor="Indigo" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                    <StackLayout Orientation="Horizontal">
+                                        <local:CustomEntry x:Name="Addre" Style="{StaticResource StProfileName2}" Placeholder="Address" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame BackgroundColor="Indigo" BorderColor="Indigo" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                    <StackLayout Orientation="Horizontal">
+                                        <local:CustomEntry x:Name="Citys" Style="{StaticResource StProfileName2}" Placeholder="City" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame BackgroundColor="Indigo" BorderColor="Indigo" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                    <StackLayout Orientation="Horizontal">
+                                        <local:CustomEntry x:Name="Passw" Style="{StaticResource StProfileName2}" Placeholder="Password" IsPassword="True" BackgroundColor="White" PlaceholderColor="Black" TextColor="Black" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="20,0,20,0"/>
+                                    </StackLayout>
+                                </Frame>
+
+                                <ImageButton Source="https://emeralddental.com/uploads/register-button-png-11.png" Clicked="sve_Clicked" BackgroundColor="Transparent"/>
+
+                            </StackLayout>
+
+
+                        </StackLayout>
+
+                    </Frame>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

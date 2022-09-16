@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:sharpndado="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame" xmlns:fRating="clr-namespace:Rating;assembly=Rating"
+             x:Class="CORE.View.FeedPage" BackgroundColor="Indigo">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout HeightRequest="10">
+                <Label x:Name="RepID" TextColor="Indigo" BackgroundColor="Transparent"/>
+            </StackLayout>
+            <StackLayout HeightRequest="20">
+                <Label Text="FEEDBACKS" Style="{StaticResource StProfileName2}" TextColor="White" HorizontalOptions="Center" VerticalOptions="Start"/>
+            </StackLayout>
+            <CollectionView x:Name="ShowPeople" BackgroundColor="FloralWhite">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <sharpndado:MaterialFrame VerticalOptions="Center" Margin="5" Padding="20" Style="{StaticResource AcrylicFrame}">
+                            <StackLayout>
+                                <Grid ColumnDefinitions="50,50,50,50,50">
+                                    <Label Style="{StaticResource StProfileName2}" TextColor="Black" FontSize="14" Text="{Binding id}" HorizontalOptions="Start" Grid.Column="0" Grid.Row="0"
+                                           BackgroundColor="FloralWhite" MaxLines="1"/>
+                                    <fRating:RatingBar IsEnabled="False" x:Name="rate" SelectedStarValue="{Binding TotalRate}" ImageHeight="10" ImageWidth="10"
+                                                               EmptyStarImage="emptystar.png" FillStarImage="fullstar.png" Grid.Column="1" Grid.Row="0" HorizontalOptions="StartAndExpand"/>
+                                </Grid>
+                                <Label Style="{StaticResource StProfileName2}" TextColor="Black" FontSize="Medium" Text="{Binding CusComment}" HorizontalOptions="Start" VerticalOptions="Start"/>
+                            </StackLayout>
+                        </sharpndado:MaterialFrame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <StackLayout HeightRequest="20">
+                
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

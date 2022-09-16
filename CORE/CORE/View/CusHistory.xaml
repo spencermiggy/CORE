@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:sharpndado="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame" xmlns:fRating="clr-namespace:Rating;assembly=Rating"
+             x:Class="CORE.View.CusHistory" BackgroundColor="Indigo">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout HorizontalOptions="Center" Margin="0,5,0,0">
+                <Label Text="Request History" TextColor="White" Style="{StaticResource StProfileName2}" FontSize="20"/>
+            </StackLayout>
+            <StackLayout>
+
+            <RefreshView x:Name="refreshme" Refreshing="refreshme_Refreshing">
+                <CollectionView x:Name="ShowPeople" BackgroundColor="FloralWhite">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <sharpndado:MaterialFrame VerticalOptions="Center" Margin="20" Padding="20" Style="{StaticResource AcrylicFrame}">
+                                <SwipeView BackgroundColor="Transparent">
+                                    <SwipeView.LeftItems>
+                                        <SwipeItems>
+                                                <SwipeItem Text="Rate"
+                                                           IconImageSource="fullstars.png"
+                                                           BackgroundColor="Indigo"
+                                                           Clicked="SwipeItem_Clicked_1"/>
+                                            </SwipeItems>
+                                    </SwipeView.LeftItems>
+                                    <Frame BackgroundColor="FloralWhite" BorderColor="Transparent" Margin="0,-25,0,-30" IsClippedToBounds="True">
+                                        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                                            <Grid ColumnDefinitions="*,*,*,*">
+                                                <Label Style="{StaticResource StProfileName2}" HorizontalTextAlignment="Center" TextColor="Indigo" Text="Mobile #:" Grid.Column="0" Grid.Row="0"/>
+                                                    <Label Style="{StaticResource StProfileName2}" HorizontalTextAlignment="Center" TextColor="Indigo" Text="First Name:" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2"/>
+                                                    <Label Style="{StaticResource StProfileName2}" HorizontalTextAlignment="Center" TextColor="Indigo" Text="Last Name:" Grid.Column="2" Grid.Row="0" Grid.RowSpan="2"/>
+                                                    <Label Style="{StaticResource StProfileName2}" HorizontalTextAlignment="Center" TextColor="Indigo" Text="Address:" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2"/>
+                                                <Label Style="{StaticResource StProfileName3}" FontSize="14" Text="{Binding Cnum}" Grid.Column="1" Grid.Row="0"/>
+                                                    <Label Style="{StaticResource StProfileName3}" FontSize="14" Text="{Binding Cfname}" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"/>
+                                                    <Label Style="{StaticResource StProfileName3}" FontSize="14" Text="{Binding Clname}" Grid.Column="3" Grid.Row="0"/>
+                                                    <Label Style="{StaticResource StProfileName2}" FontSize="14" Text="{Binding Caddr}" Grid.Column="3" Grid.Row="1" Grid.RowSpan="2"/>
+                                                    <Label Style="{StaticResource StProfileName2}" Text="Repairer ID:" HorizontalTextAlignment="Center" TextColor="Indigo" Grid.Column="0" Grid.Row="2"/>
+                                                <Label x:Name="RepID" Text="{Binding Repid}" TextColor="Black" Grid.Column="1" Grid.ColumnSpan="2"
+                                                       Grid.Row="2" HorizontalTextAlignment="Center"/>
+                                            </Grid>
+                                        </StackLayout>
+                                    </Frame>
+                                </SwipeView>
+                            </sharpndado:MaterialFrame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </RefreshView>
+        </StackLayout>
+            <StackLayout HorizontalOptions="Center" Margin="0,5,0,0">
+                <Label Text="Margin rani" TextColor="Indigo"/>
+            </StackLayout>
+       </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

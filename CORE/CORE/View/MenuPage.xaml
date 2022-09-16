@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:sharpndado="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame" xmlns:fRating="clr-namespace:Rating;assembly=Rating" xmlns:rating="clr-namespace:Syncfusion.SfRating.XForms;assembly=Syncfusion.SfRating.XForms"
+             x:Class="CORE.View.MenuPage"
+             BackgroundColor="FloralWhite">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame HasShadow="True" IsClippedToBounds="True" HeightRequest="60" Padding="0,15">
+                <StackLayout HeightRequest="100" Margin="-30" BackgroundColor="Indigo">
+                    <Grid ColumnDefinitions="*,*,*,*" Margin="25">
+                        <ImageButton x:Name="pro" Source="{Binding propics}" Aspect="Fill" CornerRadius="100" HorizontalOptions="Center" Margin="30,0,20,0"  
+                                     BackgroundColor="White" Clicked="ProfBtn" Grid.Column="0" Grid.Row="0" BorderColor="Transparent" WidthRequest="100" HeightRequest="100"/>
+                        <Frame Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" CornerRadius="30" HeightRequest="10" BackgroundColor="White" IsClippedToBounds="True">
+                            <SearchBar Style="{StaticResource StProfileName2}" x:Name="Search1" Placeholder="Search" BackgroundColor="Transparent" VerticalOptions="Start" TextColor="Black" CancelButtonColor="Black" PlaceholderColor="Black"
+                                TextChanged="Search1_TextChanged" FontSize="14" Margin="-25,0,0,0"/>
+                        </Frame>
+                        <Button ImageSource="mapa.png" BackgroundColor="Transparent" Clicked="Button_Clicked" Grid.Column="3" Grid.Row="0" BorderColor="Transparent"/>
+                    </Grid>
+                </StackLayout>
+            </Frame>
+            <StackLayout HorizontalOptions="Center" Margin="0,5,0,0">
+                <Label Text="CATEGORIES" TextColor="Black" Style="{StaticResource StProfileName2}"/>
+            </StackLayout>
+            <ScrollView HeightRequest="100" IsClippedToBounds="True" Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout Padding="20,0,20,0">
+                        <ImageButton Source="laptop" BackgroundColor="Transparent" Aspect="Fill" CornerRadius="30" WidthRequest="60" HeightRequest="60" Clicked="Laptop_Clicked"/>
+                        <Label x:Name="Laptop" Text="Laptop" Style="{StaticResource StProfileName3}" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout Padding="20,0,20,0">
+                        <ImageButton Source="androidp" BackgroundColor="Transparent" Aspect="Fill" CornerRadius="30" WidthRequest="60" HeightRequest="60" Clicked="Android_Clicked"/>
+                        <Label x:Name="Android" Text="Android" Style="{StaticResource StProfileName3}" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout Padding="20,0,20,0">
+                        <ImageButton Source="iosp" BackgroundColor="Transparent" Aspect="Fill" CornerRadius="30" WidthRequest="60" HeightRequest="60" Clicked="IOS_Clicked"/>
+                        <Label x:Name="IOS" Text="IOS" Style="{StaticResource StProfileName3}" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout Padding="20,0,20,0">
+                        <ImageButton Source="desktop" BackgroundColor="Transparent" Aspect="Fill" CornerRadius="30" WidthRequest="60" HeightRequest="60" Clicked="Desktop_Clicked"/>
+                        <Label x:Name="Desktop" Text="Desktop" Style="{StaticResource StProfileName3}" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout Padding="20,0,20,0">
+                        <ImageButton Source="plumber" BackgroundColor="Transparent" Aspect="Fill" CornerRadius="30" WidthRequest="60" HeightRequest="60" Clicked="Plumber_Clicked"/>
+                        <Label x:Name="Plumber" Text="Plumber" Style="{StaticResource StProfileName3}" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout Padding="20,0,20,0">
+                        <ImageButton Source="developer" BackgroundColor="Transparent" Aspect="Fill" CornerRadius="30" WidthRequest="60" HeightRequest="60" Clicked="Developer_Clicked"/>
+                        <Label x:Name="Developer" Text="Developer" Style="{StaticResource StProfileName3}" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout Padding="20,0,20,0">
+                        <ImageButton Source="electric" BackgroundColor="Transparent" Aspect="Fill" CornerRadius="30" WidthRequest="60" HeightRequest="60" Clicked="Electric_Clicked"/>
+                        <Label x:Name="Electric" Text="Electric" Style="{StaticResource StProfileName3}" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout Padding="20,0,20,0">
+                        <ImageButton Source="keypad" BackgroundColor="Transparent" Aspect="Fill" CornerRadius="30" WidthRequest="60" HeightRequest="60" Clicked="Keypad_Clicked"/>
+                        <Label x:Name="Keypad" Text="Keypad" Style="{StaticResource StProfileName3}" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout Padding="20,0,20,0">
+                        <ImageButton Source="technician" BackgroundColor="Transparent" Aspect="Fill" CornerRadius="30" WidthRequest="60" HeightRequest="60" Clicked="Technician_Clicked"/>
+                        <Label x:Name="Technician" Text="Technician" Style="{StaticResource StProfileName3}" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout Padding="20,0,20,0">
+                        <ImageButton Source="internet" BackgroundColor="Transparent" Aspect="Fill" CornerRadius="30" WidthRequest="60" HeightRequest="60" Clicked="Internet_Clicked"/>
+                        <Label x:Name="Internet" Text="Internet" Style="{StaticResource StProfileName3}" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                    <StackLayout Padding="20,0,20,0">
+                        <ImageButton Source="openline" BackgroundColor="Transparent" Aspect="Fill" CornerRadius="30" WidthRequest="60" HeightRequest="60" Clicked="Openline_Clicked"/>
+                        <Label x:Name="Openline" Text="Openline" Style="{StaticResource StProfileName3}" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+
+            <RefreshView x:Name="refreshme" Refreshing="RefreshView_Refreshing" RefreshColor="Indigo">
+                <CollectionView x:Name="ShowPeople">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <sharpndado:MaterialFrame VerticalOptions="Center" Margin="20" Padding="20" Style="{StaticResource AcrylicFrame}">
+                                <SwipeView BackgroundColor="Transparent">
+                                    <SwipeView.RightItems>
+                                        <SwipeItems>
+                                            <SwipeItem Text="Request"
+                                         IconImageSource="requests.png"
+                                         BackgroundColor="Transparent"
+                                         Clicked="SwipeItem_Clicked_1"/>
+                                            <SwipeItem Text="Profile"
+                                         IconImageSource="user.png"
+                                         BackgroundColor="Transparent"
+                                         Clicked="SwipeItem_Clicked_2"/>
+                                        </SwipeItems>
+                                    </SwipeView.RightItems>
+                                    <SwipeView.LeftItems>
+                                        <SwipeItems>
+                                            <SwipeItem Text="Locate Now"
+                                         IconImageSource="maplogo.png"
+                                         BackgroundColor="Transparent"
+                                         Clicked="SwipeItem_Clicked"/>
+                                            <SwipeItem Text="Message/Call"
+                                         IconImageSource="sms.png"
+                                         BackgroundColor="Transparent"
+                                         Clicked="TextBtn"/>
+                                            <SwipeItem Text="Report"
+                                         IconImageSource="report.png"
+                                         BackgroundColor="Transparent"
+                                         Clicked="reportButton_Clicked"/>
+                                        </SwipeItems>
+                                    </SwipeView.LeftItems>
+                                    <Frame BackgroundColor="FloralWhite" Margin="0,-25,0,-30" Padding="0" IsClippedToBounds="True">
+                                        <Grid Margin="10" Padding="20">
+                                            <Label Style="{StaticResource StProfileName2}" TextColor="Indigo" Text="Mobile #:" Grid.Column="0" Grid.Row="0"/>
+                                            <Label Style="{StaticResource StProfileName2}" TextColor="Indigo" Text="Job Discription:" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2"/>
+                                            <Label Style="{StaticResource StProfileName2}" TextColor="Indigo" Text="Availability:" Grid.Column="0" Grid.Row="2" Grid.RowSpan="2"/>
+                                            <Label Style="{StaticResource StProfileName2}" TextColor="Indigo" Text="Status:" Grid.Column="0" Grid.Row="3" Grid.RowSpan="2"/>
+                                            <Label Style="{StaticResource StProfileName2}" FontSize="Medium" Text="{Binding fname}" Grid.Column="2" Grid.Row="4" HorizontalOptions="Center"/>
+                                            <Label Style="{StaticResource StProfileName3}" Text="{Binding statusact}" Grid.Column="1" Grid.Row="3"/>
+                                            <Label Style="{StaticResource StProfileName3}" Text="{Binding job}" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"/>
+                                            <Label Style="{StaticResource StProfileName3}" Text="{Binding activetime}" Grid.Column="1" Grid.Row="2"/>
+                                            <Label Style="{StaticResource StProfileName2}" Text="{Binding pnum}" FontSize="18" Grid.Column="1" Grid.Row="0"/>
+                                            <Frame Grid.Column="2" Grid.Row="0" Grid.RowSpan="4" BorderColor="White" VerticalOptions="Start"
+                                               HorizontalOptions="End" WidthRequest="100" HeightRequest="100"
+                                               HasShadow="False" CornerRadius="110" Padding="0" IsClippedToBounds="True">
+                                                <Image Source="{Binding propics}" Aspect="Fill"/>
+                                            </Frame>
+                                            <rating:SfRating x:Name="starrater" ItemCount="5" Precision="Half" Value="{Binding TotalRate}" Grid.Column="0" Grid.Row="4" IsEnabled="False"
+                                                             FlowDirection="LeftToRight" ItemSize="15" HorizontalOptions="Center" VerticalOptions="Center" Visual="Material"/>
+                                            <Label x:Name="rated" Text="{Binding TotalRate}" Style="{StaticResource StAndroidLabel1}" Grid.Column="1" Grid.Row="4" HorizontalTextAlignment="Center" Padding="0,0,85,5"
+                                                   VerticalOptions="Center" FontSize="Subtitle"/>
+                                        </Grid>
+                                    </Frame>
+                                </SwipeView>
+                            </sharpndado:MaterialFrame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </RefreshView>
+            <StackLayout  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="0,0,0,15" BackgroundColor="Indigo">
+                <Label Text="margin rani" TextColor="Indigo"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

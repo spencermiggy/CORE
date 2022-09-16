@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CORE.View.ContactAdmin"
+             BackgroundColor="Indigo">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+                <Image Source="homeicon.png" Aspect="AspectFit" Margin="60"/>
+            </StackLayout>
+            <StackLayout Margin="30">
+                <Frame CornerRadius="30" VerticalOptions="CenterAndExpand" BackgroundColor="FloralWhite">
+                    <StackLayout Margin="50" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Spacing="40" BackgroundColor="FloralWhite">
+                        <Grid ColumnDefinitions="*,*">
+                            <ImageButton x:Name="fbbtn" Source="fb.png" BackgroundColor="Transparent" WidthRequest="60" Grid.Column="0" Grid.Row="0" Clicked="fbbtn_Clicked"/>
+                            <ImageButton x:Name="gbtn" Source="Gmail.png" BackgroundColor="Transparent" WidthRequest="60" Grid.Column="1" Grid.Row="0" Clicked="gbtn_Clicked"/>
+                        </Grid>
+                        <Label Text="Contact us our Social media accounts" FontSize="16" Style="{StaticResource StProfileName2}" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+                        <Button ImageSource="sms.png" HorizontalOptions="Center" BackgroundColor="Transparent" Clicked="but_Clicked"/>
+                        <Label Text="Message or Call me on the button" VerticalOptions="Start"
+                       HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="16" Style="{StaticResource StProfileName2}"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
